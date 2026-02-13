@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PataLlena - Comida para Perros en Armenia y Quindío | Domicilio WhatsApp</title>
+    <meta name="description" content="PataLlena - Concentrado premium para perros en Armenia y todo el Quindío. Sabor carne por libra al mejor precio. Pedidos por WhatsApp. Pago Nequi. Domicilio gratis.">
+    <meta name="keywords" content="comida para perros Armenia, concentrado perros Quindío, comida mascotas Armenia, alimento perros Quindío, domicilio mascotas Armenia, PataLlena, concentrado carne perros, Nequi mascotas Quindío">
+    <meta name="author" content="PataLlena - Gutierrez Felipe">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="PataLlena - Comida para Perros en Armenia y Quindío">
+    <meta property="og:description" content="Concentrado premium para perros sabor carne. Pedidos por WhatsApp, pago con Nequi. Domicilio en Armenia y Quindío.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CO">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PataLlena - Comida para Perros Armenia y Quindío">
+    <meta name="twitter:description" content="Concentrado premium sabor carne para perros. Domicilio en Armenia y Quindío. Pago Nequi.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "PataLlena",
+        "description": "PataLlena - Concentrado premium para perros sabor carne en Armenia y todo el Quindío. Domicilio y pago Nequi.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Armenia",
+            "addressRegion": "Quindío",
+            "addressCountry": "CO"
+        },
+        "telephone": "+573185875211",
+        "priceRange": "$3,000 - $8,000 COP",
+        "paymentAccepted": "Nequi, Efectivo",
+        "areaServed": "Quindío, Colombia"
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        :root{
+            --primary:#FF6B35;--primary-dark:#E55A2B;--secondary:#3E2723;
+            --accent:#FFB74D;--green:#4CAF50;--whatsapp:#25D366;
+            --nequi:#E91E63;--bg:#FFF8F0;--bg2:#FFF3E0;
+            --text:#2C1810;--text2:#5D4037;--white:#FFF;
+            --shadow:0 10px 40px rgba(62,39,35,.12);
+            --shadow-h:0 20px 60px rgba(62,39,35,.22);
+            --radius:20px;
+        }
+        html{scroll-behavior:smooth}
+        body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+
+        /* FLOATING BG */
+        .floating-bg{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden}
+        .floating-element{position:absolute;opacity:0;animation:floatUp linear infinite}
+        @keyframes floatUp{
+            0%{transform:translateY(105vh) rotate(0deg);opacity:0}
+            5%{opacity:var(--fo,.06)}
+            90%{opacity:var(--fo,.06)}
+            100%{transform:translateY(-15vh) rotate(var(--rot,360deg));opacity:0}
+        }
+
+        /* NAV */
+        .nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:15px 0;transition:all .3s}
+        .nav.scrolled{background:rgba(255,248,240,.95);backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(0,0,0,.08)}
+        .nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+        .logo{font-family:'Fredoka One',cursive;font-size:1.8rem;color:var(--primary);text-decoration:none;display:flex;align-items:center;gap:8px}
+        .logo svg{width:36px;height:36px}
+        .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+        .nav-links a{text-decoration:none;color:var(--text2);font-weight:600;font-size:.92rem;transition:color .2s}
+        .nav-links a:hover{color:var(--primary)}
+        .nav-cta{background:var(--whatsapp);color:var(--white)!important;padding:10px 22px;border-radius:50px;font-weight:700!important;transition:transform .2s,box-shadow .2s!important}
+        .nav-cta:hover{transform:scale(1.05);box-shadow:0 6px 20px rgba(37,211,102,.35)}
+        .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+        .menu-toggle span{display:block;width:26px;height:3px;background:var(--secondary);margin:5px 0;border-radius:3px;transition:all .3s}
+
+        /* HERO */
+        .hero{min-height:100vh;display:flex;align-items:center;position:relative;z-index:1;padding:120px 24px 80px;overflow:hidden}
+        .hero::before{content:'';position:absolute;top:-10%;right:-15%;width:600px;height:600px;background:radial-gradient(circle,rgba(255,107,53,.12) 0%,transparent 70%);border-radius:50%;z-index:-1}
+        .hero::after{content:'';position:absolute;bottom:-10%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(255,183,77,.1) 0%,transparent 70%);border-radius:50%;z-index:-1}
+        .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+        .hero-text h1{font-family:'Fredoka One',cursive;font-size:clamp(2.5rem,6vw,4.2rem);line-height:1.15;color:var(--secondary)}
+        .hero-text h1 span{color:var(--primary);display:inline-block;animation:wiggle 3s ease-in-out infinite}
+        @keyframes wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-2deg)}75%{transform:rotate(2deg)}}
+        .hero-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--primary),var(--accent));color:var(--white);padding:8px 18px;border-radius:50px;font-size:.85rem;font-weight:700;margin-bottom:20px;animation:pulse 2s ease-in-out infinite}
+        @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,107,53,.4)}50%{box-shadow:0 0 0 12px rgba(255,107,53,0)}}
+        .hero-text p{font-size:1.15rem;color:var(--text2);margin:20px 0 32px;line-height:1.7;max-width:500px}
+        .hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+        .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border-radius:50px;font-size:1rem;font-weight:700;text-decoration:none;transition:all .3s;border:none;cursor:pointer;font-family:inherit}
+        .btn-wa{background:var(--whatsapp);color:var(--white);box-shadow:0 8px 25px rgba(37,211,102,.3)}
+        .btn-wa:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(37,211,102,.4)}
+        .btn-outline{background:transparent;color:var(--primary);border:2.5px solid var(--primary)}
+        .btn-outline:hover{background:var(--primary);color:var(--white);transform:translateY(-3px)}
+        .hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+        .hero-dogs{width:100%;max-width:500px;position:relative}
+        .hero-dog-big{width:100%;filter:drop-shadow(0 20px 40px rgba(62,39,35,.15))}
+        .hero-dog-small{position:absolute;bottom:5%;right:-5%;width:40%;filter:drop-shadow(0 10px 20px rgba(62,39,35,.15));animation:bounce 3s ease-in-out infinite}
+        @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+        .hero-stats{display:flex;gap:40px;margin-top:40px}
+        .hero-stat{text-align:center}
+        .hero-stat strong{display:block;font-family:'Fredoka One',cursive;font-size:1.8rem;color:var(--primary)}
+        .hero-stat span{font-size:.82rem;color:var(--text2)}
+
+        /* SECTIONS */
+        section{position:relative;z-index:1;padding:80px 24px}
+        .section-header{text-align:center;margin-bottom:60px}
+        .section-header h2{font-family:'Fredoka One',cursive;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--secondary);margin-bottom:12px}
+        .section-header p{color:var(--text2);font-size:1.05rem;max-width:600px;margin:0 auto}
+        .section-tag{display:inline-block;background:var(--bg2);color:var(--primary);padding:6px 18px;border-radius:50px;font-size:.82rem;font-weight:700;margin-bottom:14px;letter-spacing:1px;text-transform:uppercase}
+        .container{max-width:1200px;margin:0 auto}
+
+        /* PRODUCTS */
+        #productos{background:var(--white)}
+        .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;max-width:750px;margin:0 auto}
+        .product-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:all .35s;position:relative}
+        .product-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-h)}
+        .product-img{height:200px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+        .product-img svg{width:80px;height:80px;opacity:.9;filter:drop-shadow(0 4px 8px rgba(0,0,0,.1))}
+        .product-badge{position:absolute;top:14px;left:14px;background:var(--primary);color:var(--white);padding:5px 14px;border-radius:50px;font-size:.75rem;font-weight:700;letter-spacing:.5px}
+        .product-info{padding:24px}
+        .product-brand{font-size:.8rem;color:var(--primary);font-weight:700;text-transform:uppercase;letter-spacing:1px}
+        .product-name{font-family:'Fredoka One',cursive;font-size:1.3rem;color:var(--secondary);margin:6px 0}
+        .product-desc{font-size:.88rem;color:var(--text2);margin-bottom:16px;line-height:1.5}
+        .product-footer{display:flex;align-items:center;justify-content:space-between}
+        .product-price{font-family:'Fredoka One',cursive;font-size:1.5rem;color:var(--primary)}
+        .product-price small{font-size:.7rem;color:var(--text2);font-family:'Poppins',sans-serif;font-weight:400}
+        .product-order{background:var(--whatsapp);color:var(--white);padding:10px 20px;border-radius:50px;font-size:.85rem;font-weight:700;text-decoration:none;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
+        .product-order:hover{transform:scale(1.06);box-shadow:0 6px 18px rgba(37,211,102,.3)}
+        .product-add{border:2.5px dashed var(--accent);background:transparent;box-shadow:none;display:flex;align-items:center;justify-content:center;min-height:380px;cursor:default}
+        .product-add-inner{text-align:center;color:var(--accent);padding:40px}
+        .product-add-inner svg{width:60px;height:60px;margin-bottom:16px;opacity:.6}
+        .product-add-inner p{font-weight:700;font-size:1.1rem}
+        .product-add-inner span{font-size:.85rem;font-weight:400;opacity:.7}
+
+        /* STEPS */
+        #como-pedir{background:linear-gradient(135deg,var(--secondary) 0%,#5D4037 100%);color:var(--white)}
+        #como-pedir .section-tag{background:rgba(255,255,255,.15);color:var(--accent)}
+        #como-pedir .section-header h2{color:var(--white)}
+        #como-pedir .section-header p{color:rgba(255,255,255,.7)}
+        .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:32px}
+        .step{background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border-radius:var(--radius);padding:36px 28px;text-align:center;transition:all .3s;border:1px solid rgba(255,255,255,.1)}
+        .step:hover{background:rgba(255,255,255,.14);transform:translateY(-5px)}
+        .step-num{width:56px;height:56px;background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;font-size:1.4rem;color:var(--white);margin:0 auto 20px}
+        .step h3{font-family:'Fredoka One',cursive;font-size:1.2rem;margin-bottom:10px}
+        .step p{font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.6}
+
+        /* BENEFITS */
+        .benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+        .benefit{background:var(--white);border-radius:var(--radius);padding:36px 28px;text-align:center;box-shadow:var(--shadow);transition:all .3s}
+        .benefit:hover{transform:translateY(-6px);box-shadow:var(--shadow-h)}
+        .benefit-icon{width:70px;height:70px;background:var(--bg2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+        .benefit-icon svg{width:34px;height:34px}
+        .benefit h3{font-family:'Fredoka One',cursive;font-size:1.1rem;color:var(--secondary);margin-bottom:10px}
+        .benefit p{font-size:.88rem;color:var(--text2);line-height:1.6}
+
+        /* NEQUI */
+        #pago{background:var(--white)}
+        .nequi-wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+        .nequi-qr{background:linear-gradient(135deg,#E91E63,#AD1457);border-radius:var(--radius);padding:48px;text-align:center;color:var(--white)}
+        .nequi-qr h3{font-family:'Fredoka One',cursive;font-size:1.6rem;margin-bottom:8px}
+        .nequi-qr p{opacity:.85;margin-bottom:24px;font-size:.95rem}
+        .qr-box{background:var(--white);border-radius:16px;padding:24px;display:inline-block;margin-bottom:20px}
+        .qr-box canvas{display:block}
+        .nequi-number{font-family:'Fredoka One',cursive;font-size:1.8rem;letter-spacing:2px}
+        .nequi-steps{list-style:none}
+        .nequi-steps li{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px}
+        .nequi-steps .ns-num{width:40px;height:40px;min-width:40px;background:var(--bg2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Fredoka One',cursive;color:var(--nequi);font-size:1.1rem}
+        .nequi-steps h4{font-size:1rem;color:var(--secondary);margin-bottom:4px}
+        .nequi-steps p{font-size:.88rem;color:var(--text2);line-height:1.5}
+
+        /* FAQ */
+        #faq{background:var(--bg)}
+        .faq-list{max-width:750px;margin:0 auto}
+        .faq-item{background:var(--white);border-radius:16px;margin-bottom:14px;box-shadow:0 2px 12px rgba(0,0,0,.05);overflow:hidden}
+        .faq-q{width:100%;padding:22px 28px;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Poppins',sans-serif;font-size:1rem;font-weight:700;color:var(--secondary);text-align:left}
+        .faq-q svg{width:20px;min-width:20px;transition:transform .3s;fill:var(--primary)}
+        .faq-q.open svg{transform:rotate(180deg)}
+        .faq-a{padding:0 28px;max-height:0;overflow:hidden;transition:all .35s ease}
+        .faq-a.open{max-height:300px;padding-bottom:22px}
+        .faq-a p{font-size:.92rem;color:var(--text2);line-height:1.7}
+
+        /* CONTACT */
+        #contacto{background:linear-gradient(135deg,var(--secondary),#4E342E)}
+        #contacto .section-tag{background:rgba(255,255,255,.15);color:var(--accent)}
+        #contacto .section-header h2,#contacto .section-header p{color:var(--white)}
+        #contacto .section-header p{color:rgba(255,255,255,.7)}
+        .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px}
+        .contact-card{background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border-radius:var(--radius);padding:32px;text-align:center;border:1px solid rgba(255,255,255,.1);transition:all .3s}
+        .contact-card:hover{background:rgba(255,255,255,.14);transform:translateY(-4px)}
+        .contact-card svg{width:40px;height:40px;fill:var(--accent);margin-bottom:16px}
+        .contact-card h3{font-family:'Fredoka One',cursive;color:var(--white);margin-bottom:8px;font-size:1.1rem}
+        .contact-card p{color:rgba(255,255,255,.7);font-size:.92rem;line-height:1.6}
+        .contact-card a{color:var(--accent);text-decoration:none;font-weight:700}
+
+        /* FOOTER */
+        footer{background:#1B0E0A;color:rgba(255,255,255,.6);padding:50px 24px 24px;position:relative;z-index:1}
+        .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+        .footer-brand{font-family:'Fredoka One',cursive;font-size:1.5rem;color:var(--primary);margin-bottom:12px}
+        footer p{font-size:.88rem;line-height:1.7}
+        footer h4{font-family:'Fredoka One',cursive;color:var(--white);margin-bottom:16px;font-size:1rem}
+        footer ul{list-style:none}
+        footer ul li{margin-bottom:10px}
+        footer ul a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.88rem;transition:color .2s}
+        footer ul a:hover{color:var(--primary)}
+        .footer-bottom{max-width:1200px;margin:30px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.82rem}
+        .footer-seo{max-width:1200px;margin:24px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.06);font-size:.78rem;opacity:.4;line-height:1.6}
+
+        /* WHATSAPP FLOAT */
+        .wa-float{position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;align-items:center;gap:12px}
+        .wa-float-btn{width:64px;height:64px;background:var(--whatsapp);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 25px rgba(37,211,102,.45);transition:all .3s;text-decoration:none;animation:waPulse 2s infinite}
+        .wa-float-btn:hover{transform:scale(1.1);box-shadow:0 10px 35px rgba(37,211,102,.55)}
+        .wa-float-btn svg{width:34px;height:34px;fill:var(--white)}
+        @keyframes waPulse{0%,100%{box-shadow:0 6px 25px rgba(37,211,102,.45)}50%{box-shadow:0 6px 25px rgba(37,211,102,.45),0 0 0 14px rgba(37,211,102,.12)}}
+        .wa-tooltip{background:var(--white);color:var(--text);padding:10px 18px;border-radius:12px;font-size:.85rem;font-weight:600;box-shadow:var(--shadow);white-space:nowrap;animation:fadeSlide .5s ease}
+        @keyframes fadeSlide{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:translateX(0)}}
+
+        /* SCROLL ANIMATIONS */
+        .reveal{opacity:0;transform:translateY(30px);transition:all .7s ease}
+        .reveal.visible{opacity:1;transform:translateY(0)}
+
+        /* RESPONSIVE */
+        @media(max-width:900px){
+            .hero-inner{grid-template-columns:1fr;text-align:center}
+            .hero-text p{margin-left:auto;margin-right:auto}
+            .hero-btns{justify-content:center}
+            .hero-visual{order:-1}
+            .hero-dogs{max-width:320px}
+            .hero-stats{justify-content:center}
+            .nequi-wrap{grid-template-columns:1fr}
+            .footer-inner{grid-template-columns:1fr}
+        }
+        @media(max-width:700px){
+            .nav-links{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(255,248,240,.98);flex-direction:column;justify-content:center;align-items:center;gap:32px}
+            .nav-links.open{display:flex}
+            .nav-links a{font-size:1.2rem}
+            .menu-toggle{display:block}
+            section{padding:60px 18px}
+            .products-grid{grid-template-columns:1fr 1fr}
+        }
+        @media(max-width:500px){
+            .products-grid{grid-template-columns:1fr}
+            .hero-stats{gap:20px}
+            .hero-stat strong{font-size:1.4rem}
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-bg" id="floatingBg"></div>
+
+    <!-- NAV -->
+    <nav class="nav" id="mainNav">
+        <div class="nav-inner">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 100 100" fill="#FF6B35"><ellipse cx="50" cy="68" rx="20" ry="16"/><ellipse cx="28" cy="38" rx="11" ry="13"/><ellipse cx="50" cy="28" rx="10" ry="12"/><ellipse cx="72" cy="38" rx="11" ry="13"/></svg>
+                PataLlena
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#como-pedir">Cómo Pedir</a></li>
+                <li><a href="#pago">Pago Nequi</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="https://wa.me/573185875211?text=Hola%20PataLlena!%20Quiero%20hacer%20un%20pedido%20🐶" class="nav-cta" target="_blank" rel="noopener">Pedir Ahora</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <div class="hero-badge">📍 Armenia y todo el Quindío - Domicilio</div>
+                <h1>La mejor comida para tu <span>peludo</span> favorito</h1>
+                <p>Concentrado premium para perros sabor carne al mejor precio por libra en Armenia y todo el Quindío. Pedidos fáciles por WhatsApp y pago seguro con Nequi. ¡Tu peludo merece lo mejor!</p>
+                <div class="hero-btns">
+                    <a href="https://wa.me/573185875211?text=Hola%20PataLlena!%20Quiero%20hacer%20un%20pedido%20🐶" class="btn btn-wa" target="_blank" rel="noopener">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Pedir por WhatsApp
+                    </a>
+                    <a href="#productos" class="btn btn-outline">Ver Productos ↓</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat"><strong>#1</strong><span>En el Quindío</span></div>
+                    <div class="hero-stat"><strong>100%</strong><span>Productos frescos</span></div>
+                    <div class="hero-stat"><strong>⚡</strong><span>Entrega rápida</span></div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-dogs">
+                    <!-- Large Dog SVG -->
+                    <svg class="hero-dog-big" viewBox="0 0 400 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="dogGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FF6B35"/>
+                                <stop offset="100%" stop-color="#FFB74D"/>
+                            </linearGradient>
+                        </defs>
+                        <ellipse cx="200" cy="280" rx="180" ry="30" fill="#FFE0B2" opacity=".3"/>
+                        <!-- Body -->
+                        <ellipse cx="200" cy="190" rx="100" ry="65" fill="url(#dogGrad1)"/>
+                        <!-- Head -->
+                        <circle cx="310" cy="130" r="55" fill="url(#dogGrad1)"/>
+                        <!-- Snout -->
+                        <ellipse cx="355" cy="145" rx="28" ry="20" fill="#FFB74D"/>
+                        <ellipse cx="360" cy="140" rx="10" ry="8" fill="#3E2723"/>
+                        <!-- Eye -->
+                        <circle cx="325" cy="118" r="10" fill="#3E2723"/>
+                        <circle cx="328" cy="115" r="4" fill="white"/>
+                        <!-- Ear -->
+                        <ellipse cx="285" cy="80" rx="22" ry="35" fill="#E55A2B" transform="rotate(-15 285 80)"/>
+                        <!-- Neck -->
+                        <ellipse cx="270" cy="165" rx="40" ry="50" fill="url(#dogGrad1)"/>
+                        <!-- Legs -->
+                        <rect x="135" y="240" width="28" height="65" rx="14" fill="url(#dogGrad1)"/>
+                        <rect x="175" y="240" width="28" height="65" rx="14" fill="#E55A2B"/>
+                        <rect x="240" y="240" width="28" height="65" rx="14" fill="url(#dogGrad1)"/>
+                        <rect x="270" y="240" width="28" height="60" rx="14" fill="#E55A2B"/>
+                        <!-- Tail -->
+                        <path d="M100,175 Q60,130 80,90" stroke="#E55A2B" stroke-width="16" fill="none" stroke-linecap="round"/>
+                        <!-- Collar -->
+                        <path d="M275,175 Q310,190 315,170" stroke="#E91E63" stroke-width="8" fill="none" stroke-linecap="round"/>
+                        <!-- Tongue -->
+                        <ellipse cx="365" cy="158" rx="8" ry="14" fill="#FF8A80"/>
+                        <!-- Food bowl -->
+                        <ellipse cx="370" cy="280" rx="45" ry="15" fill="#5D4037"/>
+                        <ellipse cx="370" cy="272" rx="45" ry="15" fill="#795548"/>
+                        <ellipse cx="370" cy="272" rx="35" ry="10" fill="#8D6E63"/>
+                        <circle cx="358" cy="268" r="5" fill="#A1887F"/>
+                        <circle cx="375" cy="270" r="6" fill="#A1887F"/>
+                        <circle cx="365" cy="264" r="4" fill="#A1887F"/>
+                    </svg>
+                    <!-- Small Dog SVG -->
+                    <svg class="hero-dog-small" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="dogGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#8D6E63"/>
+                                <stop offset="100%" stop-color="#D7CCC8"/>
+                            </linearGradient>
+                        </defs>
+                        <ellipse cx="100" cy="170" rx="80" ry="15" fill="#FFE0B2" opacity=".3"/>
+                        <!-- Body -->
+                        <ellipse cx="95" cy="115" rx="52" ry="35" fill="url(#dogGrad2)"/>
+                        <!-- Head -->
+                        <circle cx="150" cy="80" r="32" fill="url(#dogGrad2)"/>
+                        <!-- Ears (big floppy) -->
+                        <ellipse cx="130" cy="52" rx="16" ry="28" fill="#795548" transform="rotate(-20 130 52)"/>
+                        <ellipse cx="172" cy="56" rx="14" ry="26" fill="#795548" transform="rotate(15 172 56)"/>
+                        <!-- Snout -->
+                        <ellipse cx="172" cy="90" rx="16" ry="12" fill="#D7CCC8"/>
+                        <ellipse cx="176" cy="86" rx="6" ry="5" fill="#3E2723"/>
+                        <!-- Eye -->
+                        <circle cx="155" cy="72" r="7" fill="#3E2723"/>
+                        <circle cx="157" cy="70" r="3" fill="white"/>
+                        <!-- Legs (short) -->
+                        <rect x="60" y="140" width="18" height="30" rx="9" fill="url(#dogGrad2)"/>
+                        <rect x="82" y="140" width="18" height="32" rx="9" fill="#795548"/>
+                        <rect x="108" y="140" width="18" height="30" rx="9" fill="url(#dogGrad2)"/>
+                        <rect x="125" y="140" width="18" height="28" rx="9" fill="#795548"/>
+                        <!-- Tail (curly) -->
+                        <path d="M42,105 Q25,85 35,65" stroke="#795548" stroke-width="10" fill="none" stroke-linecap="round"/>
+                        <!-- Collar -->
+                        <path d="M130,100 Q150,112 155,95" stroke="#4CAF50" stroke-width="5" fill="none" stroke-linecap="round"/>
+                        <!-- Heart -->
+                        <path d="M85,55 C85,50 78,45 75,50 C72,45 65,50 65,55 C65,62 75,70 75,70 C75,70 85,62 85,55Z" fill="#E91E63" opacity=".7"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="productos">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Nuestros Productos</span>
+                <h2>Comida para Perros por Libra</h2>
+                <p>Nuestro concentrado premium sabor carne a precio justo. ¡A tu peludo le va a encantar!</p>
+            </div>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <!-- HOW TO ORDER -->
+    <section id="como-pedir">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Súper Fácil</span>
+                <h2>¿Cómo Pedir?</h2>
+                <p>En solo 3 pasos tienes la comida de tu peludo en la puerta de tu casa</p>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-num">1</div>
+                    <h3>Elige tu Producto</h3>
+                    <p>Explora nuestro catálogo y elige la marca y cantidad que necesitas para tu mascota.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step-num">2</div>
+                    <h3>Escríbenos por WhatsApp</h3>
+                    <p>Haz clic en "Pedir" y te atenderemos al instante. Cuéntanos tu dirección en Armenia.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step-num">3</div>
+                    <h3>Paga con Nequi y Recibe</h3>
+                    <p>Paga fácil con Nequi escaneando nuestro QR. ¡Recibe tu pedido rápidamente!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section id="beneficios">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">¿Por qué PataLlena?</span>
+                <h2>Tu Peludo Merece lo Mejor</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit reveal">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="#FF6B35"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <h3>Calidad Garantizada</h3>
+                    <p>Concentrado premium con proteína de carne real. Nutrición completa para tu mascota.</p>
+                </div>
+                <div class="benefit reveal">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="#FF6B35"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                    </div>
+                    <h3>Precio Justo</h3>
+                    <p>Precio competitivo en todo el Quindío. Sin costos ocultos, sin sorpresas.</p>
+                </div>
+                <div class="benefit reveal">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="#FF6B35"><path d="M18 18.5a1.5 1.5 0 01-1.5-1.5 1.5 1.5 0 011.5-1.5 1.5 1.5 0 011.5 1.5 1.5 1.5 0 01-1.5 1.5zm1.5-9l-1.89-2.5H15V5H3c-1.1 0-2 .9-2 2v9h2a3 3 0 003 3 3 3 0 003-3h6a3 3 0 003 3 3 3 0 003-3h2v-5l-2.5-3.5zM6 18.5A1.5 1.5 0 014.5 17 1.5 1.5 0 016 15.5 1.5 1.5 0 017.5 17 1.5 1.5 0 016 18.5z"/></svg>
+                    </div>
+                    <h3>Domicilio en el Quindío</h3>
+                    <p>Te llevamos el pedido a la puerta de tu casa en Armenia y todo el Quindío. ¡Rápido y seguro!</p>
+                </div>
+                <div class="benefit reveal">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="#FF6B35"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+                    </div>
+                    <h3>Atención Personal</h3>
+                    <p>Te asesoramos por WhatsApp. ¿No sabes qué marca elegir? ¡Te ayudamos!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEQUI PAYMENT -->
+    <section id="pago">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Pago Seguro</span>
+                <h2>Paga Fácil con Nequi</h2>
+                <p>Escanea el código QR o envía el pago al número Nequi. ¡Es rapidísimo!</p>
+            </div>
+            <div class="nequi-wrap">
+                <div class="nequi-qr reveal">
+                    <h3>Escanea con Nequi</h3>
+                    <p>Abre tu app Nequi, escanea el código y paga en segundos</p>
+                    <div class="qr-box">
+                        <canvas id="nequiQR"></canvas>
+                    </div>
+                    <div class="nequi-number">318 587 5211</div>
+                </div>
+                <div class="reveal">
+                    <h3 style="font-family:'Fredoka One',cursive;font-size:1.4rem;color:var(--secondary);margin-bottom:28px">Pasos para Pagar</h3>
+                    <ul class="nequi-steps">
+                        <li>
+                            <div class="ns-num">1</div>
+                            <div>
+                                <h4>Abre Nequi</h4>
+                                <p>Ingresa a tu app Nequi en tu celular</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ns-num">2</div>
+                            <div>
+                                <h4>Escanea el QR o Enviar Plata</h4>
+                                <p>Usa la opción "Escanear QR" o "Enviar plata" al número <strong>318 587 5211</strong></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ns-num">3</div>
+                            <div>
+                                <h4>Ingresa el Monto</h4>
+                                <p>Coloca el valor total de tu pedido y confirma</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ns-num">4</div>
+                            <div>
+                                <h4>Envía el Comprobante</h4>
+                                <p>Manda captura del pago por WhatsApp y listo. ¡Pedido confirmado!</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Preguntas Frecuentes</span>
+                <h2>¿Tienes Dudas?</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-q">¿Hacen domicilio en todo Armenia?<svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></button>
+                    <div class="faq-a"><p>¡Sí! Hacemos entregas en Armenia y municipios del Quindío como Calarcá, Montenegro, Circasia, La Tebaida y más. Escríbenos por WhatsApp con tu dirección y coordinamos la entrega.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-q">¿Cuáles son las formas de pago?<svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></button>
+                    <div class="faq-a"><p>Aceptamos pago por Nequi (escanea nuestro QR o envía al 318 587 5211) y también efectivo contra entrega. ¡Tú eliges!</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-q">¿El concentrado es fresco?<svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></button>
+                    <div class="faq-a"><p>¡Por supuesto! Manejamos alta rotación de producto para garantizar que siempre recibas concentrado fresco y en perfecto estado.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-q">¿Puedo pedir cualquier cantidad?<svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></button>
+                    <div class="faq-a"><p>Vendemos desde 1 libra en adelante. Si necesitas una cantidad mayor, ¡escríbenos y te damos un precio especial!</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-q">¿Qué marca me recomiendan para mi perro?<svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></button>
+                    <div class="faq-a"><p>¡Nuestro concentrado PataLlena sabor carne es ideal para perros de todas las razas y tamaños! Escríbenos por WhatsApp y te asesoramos según las necesidades de tu peludo.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contacto">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Encuéntranos</span>
+                <h2>Contacto</h2>
+                <p>Estamos para atenderte. ¡No dudes en escribirnos!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card reveal">
+                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/573185875211" target="_blank" rel="noopener">318 587 5211</a></p>
+                    <p>Respuesta inmediata</p>
+                </div>
+                <div class="contact-card reveal">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                    <h3>Ubicación</h3>
+                    <p>Armenia y todo el Quindío</p>
+                    <p>Domicilio en la región</p>
+                </div>
+                <div class="contact-card reveal">
+                    <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                    <h3>Horario</h3>
+                    <p>Lunes a Sábado</p>
+                    <p>8:00 AM - 7:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <div class="footer-brand">PataLlena</div>
+                <p>Concentrado premium para perros sabor carne en Armenia y todo el Quindío. Tu peludo merece la mejor nutrición al precio más justo. Pedidos fáciles por WhatsApp y pago seguro con Nequi.</p>
+            </div>
+            <div>
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#como-pedir">Cómo Pedir</a></li>
+                    <li><a href="#pago">Pago Nequi</a></li>
+                    <li><a href="#faq">Preguntas</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="https://wa.me/573185875211" target="_blank" rel="noopener">WhatsApp: 318 587 5211</a></li>
+                    <li><a href="#contacto">Armenia, Quindío</a></li>
+                    <li><a href="#pago">Pago Nequi</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 PataLlena - Gutierrez Felipe. Todos los derechos reservados.
+        </div>
+        <div class="footer-seo">
+            Comida para perros en Armenia y Quindío, concentrado premium para mascotas, PataLlena concentrado carne, venta por libra, domicilio mascotas Armenia, domicilio Quindío, pago Nequi mascotas, alimento perros Quindío, tienda mascotas Armenia, comida perros Calarcá, Montenegro, Circasia, La Tebaida, Quimbaya.
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <div class="wa-float">
+        <div class="wa-tooltip">¡Haz tu pedido!</div>
+        <a href="https://wa.me/573185875211?text=Hola%20PataLlena!%20Quiero%20hacer%20un%20pedido%20🐶" class="wa-float-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+    </div>
+
+    <!-- QR LIBRARY -->
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+    <script>
+    // === PRODUCT DATA (Easy to add more!) ===
+    const WHATSAPP = '573185875211';
+    const products = [
+        {
+            brand: 'PataLlena',
+            name: 'PataLlena Concentrado Carne',
+            flavor: 'Concentrado Sabor Carne',
+            weight: '1 Libra',
+            price: 6500,
+            desc: 'Nuestro concentrado premium sabor carne. Nutrición completa para perros de todas las razas y tamaños. ¡Tu peludo lo va a amar!',
+            badge: 'Nuestro Producto Estrella',
+            gradient: 'linear-gradient(135deg, #FF6B35, #FF9800)',
+            icon: 'meat'
+        }
+        // Agrega más productos aquí:
+        // { brand: 'PataLlena', name: 'Nombre', flavor: 'Sabor', weight: '1 Libra', price: 0000, desc: 'Descripción', badge: 'Etiqueta', gradient: 'linear-gradient(135deg, #color1, #color2)', icon: 'meat' },
+    ];
+
+    // === ICONS ===
+    const icons = {
+        meat: `<svg viewBox="0 0 80 80" fill="white"><ellipse cx="40" cy="40" rx="28" ry="22" fill="rgba(255,255,255,.3)"/><ellipse cx="40" cy="40" rx="18" ry="14" fill="rgba(255,255,255,.5)"/><circle cx="35" cy="37" r="5" fill="rgba(255,255,255,.7)"/><circle cx="47" cy="42" r="4" fill="rgba(255,255,255,.6)"/></svg>`,
+        star: `<svg viewBox="0 0 80 80" fill="white" opacity=".6"><path d="M40 10l9.27 18.78L70 31.64l-15 14.62L58.54 67 40 56.89 21.46 67 25 46.26 10 31.64l20.73-2.86z"/></svg>`,
+        heart: `<svg viewBox="0 0 80 80" fill="white" opacity=".5"><path d="M40 70S10 50 10 30a15 15 0 0130 0 15 15 0 0130 0c0 20-30 40-30 40z"/></svg>`,
+        fire: `<svg viewBox="0 0 80 80" fill="white" opacity=".5"><path d="M40 10c0 0-20 20-20 40a20 20 0 0040 0C60 30 40 10 40 10zm0 52a12 12 0 01-12-12c0-8 12-22 12-22s12 14 12 22a12 12 0 01-12 12z"/></svg>`
+    };
+
+    // === RENDER PRODUCTS ===
+    const grid = document.getElementById('productsGrid');
+    products.forEach(p => {
+        const waMsg = encodeURIComponent(`Hola PataLlena! 🐶 Quiero pedir ${p.name} (${p.weight}) a $${p.price.toLocaleString('es-CO')}. ¿Tienen disponible?`);
+        const card = document.createElement('div');
+        card.className = 'product-card reveal';
+        card.innerHTML = `
+            <div class="product-img" style="background:${p.gradient}">
+                ${icons[p.icon]}
+                <span class="product-badge">${p.badge}</span>
+            </div>
+            <div class="product-info">
+                <div class="product-brand">${p.brand}</div>
+                <div class="product-name">${p.flavor}</div>
+                <p class="product-desc">${p.desc}</p>
+                <div class="product-footer">
+                    <div class="product-price">$${p.price.toLocaleString('es-CO')} <small>/ ${p.weight}</small></div>
+                    <a href="https://wa.me/${WHATSAPP}?text=${waMsg}" target="_blank" rel="noopener" class="product-order">Pedir</a>
+                </div>
+            </div>`;
+        grid.appendChild(card);
+    });
+    // "Coming soon" card
+    const addCard = document.createElement('div');
+    addCard.className = 'product-card product-add reveal';
+    addCard.innerHTML = `<div class="product-add-inner">
+        <svg viewBox="0 0 24 24" fill="#FFB74D"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+        <p>Próximamente</p>
+        <span>Más productos y marcas</span>
+    </div>`;
+    grid.appendChild(addCard);
+
+    // === QR CODE ===
+    if(typeof QRious !== 'undefined') {
+        new QRious({ element: document.getElementById('nequiQR'), value: 'nequi:3185875211', size: 200, backgroundAlpha: 0, foreground: '#E91E63', level: 'H' });
+    }
+
+    // === FLOATING BACKGROUND ===
+    (function(){
+        const bg = document.getElementById('floatingBg');
+        const shapes = [
+            // Paw
+            `<svg viewBox="0 0 100 100" fill="currentColor"><ellipse cx="50" cy="68" rx="18" ry="14"/><ellipse cx="28" cy="40" rx="10" ry="12"/><ellipse cx="50" cy="30" rx="9" ry="11"/><ellipse cx="72" cy="40" rx="10" ry="12"/></svg>`,
+            // Bone
+            `<svg viewBox="0 0 120 50" fill="currentColor"><circle cx="18" cy="12" r="12"/><circle cx="18" cy="38" r="12"/><circle cx="102" cy="12" r="12"/><circle cx="102" cy="38" r="12"/><rect x="18" y="12" width="84" height="26" rx="4"/></svg>`,
+            // Large dog
+            `<svg viewBox="0 0 100 80" fill="currentColor"><circle cx="72" cy="20" r="14"/><ellipse cx="48" cy="38" rx="30" ry="18"/><rect x="25" y="52" width="10" height="22" rx="5"/><rect x="40" y="52" width="10" height="24" rx="5"/><rect x="58" y="52" width="10" height="22" rx="5"/><rect x="70" y="52" width="10" height="20" rx="5"/><path d="M18,34 Q8,20 14,10" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round"/></svg>`,
+            // Small dog
+            `<svg viewBox="0 0 80 70" fill="currentColor"><circle cx="56" cy="18" r="12"/><ellipse cx="38" cy="32" rx="22" ry="14"/><ellipse cx="64" cy="10" rx="7" ry="12"/><rect x="20" y="42" width="8" height="18" rx="4"/><rect x="32" y="42" width="8" height="20" rx="4"/><rect x="46" y="42" width="8" height="18" rx="4"/><rect x="56" y="42" width="8" height="16" rx="4"/><path d="M16,28 Q8,16 13,8" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"/></svg>`,
+            // Heart
+            `<svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 88C50 88 10 60 10 35a20 20 0 0140 0 20 20 0 0140 0C90 60 50 88 50 88z"/></svg>`
+        ];
+        const colors = ['#FF6B35','#FFB74D','#E91E63','#4CAF50','#3E2723'];
+        for(let i = 0; i < 22; i++){
+            const el = document.createElement('div');
+            el.className = 'floating-element';
+            el.innerHTML = shapes[Math.floor(Math.random() * shapes.length)];
+            const size = 25 + Math.random() * 55;
+            el.style.cssText = `
+                left:${Math.random()*100}%;
+                width:${size}px;
+                color:${colors[Math.floor(Math.random()*colors.length)]};
+                animation-duration:${18 + Math.random()*22}s;
+                animation-delay:${Math.random()*20}s;
+                --fo:${0.03 + Math.random()*0.05};
+                --rot:${Math.random()>0.5?'360deg':'-360deg'};
+            `;
+            bg.appendChild(el);
+        }
+    })();
+
+    // === NAV SCROLL ===
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // === MOBILE MENU ===
+    document.getElementById('menuToggle').addEventListener('click', function(){
+        document.getElementById('navLinks').classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+        a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+    });
+
+    // === SCROLL REVEAL ===
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // === FAQ TOGGLE ===
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', function(){
+            this.classList.toggle('open');
+            this.nextElementSibling.classList.toggle('open');
+        });
+    });
+    </script>
+</body>
+</html>
