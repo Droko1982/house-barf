@@ -203,14 +203,14 @@
         /* === HERO === */
         .hero{min-height:100vh;display:flex;align-items:center;position:relative;z-index:1;padding:140px 24px 80px;overflow:hidden}
         .hero-bg{position:absolute;inset:0;z-index:-2}
-        .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:35% center;filter:brightness(.35)}
+        .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:35% center;filter:brightness(.5)}
         .hero-overlay{position:absolute;inset:0;z-index:-1;background:var(--hero-ov)}
         .hero-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
-        .hero-text{color:var(--w)}
+        .hero-text{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.5)}
         .hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);color:var(--w);padding:8px 20px;border-radius:50px;font-size:.85rem;font-weight:700;margin-bottom:24px}
         .hero-pill .dot{width:8px;height:8px;background:var(--g);border-radius:50%;animation:dotPulse 1.5s infinite}
         @keyframes dotPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
-        .hero h1{font-family:'Fredoka One',cursive;font-size:clamp(2.4rem,5.5vw,4rem);line-height:1.12;margin-bottom:20px}
+        .hero h1{font-family:'Fredoka One',cursive;font-size:clamp(2.4rem,5.5vw,4rem);line-height:1.12;margin-bottom:20px;text-shadow:0 3px 16px rgba(0,0,0,.6)}
         .hero h1 .highlight{color:var(--a);position:relative}
         .hero h1 .highlight::after{content:'';position:absolute;bottom:-4px;left:0;width:100%;height:6px;background:var(--p);border-radius:3px;opacity:.6}
         .hero-text>p{font-size:1.1rem;opacity:.85;line-height:1.75;margin-bottom:32px;max-width:520px}
@@ -289,6 +289,24 @@
         .qty-opt .qlb{font-family:'Fredoka One',cursive;font-size:1.1rem;color:var(--s);display:block}
         .qty-opt .qpr{font-size:.82rem;color:var(--p);font-weight:700}
         .qty-opt .qdsc{position:absolute;top:-10px;right:-6px;background:var(--g);color:var(--w);font-size:.65rem;font-weight:800;padding:2px 8px;border-radius:10px}
+        .qty-custom{display:flex;align-items:center;gap:8px;margin-top:12px}
+        .qty-custom input{width:90px;padding:10px 12px;border:2px solid var(--bdr);border-radius:12px;background:var(--w);color:var(--t);font-size:1rem;font-weight:700;font-family:'Poppins',sans-serif;text-align:center;transition:border-color .3s}
+        .qty-custom input:focus{outline:none;border-color:var(--p)}
+        .qty-custom input::placeholder{color:var(--t2);font-weight:400;font-size:.85rem}
+        .qty-custom label{font-size:.88rem;color:var(--t2);font-weight:600}
+        .qty-custom .qty-custom-price{font-size:.88rem;color:var(--p);font-weight:700;min-width:80px}
+        .distrib-section{background:var(--step-bg);padding:60px 0;text-align:center}
+        .distrib-section .sec-head h2{color:#fff}
+        .distrib-section .sec-head p{color:rgba(255,255,255,.8)}
+        .distrib-section .tag{background:rgba(255,183,77,.15);color:var(--a)}
+        .distrib-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px}
+        .distrib-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:32px 24px;text-align:center;transition:transform .3s,background .3s}
+        .distrib-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.12)}
+        .distrib-card svg{width:48px;height:48px;fill:var(--a);margin-bottom:16px}
+        .distrib-card h3{color:#fff;font-size:1.1rem;margin-bottom:8px}
+        .distrib-card p{color:rgba(255,255,255,.7);font-size:.9rem;line-height:1.5}
+        .btn-distrib{display:inline-flex;align-items:center;gap:10px;background:var(--wa);color:#fff;padding:16px 36px;border-radius:50px;font-size:1.05rem;font-weight:700;text-decoration:none;margin-top:32px;transition:transform .3s,box-shadow .3s;box-shadow:0 8px 24px rgba(37,211,102,.3)}
+        .btn-distrib:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(37,211,102,.4)}
         .btn-order{width:100%;justify-content:center;font-size:1.1rem;padding:18px 32px}
 
         /* === TESTIMONIALS === */
@@ -720,6 +738,11 @@
                                 <span class="qpr">$45,000</span>
                             </div>
                         </div>
+                        <div class="qty-custom">
+                            <label for="customQty">Otra cantidad:</label>
+                            <input type="number" id="customQty" min="1" max="100" placeholder="Ej: 7" oninput="customQtyChange(this)">
+                            <span class="qty-custom-price" id="customPrice"></span>
+                        </div>
                     </div>
                     <a href="#" id="orderBtn" class="btn btn-wa btn-order" target="_blank" rel="noopener">
                         <svg width="22" height="22" fill="#fff"><use href="#ico-wa"/></svg>
@@ -1115,6 +1138,38 @@
         </div>
     </section>
 
+    <!-- DISTRIBUIDOR -->
+    <section class="distrib-section" id="distribuidor">
+        <div class="container">
+            <div class="sec-head rv">
+                <span class="tag">Únete al Equipo</span>
+                <h2>¿Quieres Ser Distribuidor?</h2>
+                <p>Trabaja con nosotros y lleva House Barf a más hogares del Quindío</p>
+            </div>
+            <div class="distrib-cards">
+                <div class="distrib-card rv rv-d1">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <h3>Producto de Alta Demanda</h3>
+                    <p>Concentrado premium a precio justo que se vende solo. Clientes satisfechos que recompran.</p>
+                </div>
+                <div class="distrib-card rv rv-d2">
+                    <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                    <h3>Excelentes Ganancias</h3>
+                    <p>Márgenes atractivos para distribuidores. Entre más vendas, más ganas.</p>
+                </div>
+                <div class="distrib-card rv rv-d3">
+                    <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                    <h3>Soporte Completo</h3>
+                    <p>Te acompañamos con material, asesoría y toda la información que necesites.</p>
+                </div>
+            </div>
+            <a href="https://wa.me/573185875211?text=Hola%20House%20Barf!%20Quiero%20ser%20distribuidor%20%2F%20trabajar%20con%20ustedes%20%F0%9F%A4%9D" class="btn-distrib" target="_blank" rel="noopener">
+                <svg width="24" height="24" fill="#fff"><use href="#ico-wa"/></svg>
+                Quiero Ser Distribuidor
+            </a>
+        </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contacto">
         <div class="container">
@@ -1164,6 +1219,7 @@
                     <li><a href="#calculadora">Calculadora</a></li>
                     <li><a href="#pago">Pago Nequi</a></li>
                     <li><a href="#faq">Preguntas</a></li>
+                    <li><a href="#distribuidor">Distribuidores</a></li>
                 </ul>
             </div>
             <div>
@@ -1217,10 +1273,24 @@
     function selQty(el){
         document.querySelectorAll('.qty-opt').forEach(o => o.classList.remove('sel'));
         el.classList.add('sel');
-        const qty = el.dataset.qty, price = parseInt(el.dataset.price);
+        document.getElementById('customQty').value = '';
+        document.getElementById('customPrice').textContent = '';
+        updateOrderBtn(el.dataset.qty, parseInt(el.dataset.price));
+    }
+    function customQtyChange(input){
+        const qty = parseInt(input.value);
+        if(!qty || qty < 1){
+            document.getElementById('customPrice').textContent = '';
+            return;
+        }
+        document.querySelectorAll('.qty-opt').forEach(o => o.classList.remove('sel'));
+        const price = qty * 4500;
+        document.getElementById('customPrice').textContent = '$' + price.toLocaleString('es-CO');
+        updateOrderBtn(qty, price);
+    }
+    function updateOrderBtn(qty, price){
         const btn = document.getElementById('orderBtn');
         const priceStr = price.toLocaleString('es-CO');
-        btn.textContent = '';
         btn.innerHTML = `<svg width="22" height="22" fill="#fff"><use href="#ico-wa"/></svg> Pedir ${qty} lb por WhatsApp — $${priceStr}`;
         const msg = encodeURIComponent(`Hola House Barf! 🐶 Quiero pedir ${qty} libra(s) de Concentrado Pollo y Verduras por $${priceStr}. (desde producto)`);
         btn.href = `https://wa.me/${WA}?text=${msg}`;
