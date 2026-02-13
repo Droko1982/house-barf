@@ -1200,7 +1200,7 @@
     <button class="btt" id="btt" aria-label="Volver arriba">↑</button>
 
     <!-- SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js" onload="new QRious({element:document.getElementById('nequiQR'),value:'nequi:3185875211',size:180,backgroundAlpha:0,foreground:'#E91E63',level:'H'})"></script>
     <script>
     const WA = '573185875211';
 
@@ -1211,10 +1211,7 @@
 
     // (countdown removed - no promotions)
 
-    // === QR CODE (runs after deferred QRious loads) ===
-    window.addEventListener('load', () => {
-        if(typeof QRious !== 'undefined') new QRious({element:document.getElementById('nequiQR'),value:'nequi:3185875211',size:180,backgroundAlpha:0,foreground:'#E91E63',level:'H'});
-    });
+    // === QR CODE: initialized via onload on the QRious script tag ===
 
     // === QUANTITY SELECTOR ===
     function selQty(el){
