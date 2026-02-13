@@ -170,7 +170,13 @@
         .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2.5px;background:var(--p);border-radius:2px;transition:width .3s}
         .nav-links a:hover{color:var(--p)}
         .nav-links a:hover::after{width:100%}
-        .nav-cta{background:var(--wa)!important;color:var(--w)!important;padding:10px 22px;border-radius:50px;font-weight:700!important;transition:all .3s!important;box-shadow:0 4px 15px rgba(37,211,102,.3)}
+        .nav:not(.scrolled) .nav-links a{color:rgba(255,255,255,.9)}
+        .nav:not(.scrolled) .nav-links a:hover{color:#fff}
+        .nav:not(.scrolled) .logo{color:#fff}
+        .nav:not(.scrolled) .theme-toggle{border-color:rgba(255,255,255,.45);color:rgba(255,255,255,.9)}
+        .nav:not(.scrolled) .theme-toggle:hover{border-color:#fff;color:#fff}
+        .nav:not(.scrolled) .burger span{background:#fff}
+        .nav-cta{background:var(--wa)!important;color:#fff!important;padding:10px 22px;border-radius:50px;font-weight:700!important;transition:all .3s!important;box-shadow:0 4px 15px rgba(37,211,102,.3)}
         .nav-cta:hover{transform:translateY(-2px)!important;box-shadow:0 8px 25px rgba(37,211,102,.4)!important}
         .nav-cta::after{display:none!important}
         .burger{display:none;background:none;border:none;cursor:pointer;width:32px;height:24px;position:relative}
