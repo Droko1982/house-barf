@@ -28,13 +28,15 @@
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1656138899262-1faa4ae4bef6?w=1200&h=630&q=80&fit=crop">
     <link rel="dns-prefetch" href="https://images.unsplash.com">
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <meta name="theme-color" content="#FF6B35" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1A1210" media="(prefers-color-scheme: dark)">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
     <script type="application/ld+json">
     [{
         "@context":"https://schema.org","@type":"LocalBusiness","name":"House Barf - Comida para Perros Armenia Quindío",
         "alternateName":"House Barf","description":"Venta de comida para perros en Armenia y todo el Quindío. Concentrado premium sabor carne a $4,500 la libra con domicilio gratis. Pedidos por WhatsApp.",
         "url":"https://quickappraiser.github.io/house-barf/",
-        "address":{"@type":"PostalAddress","streetAddress":"Armenia","addressLocality":"Armenia","addressRegion":"Quindío","postalCode":"630001","addressCountry":"CO"},
+        "address":{"@type":"PostalAddress","streetAddress":"Calle 17 #22-25","addressLocality":"Armenia","addressRegion":"Quindío","postalCode":"630001","addressCountry":"CO"},
         "geo":{"@type":"GeoCoordinates","latitude":"4.5339","longitude":"-75.6811"},
         "telephone":"+573185875211","priceRange":"$4,500 COP/lb","paymentAccepted":"Nequi, Efectivo",
         "areaServed":[{"@type":"City","name":"Armenia"},{"@type":"City","name":"Calarcá"},{"@type":"City","name":"Montenegro"},{"@type":"City","name":"Circasia"},{"@type":"City","name":"La Tebaida"},{"@type":"City","name":"Quimbaya"},{"@type":"AdministrativeArea","name":"Quindío"}],
@@ -56,6 +58,14 @@
             {"@type":"Question","name":"¿Cuál es la mejor comida para perros en Armenia Quindío?","acceptedAnswer":{"@type":"Answer","text":"House Barf ofrece concentrado premium sabor carne con proteína real, ideal para perros de todas las razas. Domicilio gratis en todo el Quindío."}},
             {"@type":"Question","name":"¿Venden comida para perros en Calarcá y Montenegro?","acceptedAnswer":{"@type":"Answer","text":"Sí, House Barf hace domicilio gratis de comida para perros en Calarcá, Montenegro, Circasia, La Tebaida, Quimbaya y todo el Quindío."}}
         ]
+    },{
+        "@context":"https://schema.org","@type":"Organization","name":"House Barf",
+        "url":"https://quickappraiser.github.io/house-barf/","telephone":"+573185875211",
+        "address":{"@type":"PostalAddress","streetAddress":"Calle 17 #22-25","addressLocality":"Armenia","addressRegion":"Quindío","postalCode":"630001","addressCountry":"CO"},
+        "slogan":"Patitas Llenas, Colas Contentas","knowsLanguage":"es"
+    },{
+        "@context":"https://schema.org","@type":"BreadcrumbList",
+        "itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://quickappraiser.github.io/house-barf/"}]
     }]
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,8 +78,57 @@
             --wa:#25D366;--nq:#E91E63;--bg:#FFF8F0;--bg2:#FFF3E0;
             --t:#2C1810;--t2:#5D4037;--w:#FFF;--r:20px;
             --sh:0 10px 40px rgba(62,39,35,.12);--shh:0 20px 60px rgba(62,39,35,.22);
+            --dot:#ddd;--star:#FFC107;--bdr:#e0d5cc;--foot-bg:#1B0E0A;
+            --fb:#1877F2;--nav-bg:rgba(255,248,240,.97);--nav-mob:rgba(255,248,240,.98);
+            --hero-ov:linear-gradient(135deg,rgba(62,39,35,.85) 0%,rgba(255,107,53,.4) 50%,rgba(255,183,77,.3) 100%);
+            --test-bg:linear-gradient(135deg,#FFF8F0,#FFE0B2);
+            --step-bg:linear-gradient(135deg,#3E2723 0%,#5D4037 100%);
+            --contact-bg:linear-gradient(135deg,#3E2723,#4E342E);
+            --nq-bg:linear-gradient(135deg,#E91E63,#AD1457);
         }
+        @media(prefers-color-scheme:dark){
+            :root{
+                --p:#FF7B45;--pd:#FF6B35;--s:#D7CCC8;--a:#FFCC80;--g:#66BB6A;
+                --wa:#2BDB6E;--nq:#F06292;--bg:#1A1210;--bg2:#2C1E18;
+                --t:#F5E6D8;--t2:#BCAAA4;--w:#2A1F1A;--r:20px;
+                --sh:0 10px 40px rgba(0,0,0,.3);--shh:0 20px 60px rgba(0,0,0,.45);
+                --dot:#4A3830;--star:#FFD54F;--bdr:#3E2E26;--foot-bg:#110C09;
+                --fb:#4293F5;--nav-bg:rgba(26,18,16,.97);--nav-mob:rgba(26,18,16,.98);
+                --hero-ov:linear-gradient(135deg,rgba(10,6,4,.9) 0%,rgba(255,107,53,.3) 50%,rgba(255,183,77,.2) 100%);
+                --test-bg:linear-gradient(135deg,#1A1210,#2C1E18);
+                --step-bg:linear-gradient(135deg,#110C09 0%,#2C1E18 100%);
+                --contact-bg:linear-gradient(135deg,#110C09,#1A1210);
+                --nq-bg:linear-gradient(135deg,#F06292,#C2185B);
+            }
+            html{color-scheme:dark}
+            .hero-bg img{filter:brightness(.2)}
+            .carousel-arrow{background:rgba(0,0,0,.6);color:var(--t)}
+            .gallery-grid .gi::after{background:linear-gradient(transparent 50%,rgba(0,0,0,.5))}
+            .faq-i{box-shadow:0 2px 12px rgba(0,0,0,.2)}
+            .faq-i:hover{box-shadow:0 4px 20px rgba(0,0,0,.3)}
+            .trust-bar{border-bottom:1px solid rgba(255,255,255,.06)}
+            .mob-cta{box-shadow:0 -4px 20px rgba(0,0,0,.3);border-top:1px solid rgba(255,255,255,.06)}
+            .qr-box{background:#fff!important}
+            .wa-fl-btn svg{fill:#fff}
+            .calc-result{box-shadow:0 4px 15px rgba(0,0,0,.2)}
+            .promo-bar{color:#fff}
+            .nav-cta{color:#fff!important}
+            .btn-wa{color:#fff}
+            .mob-cta a{color:#fff}
+            .foot-bot{border-top:1px solid rgba(255,255,255,.06)}
+            .foot-seo{border-top:1px solid rgba(255,255,255,.03)}
+            .img-fallback{background:linear-gradient(135deg,var(--p),var(--a))!important}
+        }
+        @media(prefers-reduced-motion:reduce){
+            *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+            .floating-bg{display:none}
+            .rv,.rv-l,.rv-r{opacity:1;transform:none}
+            .loader{display:none}
+            html{scroll-behavior:auto}
+        }
+        .img-fallback{background:linear-gradient(135deg,var(--p),var(--a))!important}
         html{scroll-behavior:smooth}
+        #testimonios,#galeria,#transformacion,#consejos,#comunidad,#garantia,#pago,#faq{content-visibility:auto;contain-intrinsic-size:auto 600px}
         body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--t);overflow-x:hidden}
 
         /* === LOADER === */
@@ -88,13 +147,14 @@
 
         /* === FLOATING BG === */
         .floating-bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-        .fl{position:absolute;opacity:0;animation:flUp linear infinite}
+        .fl{position:absolute;opacity:0;animation:flUp linear infinite;will-change:transform,opacity;contain:layout style}
+        .floating-bg{contain:strict}
         @keyframes flUp{0%{transform:translateY(105vh) rotate(0deg) scale(var(--sc,1));opacity:0}5%{opacity:var(--fo,.05)}90%{opacity:var(--fo,.05)}100%{transform:translateY(-15vh) rotate(var(--ro,360deg)) scale(var(--sc,1));opacity:0}}
 
         /* === NAV === */
         .nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:12px 0;transition:all .4s cubic-bezier(.4,0,.2,1)}
         .nav.has-promo{top:40px}
-        .nav.scrolled{background:rgba(255,248,240,.97);backdrop-filter:blur(16px);box-shadow:0 4px 30px rgba(0,0,0,.08);top:0;padding:8px 0}
+        .nav.scrolled{background:var(--nav-bg);backdrop-filter:blur(16px);box-shadow:0 4px 30px rgba(0,0,0,.08);top:0;padding:8px 0}
         .nav-in{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
         .logo{font-family:'Fredoka One',cursive;font-size:1.7rem;color:var(--p);text-decoration:none;display:flex;align-items:center;gap:8px;transition:transform .3s}
         .logo:hover{transform:scale(1.03)}
@@ -120,7 +180,7 @@
         .hero{min-height:100vh;display:flex;align-items:center;position:relative;z-index:1;padding:140px 24px 80px;overflow:hidden}
         .hero-bg{position:absolute;inset:0;z-index:-2}
         .hero-bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.35)}
-        .hero-overlay{position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,rgba(62,39,35,.85) 0%,rgba(255,107,53,.4) 50%,rgba(255,183,77,.3) 100%)}
+        .hero-overlay{position:absolute;inset:0;z-index:-1;background:var(--hero-ov)}
         .hero-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
         .hero-text{color:var(--w)}
         .hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);color:var(--w);padding:8px 20px;border-radius:50px;font-size:.85rem;font-weight:700;margin-bottom:24px}
@@ -184,7 +244,7 @@
         .prod-carousel:hover .carousel-arrow{opacity:1}
         .carousel-arrow:hover{background:var(--p);color:var(--w);transform:scale(1.1)}
         .carousel-dots{display:flex;gap:8px;justify-content:center;margin-top:16px}
-        .carousel-dot{width:10px;height:10px;border-radius:50%;background:#ddd;border:none;cursor:pointer;transition:all .3s;padding:0}
+        .carousel-dot{width:10px;height:10px;border-radius:50%;background:var(--dot);border:none;cursor:pointer;transition:all .3s;padding:8px;background-clip:content-box}
         .carousel-dot.active{background:var(--p);transform:scale(1.3)}
         .carousel-counter{position:absolute;top:16px;right:16px;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);color:var(--w);padding:6px 14px;border-radius:20px;font-size:.75rem;font-weight:700;z-index:2;letter-spacing:1px}
         .prod-details h2{font-family:'Fredoka One',cursive;font-size:clamp(1.6rem,3.5vw,2.4rem);color:var(--s);margin-bottom:8px}
@@ -200,7 +260,7 @@
         .qty-section{margin-bottom:24px}
         .qty-section h4{font-weight:700;font-size:.9rem;color:var(--s);margin-bottom:12px}
         .qty-options{display:flex;gap:10px;flex-wrap:wrap}
-        .qty-opt{padding:10px 20px;border-radius:12px;border:2px solid #e0d5cc;background:var(--w);cursor:pointer;transition:all .3s;text-align:center;min-width:90px;position:relative}
+        .qty-opt{padding:10px 20px;border-radius:12px;border:2px solid var(--bdr);background:var(--w);cursor:pointer;transition:all .3s;text-align:center;min-width:90px;position:relative}
         .qty-opt:hover,.qty-opt.sel{border-color:var(--p);background:var(--bg2)}
         .qty-opt .qlb{font-family:'Fredoka One',cursive;font-size:1.1rem;color:var(--s);display:block}
         .qty-opt .qpr{font-size:.82rem;color:var(--p);font-weight:700}
@@ -208,12 +268,12 @@
         .btn-order{width:100%;justify-content:center;font-size:1.1rem;padding:18px 32px}
 
         /* === TESTIMONIALS === */
-        #testimonios{background:linear-gradient(135deg,#FFF8F0,#FFE0B2)}
+        #testimonios{background:var(--test-bg)}
         .test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
         .test-card{background:var(--w);border-radius:var(--r);padding:32px;box-shadow:var(--sh);transition:all .4s cubic-bezier(.4,0,.2,1);position:relative}
         .test-card:hover{transform:translateY(-6px);box-shadow:var(--shh)}
         .test-card::before{content:'"';position:absolute;top:16px;right:24px;font-family:'Fredoka One',cursive;font-size:4rem;color:var(--p);opacity:.12;line-height:1}
-        .test-stars{color:#FFC107;font-size:1.1rem;margin-bottom:12px;letter-spacing:2px}
+        .test-stars{color:var(--star);font-size:1.1rem;margin-bottom:12px;letter-spacing:2px}
         .test-card blockquote{font-size:.95rem;color:var(--t2);line-height:1.7;margin-bottom:20px;font-style:italic}
         .test-author{display:flex;align-items:center;gap:14px}
         .test-avatar{width:50px;height:50px;border-radius:50%;overflow:hidden;border:3px solid var(--bg2);flex-shrink:0}
@@ -232,7 +292,7 @@
         .gallery-grid .gi:nth-child(1){grid-column:span 2;grid-row:span 2}
 
         /* === STEPS === */
-        #como-pedir{background:linear-gradient(135deg,var(--s) 0%,#5D4037 100%);color:var(--w)}
+        #como-pedir{background:var(--step-bg);color:var(--w)}
         #como-pedir .tag{background:rgba(255,255,255,.12);color:var(--a)}
         #como-pedir .sec-head h2{color:var(--w)}
         #como-pedir .sec-head p{color:rgba(255,255,255,.65)}
@@ -264,7 +324,7 @@
         /* === NEQUI === */
         #pago{background:var(--w)}
         .nq-wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-        .nq-qr{background:linear-gradient(135deg,#E91E63,#AD1457);border-radius:24px;padding:44px;text-align:center;color:var(--w);position:relative;overflow:hidden}
+        .nq-qr{background:var(--nq-bg);border-radius:24px;padding:44px;text-align:center;color:var(--w);position:relative;overflow:hidden}
         .nq-qr::before{content:'';position:absolute;top:-30px;left:-30px;width:120px;height:120px;background:rgba(255,255,255,.08);border-radius:50%}
         .nq-qr::after{content:'';position:absolute;bottom:-20px;right:-20px;width:80px;height:80px;background:rgba(255,255,255,.06);border-radius:50%}
         .nq-qr h3{font-family:'Fredoka One',cursive;font-size:1.5rem;margin-bottom:6px;position:relative}
@@ -292,7 +352,7 @@
         .faq-a p{font-size:.9rem;color:var(--t2);line-height:1.7}
 
         /* === CONTACT === */
-        #contacto{background:linear-gradient(135deg,var(--s),#4E342E);color:var(--w)}
+        #contacto{background:var(--contact-bg);color:var(--w)}
         #contacto .tag{background:rgba(255,255,255,.12);color:var(--a)}
         #contacto .sec-head h2{color:var(--w)}
         #contacto .sec-head p{color:rgba(255,255,255,.6)}
@@ -305,7 +365,7 @@
         .cc a{color:var(--a);text-decoration:none;font-weight:700}
 
         /* === FOOTER === */
-        footer{background:#1B0E0A;color:rgba(255,255,255,.55);padding:50px 24px 20px;position:relative;z-index:1}
+        footer{background:var(--foot-bg);color:rgba(255,255,255,.55);padding:50px 24px 20px;position:relative;z-index:1}
         .foot-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
         .foot-brand{font-family:'Fredoka One',cursive;font-size:1.4rem;color:var(--p);margin-bottom:10px}
         footer p{font-size:.85rem;line-height:1.7}
@@ -339,7 +399,7 @@
         .calc-wrap{max-width:700px;margin:0 auto}
         .calc-card{background:var(--bg);border-radius:24px;padding:40px 36px;box-shadow:var(--sh)}
         .calc-size-btns{display:flex;gap:10px;margin-bottom:28px;justify-content:center}
-        .calc-size-btn{padding:12px 24px;border-radius:50px;border:2px solid #e0d5cc;background:var(--w);cursor:pointer;font-family:inherit;font-weight:700;font-size:.88rem;color:var(--t2);transition:all .3s;display:flex;align-items:center;gap:8px}
+        .calc-size-btn{padding:12px 24px;border-radius:50px;border:2px solid var(--bdr);background:var(--w);cursor:pointer;font-family:inherit;font-weight:700;font-size:.88rem;color:var(--t2);transition:all .3s;display:flex;align-items:center;gap:8px}
         .calc-size-btn:hover,.calc-size-btn.active{border-color:var(--p);background:var(--bg2);color:var(--p)}
         .calc-size-btn svg{width:28px;height:28px;transition:transform .3s}
         .calc-size-btn.active svg{transform:scale(1.15)}
@@ -371,7 +431,7 @@
         .share-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:50px;font-weight:700;font-size:.88rem;text-decoration:none;transition:all .3s;border:none;cursor:pointer;font-family:inherit}
         .share-btn:hover{transform:translateY(-2px)}
         .share-btn-wa{background:var(--wa);color:var(--w);box-shadow:0 4px 15px rgba(37,211,102,.3)}
-        .share-btn-fb{background:#1877F2;color:var(--w);box-shadow:0 4px 15px rgba(24,119,242,.3)}
+        .share-btn-fb{background:var(--fb);color:var(--w);box-shadow:0 4px 15px rgba(24,119,242,.3)}
         .share-btn-ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:var(--w);box-shadow:0 4px 15px rgba(220,39,67,.3)}
         .share-btn svg{width:18px;height:18px;fill:currentColor}
 
@@ -433,7 +493,7 @@
         }
         @media(max-width:700px){
             .promo-bar{font-size:.78rem;padding:8px 14px}
-            .nav-links{display:none;position:fixed;inset:0;background:rgba(255,248,240,.98);backdrop-filter:blur(20px);flex-direction:column;justify-content:center;align-items:center;gap:28px;z-index:999}
+            .nav-links{display:none;position:fixed;inset:0;background:var(--nav-mob);backdrop-filter:blur(20px);flex-direction:column;justify-content:center;align-items:center;gap:28px;z-index:999}
             .nav-links.open{display:flex}
             .nav-links a{font-size:1.2rem}
             .burger{display:block}
@@ -458,6 +518,10 @@
     </style>
 </head>
 <body>
+    <!-- SVG SYMBOLS -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none"><symbol id="ico-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol></svg>
+    <!-- SKIP NAV -->
+    <a href="#producto" class="skip-link" style="position:absolute;left:-9999px;top:0;z-index:100000;padding:12px 24px;background:var(--p);color:#fff;font-weight:700;font-size:1rem;text-decoration:none;border-radius:0 0 8px 0" onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Ir al contenido principal</a>
     <!-- LOADER -->
     <div class="loader" id="loader">
         <div class="loader-paw"><svg viewBox="0 0 100 100"><ellipse cx="50" cy="68" rx="20" ry="16"/><ellipse cx="28" cy="38" rx="11" ry="13"/><ellipse cx="50" cy="28" rx="10" ry="12"/><ellipse cx="72" cy="38" rx="11" ry="13"/></svg></div>
@@ -473,10 +537,10 @@
     </div>
 
     <!-- NAV -->
-    <nav class="nav has-promo" id="mainNav">
+    <nav class="nav has-promo" id="mainNav" aria-label="Menú principal">
         <div class="nav-in">
             <a href="#" class="logo">
-                <svg viewBox="0 0 100 100" fill="#FF6B35"><ellipse cx="50" cy="68" rx="20" ry="16"/><ellipse cx="28" cy="38" rx="11" ry="13"/><ellipse cx="50" cy="28" rx="10" ry="12"/><ellipse cx="72" cy="38" rx="11" ry="13"/></svg>
+                <svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="68" rx="20" ry="16"/><ellipse cx="28" cy="38" rx="11" ry="13"/><ellipse cx="50" cy="28" rx="10" ry="12"/><ellipse cx="72" cy="38" rx="11" ry="13"/></svg>
                 House Barf
             </a>
             <span style="display:none" class="logo-motto">Patitas Llenas, Colas Contentas</span>
@@ -488,14 +552,15 @@
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="https://wa.me/573185875211?text=Hola%20House%20Barf!%20Quiero%20pedir%20concentrado%20%F0%9F%90%B6%20(desde%20men%C3%BA)" class="nav-cta" target="_blank" rel="noopener">¡Pedir Ahora!</a></li>
             </ul>
-            <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+            <button class="burger" id="burger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
         </div>
     </nav>
 
+    <main>
     <!-- HERO -->
     <section class="hero" id="inicio">
         <div class="hero-bg">
-            <img src="https://images.unsplash.com/photo-1665333354010-050f08f35907?w=1400&q=80&fit=crop" alt="Perros felices corriendo - House Barf comida para perros" loading="eager" onerror="this.style.display='none'">
+            <img src="https://images.unsplash.com/photo-1665333354010-050f08f35907?w=1400&q=80&fit=crop" alt="Perros felices corriendo - House Barf comida para perros" loading="eager" fetchpriority="high" onerror="this.style.display='none'">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-in">
@@ -506,7 +571,7 @@
                 <p>Concentrado premium sabor carne a <strong>$4,500 la libra</strong>. Domicilio gratis en Armenia, Calarcá, Montenegro, Circasia y todo el Quindío. Pide por WhatsApp, paga con Nequi.</p>
                 <div class="hero-btns">
                     <a href="https://wa.me/573185875211?text=Hola%20House%20Barf!%20Quiero%20pedir%20concentrado%20%F0%9F%90%B6%20(v%C3%AD%20la%20p%C3%A1gina%20web)" class="btn btn-wa" target="_blank" rel="noopener">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        <svg width="22" height="22" fill="#fff"><use href="#ico-wa"/></svg>
                         Pedir por WhatsApp
                     </a>
                     <a href="#producto" class="btn btn-sec">Ver Producto ↓</a>
@@ -568,20 +633,20 @@
             </div>
             <div class="prod-wrap">
                 <div class="prod-gallery rv-l">
-                    <div class="prod-carousel" id="prodCarousel">
+                    <div class="prod-carousel" id="prodCarousel" role="region" aria-roledescription="carrusel" aria-label="Galería de producto">
                         <div class="slides" id="prodSlides">
-                            <div class="slide"><img src="https://images.unsplash.com/photo-1673474025690-eacc81e21daa?w=800&q=80&fit=crop" alt="Rottweiler fuerte y saludable alimentado con House Barf en Armenia Quindío" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#3E2723,#8D6E63)'"><div class="slide-caption">Rottweiler fuerte y saludable</div></div>
-                            <div class="slide"><img src="https://images.unsplash.com/photo-1656138899262-1faa4ae4bef6?w=800&q=80&fit=crop" alt="Rottweiler mirando a cámara - comida para perros House Barf Quindío" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#3E2723,#795548)'"><div class="slide-caption">Mirada atenta y lleno de energía</div></div>
-                            <div class="slide"><img src="https://images.unsplash.com/photo-1598819849325-f0152d605b08?w=800&q=80&fit=crop" alt="Cachorro Rottweiler nutrido con concentrado House Barf Armenia" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#5D4037,#8D6E63)'"><div class="slide-caption">Cachorro Rottweiler bien nutrido</div></div>
-                            <div class="slide"><img src="https://images.unsplash.com/photo-1665333354010-050f08f35907?w=800&q=80&fit=crop" alt="Rottweiler en campo - alimentación premium House Barf Quindío" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B35,#FFB74D)'"><div class="slide-caption">Energía para explorar todo el día</div></div>
-                            <div class="slide"><img src="https://images.unsplash.com/photo-1644563320037-71630d8515b0?w=800&q=80&fit=crop" alt="Rottweiler adulto fuerte con pelaje brillante House Barf" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#3E2723,#5D4037)'"><div class="slide-caption">Pelaje brillante y músculos fuertes</div></div>
-                            <div class="slide"><img src="https://images.unsplash.com/photo-1669109947479-728a0d33b9b2?w=800&q=80&fit=crop" alt="Rottweiler feliz después de comer concentrado House Barf" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#795548,#BCAAA4)'"><div class="slide-caption">Feliz después de comer House Barf</div></div>
-                            <div class="slide"><img src="https://images.unsplash.com/photo-1644732368811-1d10e6832818?w=800&q=80&fit=crop" alt="Rottweiler en campo verde - nutrición completa House Barf Armenia Quindío" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#4CAF50,#81C784)'"><div class="slide-caption">Nutrición para una vida activa</div></div>
-                            <div class="slide"><img src="https://images.unsplash.com/photo-1643724767394-ebe3e2ff296a?w=800&q=80&fit=crop" alt="Rottweiler aventurero - concentrado premium House Barf Quindío Colombia" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#E3F2FD,#90CAF9)'"><div class="slide-caption">Listo para cualquier aventura</div></div>
-                            <div class="slide"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=800&q=80&fit=crop" alt="Golden Retriever saludable con comida para perros House Barf Armenia" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFB74D,#FF8F00)'"><div class="slide-caption">Golden Retriever radiante de salud</div></div>
-                            <div class="slide"><img src="https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=800&q=80&fit=crop" alt="Pastor Alemán fuerte alimentado con concentrado House Barf Quindío" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#5D4037,#8D6E63)'"><div class="slide-caption">Pastor Alemán con energía total</div></div>
-                            <div class="slide"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80&fit=crop" alt="Labrador feliz nutrido con House Barf comida para perros Armenia Quindío" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFE0B2,#FFCC80)'"><div class="slide-caption">Labrador feliz y bien alimentado</div></div>
-                            <div class="slide"><img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=800&q=80&fit=crop" alt="Perro pequeño adorable con comida premium House Barf Armenia" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#795548,#D7CCC8)'"><div class="slide-caption">Hasta los más pequeños lo aman</div></div>
+                            <div class="slide"><img src="https://images.unsplash.com/photo-1673474025690-eacc81e21daa?w=800&q=80&fit=crop" alt="Rottweiler fuerte y saludable alimentado con House Barf en Armenia Quindío" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#3E2723,#8D6E63)'"><div class="slide-caption">Rottweiler fuerte y saludable</div></div>
+                            <div class="slide"><img src="https://images.unsplash.com/photo-1656138899262-1faa4ae4bef6?w=800&q=80&fit=crop" alt="Rottweiler mirando a cámara - comida para perros House Barf Quindío" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#3E2723,#795548)'"><div class="slide-caption">Mirada atenta y lleno de energía</div></div>
+                            <div class="slide"><img src="https://images.unsplash.com/photo-1598819849325-f0152d605b08?w=800&q=80&fit=crop" alt="Cachorro Rottweiler nutrido con concentrado House Barf Armenia" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#5D4037,#8D6E63)'"><div class="slide-caption">Cachorro Rottweiler bien nutrido</div></div>
+                            <div class="slide"><img src="https://images.unsplash.com/photo-1665333354010-050f08f35907?w=800&q=80&fit=crop" alt="Rottweiler en campo - alimentación premium House Barf Quindío" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B35,#FFB74D)'"><div class="slide-caption">Energía para explorar todo el día</div></div>
+                            <div class="slide"><img src="https://images.unsplash.com/photo-1644563320037-71630d8515b0?w=800&q=80&fit=crop" alt="Rottweiler adulto fuerte con pelaje brillante House Barf" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#3E2723,#5D4037)'"><div class="slide-caption">Pelaje brillante y músculos fuertes</div></div>
+                            <div class="slide"><img src="https://images.unsplash.com/photo-1669109947479-728a0d33b9b2?w=800&q=80&fit=crop" alt="Rottweiler feliz después de comer concentrado House Barf" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#795548,#BCAAA4)'"><div class="slide-caption">Feliz después de comer House Barf</div></div>
+                            <div class="slide"><img src="https://images.unsplash.com/photo-1644732368811-1d10e6832818?w=800&q=80&fit=crop" alt="Rottweiler en campo verde - nutrición completa House Barf Armenia Quindío" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#4CAF50,#81C784)'"><div class="slide-caption">Nutrición para una vida activa</div></div>
+                            <div class="slide"><img src="https://images.unsplash.com/photo-1643724767394-ebe3e2ff296a?w=800&q=80&fit=crop" alt="Rottweiler aventurero - concentrado premium House Barf Quindío Colombia" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#E3F2FD,#90CAF9)'"><div class="slide-caption">Listo para cualquier aventura</div></div>
+                            <div class="slide"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=800&q=80&fit=crop" alt="Golden Retriever saludable con comida para perros House Barf Armenia" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFB74D,#FF8F00)'"><div class="slide-caption">Golden Retriever radiante de salud</div></div>
+                            <div class="slide"><img src="https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=800&q=80&fit=crop" alt="Pastor Alemán fuerte alimentado con concentrado House Barf Quindío" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#5D4037,#8D6E63)'"><div class="slide-caption">Pastor Alemán con energía total</div></div>
+                            <div class="slide"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80&fit=crop" alt="Labrador feliz nutrido con House Barf comida para perros Armenia Quindío" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFE0B2,#FFCC80)'"><div class="slide-caption">Labrador feliz y bien alimentado</div></div>
+                            <div class="slide"><img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=800&q=80&fit=crop" alt="Perro pequeño adorable con comida premium House Barf Armenia" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#795548,#D7CCC8)'"><div class="slide-caption">Hasta los más pequeños lo aman</div></div>
                         </div>
                         <div class="carousel-arrows">
                             <button class="carousel-arrow" onclick="moveSlide(-1)" aria-label="Anterior">&#8249;</button>
@@ -627,7 +692,7 @@
                         </div>
                     </div>
                     <a href="#" id="orderBtn" class="btn btn-wa btn-order" target="_blank" rel="noopener">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        <svg width="22" height="22" fill="#fff"><use href="#ico-wa"/></svg>
                         Pedir 1 lb por WhatsApp — $4,500
                     </a>
                 </div>
@@ -684,7 +749,7 @@
                         </div>
                     </div>
                     <a href="#" id="calcOrderBtn" class="calc-order-btn" target="_blank" rel="noopener">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        <svg width="20" height="20" fill="#fff"><use href="#ico-wa"/></svg>
                         Pedir 13 lb por WhatsApp — $58,500
                     </a>
                 </div>
@@ -702,42 +767,42 @@
             </div>
             <div class="test-grid">
                 <div class="test-card rv rv-d1">
-                    <div class="test-stars">★★★★★</div>
+                    <div class="test-stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
                     <blockquote>"Mi Rocky es Rottweiler de 45kg y con otras marcas siempre quedaba con hambre. Desde que probó House Barf no deja ni una migaja. En 3 semanas se le notó el pelaje más brillante y tiene más energía para jugar."</blockquote>
                     <div class="test-author">
-                        <div class="test-avatar"><img src="https://images.unsplash.com/photo-1665333354010-050f08f35907?w=100&q=70&fit=crop" alt="Rocky - Rottweiler en Armenia" loading="lazy" onerror="this.parentElement.style.background='var(--bg2)'"></div>
+                        <div class="test-avatar"><img src="https://images.unsplash.com/photo-1665333354010-050f08f35907?w=100&q=70&fit=crop" alt="Rocky - Rottweiler en Armenia" loading="lazy" decoding="async" onerror="this.parentElement.style.background='var(--bg2)'"></div>
                         <div><strong>Camila Restrepo</strong><span>Armenia, Centro — Rocky, Rottweiler</span></div>
                     </div>
                 </div>
                 <div class="test-card rv rv-d2">
-                    <div class="test-stars">★★★★★</div>
+                    <div class="test-stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
                     <blockquote>"Excelente servicio. Felipe me lleva el pedido hasta Calarcá super rápido. Mi Luna es Golden y antes era muy mañosa con la comida. Con House Barf come feliz. 100% recomendado para cualquier raza."</blockquote>
                     <div class="test-author">
-                        <div class="test-avatar"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=100&q=70&fit=crop" alt="Luna - Golden Retriever en Calarcá" loading="lazy" onerror="this.parentElement.style.background='var(--bg2)'"></div>
+                        <div class="test-avatar"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=100&q=70&fit=crop" alt="Luna - Golden Retriever en Calarcá" loading="lazy" decoding="async" onerror="this.parentElement.style.background='var(--bg2)'"></div>
                         <div><strong>Andrés Muñoz</strong><span>Calarcá — Luna, Golden Retriever</span></div>
                     </div>
                 </div>
                 <div class="test-card rv rv-d3">
-                    <div class="test-stars">★★★★★</div>
+                    <div class="test-stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
                     <blockquote>"Tengo 3 perros: un Pastor Alemán, un mestizo y un French Poodle. Antes gastaba una fortuna en marcas diferentes. Con House Barf los 3 comen lo mismo, les encanta y rinde más. ¡Gracias Felipe!"</blockquote>
                     <div class="test-author">
-                        <div class="test-avatar"><img src="https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=100&q=70&fit=crop" alt="Max - Pastor Alemán en Montenegro" loading="lazy" onerror="this.parentElement.style.background='var(--bg2)'"></div>
+                        <div class="test-avatar"><img src="https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=100&q=70&fit=crop" alt="Max - Pastor Alemán en Montenegro" loading="lazy" decoding="async" onerror="this.parentElement.style.background='var(--bg2)'"></div>
                         <div><strong>María José Patiño</strong><span>Montenegro — Max, Pastor Alemán</span></div>
                     </div>
                 </div>
                 <div class="test-card rv rv-d4">
-                    <div class="test-stars">★★★★★</div>
+                    <div class="test-stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
                     <blockquote>"Soy veterinario y recomiendo House Barf a mis pacientes en Circasia. La relación proteína-precio es inmejorable. Mis propios 2 Labradores lo comen desde hace meses y están en condición física óptima."</blockquote>
                     <div class="test-author">
-                        <div class="test-avatar"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&q=70&fit=crop" alt="Labrador en Circasia Quindío" loading="lazy" onerror="this.parentElement.style.background='var(--bg2)'"></div>
+                        <div class="test-avatar"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&q=70&fit=crop" alt="Labrador en Circasia Quindío" loading="lazy" decoding="async" onerror="this.parentElement.style.background='var(--bg2)'"></div>
                         <div><strong>Dr. Santiago Herrera</strong><span>Circasia — Bruno y Thor, Labradores</span></div>
                     </div>
                 </div>
                 <div class="test-card rv rv-d1">
-                    <div class="test-stars">★★★★★</div>
+                    <div class="test-stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
                     <blockquote>"Mi Toby es un perrito mestizo rescatado que llegó desnutrido. En 2 meses con House Barf recuperó peso, le creció el pelo y ahora corre por todo el parque. El domicilio gratis a La Tebaida es un plus enorme."</blockquote>
                     <div class="test-author">
-                        <div class="test-avatar"><img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=100&q=70&fit=crop" alt="Toby - perro mestizo en La Tebaida" loading="lazy" onerror="this.parentElement.style.background='var(--bg2)'"></div>
+                        <div class="test-avatar"><img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=100&q=70&fit=crop" alt="Toby - perro mestizo en La Tebaida" loading="lazy" decoding="async" onerror="this.parentElement.style.background='var(--bg2)'"></div>
                         <div><strong>Valentina Ocampo</strong><span>La Tebaida — Toby, Mestizo rescatado</span></div>
                     </div>
                 </div>
@@ -753,12 +818,12 @@
                 <h2>Peludos Bien Alimentados</h2>
             </div>
             <div class="gallery-grid rv">
-                <div class="gi"><img src="https://images.unsplash.com/photo-1656138899262-1faa4ae4bef6?w=800&q=80&fit=crop" alt="Rottweiler feliz alimentado con House Barf en Armenia Quindío" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B35,#FFB74D)'"></div>
-                <div class="gi"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&q=80&fit=crop" alt="Golden Retriever saludable con comida para perros House Barf" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFB74D,#FF8F00)'"></div>
-                <div class="gi"><img src="https://images.unsplash.com/photo-1644732368811-1d10e6832818?w=400&q=80&fit=crop" alt="Rottweiler corriendo con energía House Barf Quindío" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#4CAF50,#81C784)'"></div>
-                <div class="gi"><img src="https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=400&q=80&fit=crop" alt="Pastor Alemán fuerte alimentado con concentrado House Barf" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#5D4037,#8D6E63)'"></div>
-                <div class="gi"><img src="https://images.unsplash.com/photo-1598819849325-f0152d605b08?w=400&q=80&fit=crop" alt="Cachorro Rottweiler bien nutrido con House Barf Armenia" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#795548,#BCAAA4)'"></div>
-                <div class="gi"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80&fit=crop" alt="Labrador feliz nutrido con House Barf comida para perros Quindío" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFE0B2,#FFCC80)'"></div>
+                <div class="gi"><img src="https://images.unsplash.com/photo-1656138899262-1faa4ae4bef6?w=800&q=80&fit=crop" alt="Rottweiler feliz alimentado con House Barf en Armenia Quindío" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B35,#FFB74D)'"></div>
+                <div class="gi"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&q=80&fit=crop" alt="Golden Retriever saludable con comida para perros House Barf" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFB74D,#FF8F00)'"></div>
+                <div class="gi"><img src="https://images.unsplash.com/photo-1644732368811-1d10e6832818?w=400&q=80&fit=crop" alt="Rottweiler corriendo con energía House Barf Quindío" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#4CAF50,#81C784)'"></div>
+                <div class="gi"><img src="https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=400&q=80&fit=crop" alt="Pastor Alemán fuerte alimentado con concentrado House Barf" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#5D4037,#8D6E63)'"></div>
+                <div class="gi"><img src="https://images.unsplash.com/photo-1598819849325-f0152d605b08?w=400&q=80&fit=crop" alt="Cachorro Rottweiler bien nutrido con House Barf Armenia" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#795548,#BCAAA4)'"></div>
+                <div class="gi"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80&fit=crop" alt="Labrador feliz nutrido con House Barf comida para perros Quindío" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFE0B2,#FFCC80)'"></div>
             </div>
         </div>
     </section>
@@ -774,8 +839,8 @@
             <div class="transform-grid">
                 <div class="transform-card rv rv-d1">
                     <div class="transform-imgs">
-                        <img src="https://images.unsplash.com/photo-1643811356771-dc2c1a53e235?w=400&q=80&fit=crop" alt="Rottweiler antes de House Barf" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#795548,#BCAAA4)'">
-                        <img src="https://images.unsplash.com/photo-1656138899262-1faa4ae4bef6?w=400&q=80&fit=crop" alt="Rottweiler después de House Barf con pelaje brillante" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#4CAF50,#81C784)'">
+                        <img src="https://images.unsplash.com/photo-1643811356771-dc2c1a53e235?w=400&q=80&fit=crop" alt="Rottweiler antes de House Barf" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#795548,#BCAAA4)'">
+                        <img src="https://images.unsplash.com/photo-1656138899262-1faa4ae4bef6?w=400&q=80&fit=crop" alt="Rottweiler después de House Barf con pelaje brillante" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#4CAF50,#81C784)'">
                         <span class="tf-label tf-before">Antes</span>
                         <span class="tf-label tf-after">Después</span>
                         <span class="tf-arrow">→</span>
@@ -788,8 +853,8 @@
                 </div>
                 <div class="transform-card rv rv-d2">
                     <div class="transform-imgs">
-                        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400&q=80&fit=crop" alt="Perro mestizo antes de House Barf" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#795548,#D7CCC8)'">
-                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80&fit=crop" alt="Labrador saludable después de House Barf" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFE0B2,#FFCC80)'">
+                        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400&q=80&fit=crop" alt="Perro mestizo antes de House Barf" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#795548,#D7CCC8)'">
+                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80&fit=crop" alt="Labrador saludable después de House Barf" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFE0B2,#FFCC80)'">
                         <span class="tf-label tf-before">Antes</span>
                         <span class="tf-label tf-after">Después</span>
                         <span class="tf-arrow">→</span>
@@ -802,8 +867,8 @@
                 </div>
                 <div class="transform-card rv rv-d3">
                     <div class="transform-imgs">
-                        <img src="https://images.unsplash.com/photo-1598819849325-f0152d605b08?w=400&q=80&fit=crop" alt="Cachorro Rottweiler antes de House Barf" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#5D4037,#8D6E63)'">
-                        <img src="https://images.unsplash.com/photo-1629798358432-335e108ebe3f?w=400&q=80&fit=crop" alt="Cachorro Rottweiler saludable con House Barf" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B35,#FFB74D)'">
+                        <img src="https://images.unsplash.com/photo-1598819849325-f0152d605b08?w=400&q=80&fit=crop" alt="Cachorro Rottweiler antes de House Barf" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#5D4037,#8D6E63)'">
+                        <img src="https://images.unsplash.com/photo-1629798358432-335e108ebe3f?w=400&q=80&fit=crop" alt="Cachorro Rottweiler saludable con House Barf" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B35,#FFB74D)'">
                         <span class="tf-label tf-before">Antes</span>
                         <span class="tf-label tf-after">Después</span>
                         <span class="tf-arrow">→</span>
@@ -888,7 +953,7 @@
                     <p>Comparte tu experiencia con otros amantes de los peludos en el Quindío. ¡Tu recomendación nos ayuda a llegar a más patitas!</p>
                     <div class="share-btns">
                         <a href="https://wa.me/?text=Te%20recomiendo%20House%20Barf%20para%20tu%20perro!%20Concentrado%20premium%20a%20%244%2C500%2Flb%20con%20domicilio%20gratis%20en%20el%20Quind%C3%ADo.%20Pide%20al%20318%20587%205211%20🐾" class="share-btn share-btn-wa" target="_blank" rel="noopener">
-                            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                            <svg width="18" height="18" fill="currentColor"><use href="#ico-wa"/></svg>
                             Compartir por WhatsApp
                         </a>
                         <a href="#" class="share-btn share-btn-fb" id="fbShareBtn">
@@ -955,7 +1020,7 @@
             <div class="tips-grid">
                 <div class="tip-card rv rv-d1">
                     <div class="tip-card-img">
-                        <img src="https://images.unsplash.com/photo-1644732368811-1d10e6832818?w=600&q=80&fit=crop" alt="Rottweiler en campo verde - cuánto debe comer un perro grande en Armenia" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#4CAF50,#81C784)'">
+                        <img src="https://images.unsplash.com/photo-1644732368811-1d10e6832818?w=600&q=80&fit=crop" alt="Rottweiler en campo verde - cuánto debe comer un perro grande en Armenia" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#4CAF50,#81C784)'">
                         <span class="tip-cat">Nutrición</span>
                     </div>
                     <div class="tip-card-body">
@@ -966,7 +1031,7 @@
                 </div>
                 <div class="tip-card rv rv-d2">
                     <div class="tip-card-img">
-                        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600&q=80&fit=crop" alt="Golden Retriever saludable - señales de buena alimentación en perros" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFB74D,#FF8F00)'">
+                        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600&q=80&fit=crop" alt="Golden Retriever saludable - señales de buena alimentación en perros" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFB74D,#FF8F00)'">
                         <span class="tip-cat">Salud</span>
                     </div>
                     <div class="tip-card-body">
@@ -977,7 +1042,7 @@
                 </div>
                 <div class="tip-card rv rv-d3">
                     <div class="tip-card-img">
-                        <img src="https://images.unsplash.com/photo-1629798358432-335e108ebe3f?w=600&q=80&fit=crop" alt="Cachorro Rottweiler - alimentación de cachorros en el Quindío" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B35,#FFB74D)'">
+                        <img src="https://images.unsplash.com/photo-1629798358432-335e108ebe3f?w=600&q=80&fit=crop" alt="Cachorro Rottweiler - alimentación de cachorros en el Quindío" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B35,#FFB74D)'">
                         <span class="tip-cat">Cachorros</span>
                     </div>
                     <div class="tip-card-body">
@@ -1020,7 +1085,7 @@
             </div>
             <div class="contact-grid">
                 <div class="cc rv rv-d1">
-                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    <svg width="36" height="36" fill="currentColor"><use href="#ico-wa"/></svg>
                     <h3>WhatsApp</h3>
                     <p><a href="https://wa.me/573185875211" target="_blank" rel="noopener">318 587 5211</a></p>
                     <p>Respuesta inmediata</p>
@@ -1028,8 +1093,8 @@
                 <div class="cc rv rv-d2">
                     <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
                     <h3>Ubicación</h3>
-                    <p>Armenia y todo el Quindío</p>
-                    <p>Domicilio en la región</p>
+                    <p>Calle 17 #22-25, Armenia, Quindío</p>
+                    <p>Domicilio gratis en toda la región</p>
                 </div>
                 <div class="cc rv rv-d3">
                     <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
@@ -1041,6 +1106,7 @@
         </div>
     </section>
 
+    </main>
     <!-- FOOTER -->
     <footer>
         <div class="foot-in">
@@ -1066,7 +1132,7 @@
                     <li><a href="https://wa.me/573185875211" target="_blank" rel="noopener">WhatsApp: 318 587 5211</a></li>
                     <li><a href="#" id="footFb">Facebook (próximamente)</a></li>
                     <li><a href="#" id="footIg">Instagram (próximamente)</a></li>
-                    <li><a href="#contacto">Armenia, Quindío</a></li>
+                    <li><a href="#contacto">Calle 17 #22-25, Armenia, Quindío</a></li>
                 </ul>
             </div>
         </div>
@@ -1078,14 +1144,14 @@
     <div class="wa-fl" id="waFloat">
         <div class="wa-tip">¡Pide ahora!</div>
         <a href="https://wa.me/573185875211?text=Hola%20House%20Barf!%20Quiero%20pedir%20concentrado%20%F0%9F%90%B6%20(bot%C3%B3n%20flotante)" class="wa-fl-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <svg width="32" height="32" fill="#fff"><use href="#ico-wa"/></svg>
         </a>
     </div>
 
     <!-- MOBILE STICKY CTA -->
     <div class="mob-cta" id="mobCta">
         <a href="https://wa.me/573185875211?text=Hola%20House%20Barf!%20Quiero%20pedir%20concentrado%20%F0%9F%90%B6%20(desde%20celular)" target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+            <svg width="20" height="20" fill="#fff"><use href="#ico-wa"/></svg>
             Pedir por WhatsApp
         </a>
     </div>
@@ -1094,7 +1160,7 @@
     <button class="btt" id="btt" aria-label="Volver arriba">↑</button>
 
     <!-- SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js" defer></script>
     <script>
     const WA = '573185875211';
 
@@ -1116,7 +1182,7 @@
         const btn = document.getElementById('orderBtn');
         const priceStr = price.toLocaleString('es-CO');
         btn.textContent = '';
-        btn.innerHTML = `<svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Pedir ${qty} lb por WhatsApp — $${priceStr}`;
+        btn.innerHTML = `<svg width="22" height="22" fill="#fff"><use href="#ico-wa"/></svg> Pedir ${qty} lb por WhatsApp — $${priceStr}`;
         const msg = encodeURIComponent(`Hola House Barf! 🐶 Quiero pedir ${qty} libra(s) de Concentrado Carne por $${priceStr}. (desde producto)`);
         btn.href = `https://wa.me/${WA}?text=${msg}`;
     }
@@ -1183,15 +1249,19 @@
 
     // === BURGER MENU ===
     const burger = document.getElementById('burger');
+    function closeMobileMenu(){
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded','false');
+        document.getElementById('navLinks').classList.remove('open');
+    }
     burger.addEventListener('click', () => {
-        burger.classList.toggle('open');
+        const open = burger.classList.toggle('open');
+        burger.setAttribute('aria-expanded', open);
         document.getElementById('navLinks').classList.toggle('open');
     });
-    document.querySelectorAll('.nav-links a').forEach(a => {
-        a.addEventListener('click', () => {
-            burger.classList.remove('open');
-            document.getElementById('navLinks').classList.remove('open');
-        });
+    document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', closeMobileMenu));
+    document.addEventListener('click', e => {
+        if(document.getElementById('navLinks').classList.contains('open') && !e.target.closest('.nav-in')) closeMobileMenu();
     });
 
     // === SCROLL REVEAL ===
@@ -1212,9 +1282,13 @@
     if(heroStats) revObs.observe(heroStats);
 
     // === FAQ TOGGLE ===
-    document.querySelectorAll('.faq-q').forEach(btn => {
+    document.querySelectorAll('.faq-q').forEach((btn,i) => {
+        btn.setAttribute('aria-expanded','false');
+        btn.setAttribute('aria-controls','faq-a-'+i);
+        btn.nextElementSibling.id = 'faq-a-'+i;
         btn.addEventListener('click', function(){
-            this.classList.toggle('open');
+            const open = this.classList.toggle('open');
+            this.setAttribute('aria-expanded', open);
             this.nextElementSibling.classList.toggle('open');
         });
     });
@@ -1232,13 +1306,13 @@
             `<svg viewBox="0 0 80 70" fill="currentColor"><circle cx="56" cy="18" r="12"/><ellipse cx="38" cy="32" rx="22" ry="14"/><ellipse cx="64" cy="10" rx="7" ry="12"/><rect x="20" y="42" width="8" height="18" rx="4"/><rect x="32" y="42" width="8" height="20" rx="4"/><rect x="46" y="42" width="8" height="18" rx="4"/><rect x="56" y="42" width="8" height="16" rx="4"/></svg>`,
             `<svg viewBox="0 0 100 100" fill="currentColor"><path d="M50 88C50 88 10 60 10 35a20 20 0 0140 0 20 20 0 0140 0C90 60 50 88 50 88z"/></svg>`
         ];
-        const cols = ['#FF6B35','#FFB74D','#E91E63','#4CAF50','#3E2723'];
-        for(let i=0;i<18;i++){
+        const varNames = ['--p','--a','--nq','--g','--s'];
+        for(let i=0;i<10;i++){
             const el = document.createElement('div');
             el.className = 'fl';
             el.innerHTML = shapes[Math.floor(Math.random()*shapes.length)];
             const sz = 20 + Math.random()*50;
-            el.style.cssText = `left:${Math.random()*100}%;width:${sz}px;color:${cols[Math.floor(Math.random()*cols.length)]};animation-duration:${20+Math.random()*25}s;animation-delay:${Math.random()*22}s;--fo:${.02+Math.random()*.04};--ro:${Math.random()>.5?'360deg':'-360deg'};--sc:${.8+Math.random()*.4}`;
+            el.style.cssText = `left:${Math.random()*100}%;width:${sz}px;color:var(${varNames[Math.floor(Math.random()*varNames.length)]});animation-duration:${20+Math.random()*25}s;animation-delay:${Math.random()*22}s;--fo:${.02+Math.random()*.04};--ro:${Math.random()>.5?'360deg':'-360deg'};--sc:${.8+Math.random()*.4}`;
             bg.appendChild(el);
         }
     })();
@@ -1278,7 +1352,7 @@
         // Update order button
         const btn = document.getElementById('calcOrderBtn');
         btn.textContent = '';
-        btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> Pedir ${monthlyLb} lb por WhatsApp — $${monthlyCost.toLocaleString('es-CO')}`;
+        btn.innerHTML = `<svg width="20" height="20" fill="#fff"><use href="#ico-wa"/></svg> Pedir ${monthlyLb} lb por WhatsApp — $${monthlyCost.toLocaleString('es-CO')}`;
         const msg = encodeURIComponent(`Hola House Barf! 🐶 Mi perro pesa ${w}kg. Quiero pedir ${monthlyLb} libras de Concentrado Carne por $${monthlyCost.toLocaleString('es-CO')}. (desde calculadora)`);
         btn.href = `https://wa.me/${WA}?text=${msg}`;
     }
