@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PataLlena - Comida Premium para Perros en Armenia y Quindío | Domicilio WhatsApp</title>
-    <meta name="description" content="PataLlena - Concentrado premium sabor carne para perros en Armenia y todo el Quindío. $6,500/libra. Domicilio gratis. Pago Nequi. Pedidos WhatsApp 318 587 5211.">
-    <meta name="keywords" content="comida perros Armenia, concentrado perros Quindío, alimento mascotas Armenia, PataLlena, domicilio comida perros, Nequi mascotas, comida perros Calarcá Montenegro Circasia">
-    <meta name="author" content="PataLlena - Gutierrez Felipe">
+    <title>House Barf - Comida Premium para Perros en Armenia y Quindío | Domicilio WhatsApp</title>
+    <meta name="description" content="House Barf - Concentrado premium sabor carne para perros en Armenia y todo el Quindío. $4,500/libra. Domicilio gratis. Pago Nequi. Pedidos WhatsApp 318 587 5211.">
+    <meta name="keywords" content="comida perros Armenia, concentrado perros Quindío, alimento mascotas Armenia, House Barf, domicilio comida perros, Nequi mascotas, comida perros Calarcá Montenegro Circasia">
+    <meta name="author" content="House Barf - Gutierrez Felipe">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="PataLlena - Comida Premium para Perros | Armenia y Quindío">
-    <meta property="og:description" content="Concentrado premium sabor carne $6,500/lb. Domicilio gratis en el Quindío. Pago Nequi. WhatsApp 318 587 5211.">
+    <meta property="og:title" content="House Barf - Comida Premium para Perros | Armenia y Quindío">
+    <meta property="og:description" content="Concentrado premium sabor carne $4,500/lb. Domicilio gratis en el Quindío. Pago Nequi. WhatsApp 318 587 5211.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_CO">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PataLlena - Comida para Perros Armenia Quindío">
+    <meta name="twitter:title" content="House Barf - Comida para Perros Armenia Quindío">
     <meta name="twitter:description" content="Concentrado premium sabor carne. Domicilio gratis. Pago Nequi.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
     <script type="application/ld+json">
     [{
-        "@context":"https://schema.org","@type":"LocalBusiness","name":"PataLlena",
+        "@context":"https://schema.org","@type":"LocalBusiness","name":"House Barf",
         "description":"Concentrado premium para perros sabor carne en Armenia y Quindío.",
         "address":{"@type":"PostalAddress","addressLocality":"Armenia","addressRegion":"Quindío","addressCountry":"CO"},
-        "telephone":"+573185875211","priceRange":"$6,500 COP/lb","paymentAccepted":"Nequi, Efectivo","areaServed":"Quindío, Colombia"
+        "telephone":"+573185875211","priceRange":"$4,500 COP/lb","paymentAccepted":"Nequi, Efectivo","areaServed":"Quindío, Colombia"
     },{
-        "@context":"https://schema.org","@type":"Product","name":"PataLlena Concentrado Carne",
-        "description":"Concentrado premium sabor carne para perros de todas las razas","brand":{"@type":"Brand","name":"PataLlena"},
-        "offers":{"@type":"Offer","price":"6500","priceCurrency":"COP","availability":"https://schema.org/InStock","areaServed":"Quindío"}
+        "@context":"https://schema.org","@type":"Product","name":"House Barf Concentrado Carne",
+        "description":"Concentrado premium sabor carne para perros de todas las razas","brand":{"@type":"Brand","name":"House Barf"},
+        "offers":{"@type":"Offer","price":"4500","priceCurrency":"COP","availability":"https://schema.org/InStock","areaServed":"Quindío"}
     },{
         "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
             {"@type":"Question","name":"¿Hacen domicilio en todo el Quindío?","acceptedAnswer":{"@type":"Answer","text":"Sí, hacemos entregas en Armenia, Calarcá, Montenegro, Circasia, La Tebaida y más."}},
             {"@type":"Question","name":"¿Cuáles son las formas de pago?","acceptedAnswer":{"@type":"Answer","text":"Aceptamos Nequi y efectivo contra entrega."}},
-            {"@type":"Question","name":"¿Puedo pedir cualquier cantidad?","acceptedAnswer":{"@type":"Answer","text":"Vendemos desde 1 libra. Descuentos por cantidad: 3lb 5%, 5lb 10%, 10lb+ 15%."}}
+            {"@type":"Question","name":"¿Puedo pedir cualquier cantidad?","acceptedAnswer":{"@type":"Answer","text":"Vendemos desde 1 libra hasta la cantidad que necesites. $4,500 por libra."}}
         ]
     }]
     </script>
@@ -303,6 +303,47 @@
         .btt.show{opacity:1;transform:translateY(0)}
         .btt:hover{background:var(--p);transform:translateY(-3px)}
 
+        /* === CALCULATOR === */
+        #calculadora{background:var(--w);overflow:hidden}
+        .calc-wrap{max-width:700px;margin:0 auto}
+        .calc-card{background:var(--bg);border-radius:24px;padding:40px 36px;box-shadow:var(--sh)}
+        .calc-size-btns{display:flex;gap:10px;margin-bottom:28px;justify-content:center}
+        .calc-size-btn{padding:12px 24px;border-radius:50px;border:2px solid #e0d5cc;background:var(--w);cursor:pointer;font-family:inherit;font-weight:700;font-size:.88rem;color:var(--t2);transition:all .3s;display:flex;align-items:center;gap:8px}
+        .calc-size-btn:hover,.calc-size-btn.active{border-color:var(--p);background:var(--bg2);color:var(--p)}
+        .calc-size-btn svg{width:28px;height:28px;transition:transform .3s}
+        .calc-size-btn.active svg{transform:scale(1.15)}
+        .calc-slider-wrap{margin-bottom:32px;text-align:center}
+        .calc-slider-wrap label{font-weight:700;font-size:.95rem;color:var(--s);display:block;margin-bottom:14px}
+        .calc-weight-display{font-family:'Fredoka One',cursive;font-size:2.4rem;color:var(--p);margin-bottom:6px}
+        .calc-weight-display small{font-size:1rem;color:var(--t2);font-family:'Poppins',sans-serif}
+        .calc-slider{-webkit-appearance:none;appearance:none;width:100%;height:10px;background:linear-gradient(90deg,var(--bg2),var(--p));border-radius:10px;outline:none;cursor:pointer;margin:16px 0}
+        .calc-slider::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;border-radius:50%;background:var(--p);cursor:pointer;box-shadow:0 4px 15px rgba(255,107,53,.4);border:3px solid var(--w);transition:transform .2s}
+        .calc-slider::-webkit-slider-thumb:hover{transform:scale(1.15)}
+        .calc-slider::-moz-range-thumb{width:30px;height:30px;border-radius:50%;background:var(--p);cursor:pointer;box-shadow:0 4px 15px rgba(255,107,53,.4);border:3px solid var(--w)}
+        .calc-dog-visual{display:flex;justify-content:center;margin-bottom:24px;height:80px;align-items:flex-end}
+        .calc-dog-visual svg{fill:var(--s);transition:all .5s cubic-bezier(.4,0,.2,1);opacity:.6}
+        .calc-results{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+        .calc-result{background:var(--w);border-radius:16px;padding:20px 16px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,.05)}
+        .calc-result .cr-val{font-family:'Fredoka One',cursive;font-size:1.5rem;color:var(--p);display:block;margin-bottom:4px}
+        .calc-result .cr-label{font-size:.78rem;color:var(--t2);font-weight:600}
+        .calc-order-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px;background:var(--wa);color:var(--w);border-radius:50px;font-weight:800;font-size:1rem;text-decoration:none;font-family:inherit;border:none;cursor:pointer;transition:all .3s;box-shadow:0 8px 30px rgba(37,211,102,.3)}
+        .calc-order-btn:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(37,211,102,.4)}
+
+        /* === COMMUNITY === */
+        #comunidad{background:linear-gradient(135deg,var(--bg2),var(--bg))}
+        .community-wrap{max-width:700px;margin:0 auto;text-align:center}
+        .community-card{background:var(--w);border-radius:24px;padding:48px 40px;box-shadow:var(--shh)}
+        .community-card svg{width:60px;height:60px;fill:var(--p);margin-bottom:20px}
+        .community-card h3{font-family:'Fredoka One',cursive;font-size:1.4rem;color:var(--s);margin-bottom:12px}
+        .community-card p{font-size:.95rem;color:var(--t2);line-height:1.7;margin-bottom:24px}
+        .share-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+        .share-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:50px;font-weight:700;font-size:.88rem;text-decoration:none;transition:all .3s;border:none;cursor:pointer;font-family:inherit}
+        .share-btn:hover{transform:translateY(-2px)}
+        .share-btn-wa{background:var(--wa);color:var(--w);box-shadow:0 4px 15px rgba(37,211,102,.3)}
+        .share-btn-fb{background:#1877F2;color:var(--w);box-shadow:0 4px 15px rgba(24,119,242,.3)}
+        .share-btn-ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:var(--w);box-shadow:0 4px 15px rgba(220,39,67,.3)}
+        .share-btn svg{width:18px;height:18px;fill:currentColor}
+
         /* === SCROLL ANIMATIONS === */
         .rv{opacity:0;transform:translateY(35px);transition:all .7s cubic-bezier(.4,0,.2,1)}
         .rv.vis{opacity:1;transform:translateY(0)}
@@ -346,6 +387,10 @@
             .hero-stat strong{font-size:1.4rem}
             .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,140px)}
             .trust-bar-in{flex-direction:column;align-items:center;gap:14px}
+            .calc-results{grid-template-columns:1fr}
+            .calc-size-btns{flex-direction:column;align-items:center}
+            .calc-card{padding:28px 20px}
+            .share-btns{flex-direction:column;align-items:center}
         }
     </style>
 </head>
@@ -353,7 +398,7 @@
     <!-- LOADER -->
     <div class="loader" id="loader">
         <div class="loader-paw"><svg viewBox="0 0 100 100"><ellipse cx="50" cy="68" rx="20" ry="16"/><ellipse cx="28" cy="38" rx="11" ry="13"/><ellipse cx="50" cy="28" rx="10" ry="12"/><ellipse cx="72" cy="38" rx="11" ry="13"/></svg></div>
-        <p>Cargando PataLlena...</p>
+        <p>Patitas Llenas, Colas Contentas</p>
     </div>
 
     <!-- FLOATING BG -->
@@ -361,8 +406,7 @@
 
     <!-- PROMO BANNER -->
     <div class="promo-bar" id="promoBar">
-        <span>🎉 OFERTA DE LANZAMIENTO — <strong>10% OFF</strong> en tu primer pedido</span>
-        <span class="countdown" id="countdown"></span>
+        <span>🐾 HOUSE BARF — <strong>Patitas Llenas, Colas Contentas</strong> — Domicilio GRATIS en el Quindío</span>
     </div>
 
     <!-- NAV -->
@@ -370,15 +414,16 @@
         <div class="nav-in">
             <a href="#" class="logo">
                 <svg viewBox="0 0 100 100" fill="#FF6B35"><ellipse cx="50" cy="68" rx="20" ry="16"/><ellipse cx="28" cy="38" rx="11" ry="13"/><ellipse cx="50" cy="28" rx="10" ry="12"/><ellipse cx="72" cy="38" rx="11" ry="13"/></svg>
-                PataLlena
+                House Barf
             </a>
+            <span style="display:none" class="logo-motto">Patitas Llenas, Colas Contentas</span>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#producto">Producto</a></li>
                 <li><a href="#testimonios">Opiniones</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
                 <li><a href="#como-pedir">Cómo Pedir</a></li>
-                <li><a href="#pago">Pago</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="https://wa.me/573185875211?text=Hola%20PataLlena!%20Quiero%20mi%2010%25%20de%20descuento%20🐶" class="nav-cta" target="_blank" rel="noopener">¡Pedir Ahora!</a></li>
+                <li><a href="https://wa.me/573185875211?text=Hola%20House%20Barf!%20Quiero%20pedir%20concentrado%20🐶" class="nav-cta" target="_blank" rel="noopener">¡Pedir Ahora!</a></li>
             </ul>
             <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
         </div>
@@ -387,18 +432,19 @@
     <!-- HERO -->
     <section class="hero" id="inicio">
         <div class="hero-bg">
-            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1400&q=80&fit=crop" alt="Perros felices corriendo - PataLlena comida para perros" loading="eager" onerror="this.style.display='none'">
+            <img src="https://images.unsplash.com/photo-1567752881298-894bb81f9379?w=1400&q=80&fit=crop" alt="Perros felices corriendo - House Barf comida para perros" loading="eager" onerror="this.style.display='none'">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-in">
             <div class="hero-text rv">
                 <div class="hero-pill"><span class="dot"></span> Envíos en Armenia y todo el Quindío</div>
                 <h1>Tu peludo merece <span class="highlight">comida de verdad</span></h1>
+                <p style="font-family:'Fredoka One',cursive;font-size:1.15rem;color:var(--a);margin-bottom:8px;letter-spacing:1px;opacity:.9">— Patitas Llenas, Colas Contentas —</p>
                 <p>Concentrado premium sabor carne que a tu perro le va a encantar. Fresquito hasta la puerta de tu casa. Pide por WhatsApp, paga con Nequi.</p>
                 <div class="hero-btns">
-                    <a href="https://wa.me/573185875211?text=Hola%20PataLlena!%20Quiero%20mi%2010%25%20de%20descuento%20de%20lanzamiento%20🐶" class="btn btn-wa" target="_blank" rel="noopener">
+                    <a href="https://wa.me/573185875211?text=Hola%20House%20Barf!%20Quiero%20pedir%20concentrado%20🐶" class="btn btn-wa" target="_blank" rel="noopener">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        Quiero mi 10% OFF
+                        Pedir por WhatsApp
                     </a>
                     <a href="#producto" class="btn btn-sec">Ver Producto ↓</a>
                 </div>
@@ -411,15 +457,14 @@
             <div class="hero-visual rv rv-r">
                 <div class="hero-card">
                     <div class="hero-card-img">
-                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80&fit=crop" alt="Golden Retriever feliz con PataLlena" loading="eager" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B35,#FFB74D)'">
+                        <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=600&q=80&fit=crop" alt="Rottweiler feliz con House Barf" loading="eager" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B35,#FFB74D)'">
                         <span class="badge-new">NUEVO</span>
                     </div>
                     <div class="hero-card-body">
-                        <h3>PataLlena Concentrado Carne</h3>
+                        <h3>House Barf Concentrado Carne</h3>
                         <p>Nutrición completa para todas las razas</p>
                         <div class="hero-card-price">
-                            <span class="old">$8,000</span>
-                            <span class="now">$6,500</span>
+                            <span class="now">$4,500</span>
                             <small>/libra</small>
                         </div>
                     </div>
@@ -461,31 +506,29 @@
             <div class="prod-wrap">
                 <div class="prod-gallery rv-l">
                     <div class="prod-main-img" id="prodMainImg">
-                        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&q=80&fit=crop" alt="Perro Golden Retriever comiendo PataLlena" id="mainProdImg" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B35,#FFB74D)'">
+                        <img src="https://images.unsplash.com/photo-1603232644140-bb47da511b92?w=800&q=80&fit=crop" alt="Perro feliz y saludable - House Barf" id="mainProdImg" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B35,#FFB74D)'">
                     </div>
                     <div class="prod-thumbs">
-                        <div class="prod-thumb active" onclick="changeProdImg(this,'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&q=80&fit=crop')">
-                            <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=120&q=60&fit=crop" alt="Perro comiendo" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B35,#FFB74D)'">
+                        <div class="prod-thumb active" onclick="changeProdImg(this,'https://images.unsplash.com/photo-1603232644140-bb47da511b92?w=800&q=80&fit=crop')">
+                            <img src="https://images.unsplash.com/photo-1603232644140-bb47da511b92?w=120&q=60&fit=crop" alt="Perro feliz House Barf" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B35,#FFB74D)'">
                         </div>
-                        <div class="prod-thumb" onclick="changeProdImg(this,'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80&fit=crop')">
-                            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=120&q=60&fit=crop" alt="Golden Retriever feliz" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#8D6E63,#D7CCC8)'">
+                        <div class="prod-thumb" onclick="changeProdImg(this,'https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=800&q=80&fit=crop')">
+                            <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=120&q=60&fit=crop" alt="Rottweiler feliz" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#8D6E63,#D7CCC8)'">
                         </div>
-                        <div class="prod-thumb" onclick="changeProdImg(this,'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=800&q=80&fit=crop')">
-                            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=120&q=60&fit=crop" alt="Perro pequeño" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#795548,#D7CCC8)'">
+                        <div class="prod-thumb" onclick="changeProdImg(this,'https://images.unsplash.com/photo-1543071220-6ee5bf71a54e?w=800&q=80&fit=crop')">
+                            <img src="https://images.unsplash.com/photo-1543071220-6ee5bf71a54e?w=120&q=60&fit=crop" alt="Rottweiler cachorro" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#795548,#D7CCC8)'">
                         </div>
-                        <div class="prod-thumb" onclick="changeProdImg(this,'https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=800&q=80&fit=crop')">
-                            <img src="https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=120&q=60&fit=crop" alt="Pastor Alemán" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#3E2723,#8D6E63)'">
+                        <div class="prod-thumb" onclick="changeProdImg(this,'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=800&q=80&fit=crop')">
+                            <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=120&q=60&fit=crop" alt="Rottweiler" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#3E2723,#8D6E63)'">
                         </div>
                     </div>
                 </div>
                 <div class="prod-details rv-r">
-                    <span class="tag">PataLlena</span>
+                    <span class="tag">House Barf</span>
                     <h2>Concentrado Sabor Carne</h2>
                     <p class="prod-sub">Alimento completo para perros adultos de todas las razas y tamaños. Rico en proteína cárnica real para músculos fuertes, pelaje brillante y energía todo el día.</p>
                     <div class="prod-price-box">
-                        <span class="old-p">$8,000</span>
-                        <span class="new-p">$6,500</span>
-                        <span class="save">AHORRAS 19%</span>
+                        <span class="new-p">$4,500</span>
                         <small>/libra</small>
                     </div>
                     <ul class="prod-features">
@@ -497,30 +540,84 @@
                     <div class="qty-section">
                         <h4>Elige tu cantidad:</h4>
                         <div class="qty-options" id="qtyOpts">
-                            <div class="qty-opt sel" data-qty="1" data-price="6500" onclick="selQty(this)">
+                            <div class="qty-opt sel" data-qty="1" data-price="4500" onclick="selQty(this)">
                                 <span class="qlb">1 lb</span>
-                                <span class="qpr">$6,500</span>
+                                <span class="qpr">$4,500</span>
                             </div>
-                            <div class="qty-opt" data-qty="3" data-price="18525" onclick="selQty(this)">
-                                <span class="qdsc">-5%</span>
+                            <div class="qty-opt" data-qty="3" data-price="13500" onclick="selQty(this)">
                                 <span class="qlb">3 lb</span>
-                                <span class="qpr">$18,525</span>
+                                <span class="qpr">$13,500</span>
                             </div>
-                            <div class="qty-opt" data-qty="5" data-price="29250" onclick="selQty(this)">
-                                <span class="qdsc">-10%</span>
+                            <div class="qty-opt" data-qty="5" data-price="22500" onclick="selQty(this)">
                                 <span class="qlb">5 lb</span>
-                                <span class="qpr">$29,250</span>
+                                <span class="qpr">$22,500</span>
                             </div>
-                            <div class="qty-opt" data-qty="10" data-price="55250" onclick="selQty(this)">
-                                <span class="qdsc">-15%</span>
+                            <div class="qty-opt" data-qty="10" data-price="45000" onclick="selQty(this)">
                                 <span class="qlb">10 lb</span>
-                                <span class="qpr">$55,250</span>
+                                <span class="qpr">$45,000</span>
                             </div>
                         </div>
                     </div>
                     <a href="#" id="orderBtn" class="btn btn-wa btn-order" target="_blank" rel="noopener">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        Pedir 1 lb por WhatsApp — $6,500
+                        Pedir 1 lb por WhatsApp — $4,500
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTION CALCULATOR -->
+    <section id="calculadora">
+        <div class="container">
+            <div class="sec-head rv">
+                <span class="tag">Calculadora de Porciones</span>
+                <h2>¿Cuánto Necesita tu Peludo?</h2>
+                <p>Selecciona el tamaño y peso de tu perro para saber la porción diaria y cuánto pedir al mes</p>
+            </div>
+            <div class="calc-wrap rv">
+                <div class="calc-card">
+                    <div class="calc-size-btns">
+                        <button class="calc-size-btn" data-size="small" onclick="setCalcSize('small',this)">
+                            <svg viewBox="0 0 40 40"><circle cx="26" cy="12" r="6"/><ellipse cx="20" cy="22" rx="12" ry="8"/><rect x="10" y="28" width="4" height="8" rx="2"/><rect x="18" y="28" width="4" height="9" rx="2"/><rect x="26" y="28" width="4" height="8" rx="2"/></svg>
+                            Pequeño
+                        </button>
+                        <button class="calc-size-btn active" data-size="medium" onclick="setCalcSize('medium',this)">
+                            <svg viewBox="0 0 50 40"><circle cx="34" cy="10" r="7"/><ellipse cx="25" cy="22" rx="16" ry="10"/><rect x="12" y="30" width="5" height="10" rx="2.5"/><rect x="21" y="30" width="5" height="11" rx="2.5"/><rect x="30" y="30" width="5" height="10" rx="2.5"/></svg>
+                            Mediano
+                        </button>
+                        <button class="calc-size-btn" data-size="large" onclick="setCalcSize('large',this)">
+                            <svg viewBox="0 0 60 40"><circle cx="42" cy="8" r="8"/><ellipse cx="30" cy="22" rx="20" ry="12"/><rect x="14" y="32" width="6" height="12" rx="3"/><rect x="24" y="32" width="6" height="13" rx="3"/><rect x="34" y="32" width="6" height="12" rx="3"/><rect x="44" y="32" width="6" height="11" rx="3"/></svg>
+                            Grande
+                        </button>
+                    </div>
+                    <div class="calc-dog-visual" id="calcDogVis">
+                        <svg id="calcDogSvg" viewBox="0 0 120 80" width="100" height="66">
+                            <circle cx="85" cy="18" r="14"/><ellipse cx="60" cy="40" rx="35" ry="22"/><rect x="30" y="58" width="10" height="20" rx="5"/><rect x="46" y="58" width="10" height="22" rx="5"/><rect x="64" y="58" width="10" height="20" rx="5"/><rect x="78" y="58" width="10" height="18" rx="5"/><ellipse cx="96" cy="16" rx="4" ry="7"/>
+                        </svg>
+                    </div>
+                    <div class="calc-slider-wrap">
+                        <div class="calc-weight-display"><span id="calcWeightVal">15</span> <small>kg</small></div>
+                        <input type="range" class="calc-slider" id="calcSlider" min="1" max="60" value="15" oninput="updateCalc()">
+                        <div style="display:flex;justify-content:space-between;font-size:.75rem;color:var(--t2);font-weight:600"><span>1 kg</span><span>60 kg</span></div>
+                    </div>
+                    <div class="calc-results" id="calcResults">
+                        <div class="calc-result">
+                            <span class="cr-val" id="calcDaily">200g</span>
+                            <span class="cr-label">Porción diaria</span>
+                        </div>
+                        <div class="calc-result">
+                            <span class="cr-val" id="calcMonthly">13 lb</span>
+                            <span class="cr-label">Necesitas al mes</span>
+                        </div>
+                        <div class="calc-result">
+                            <span class="cr-val" id="calcCost">$58,500</span>
+                            <span class="cr-label">Costo mensual</span>
+                        </div>
+                    </div>
+                    <a href="#" id="calcOrderBtn" class="calc-order-btn" target="_blank" rel="noopener">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Pedir 13 lb por WhatsApp — $58,500
                     </a>
                 </div>
             </div>
@@ -533,31 +630,31 @@
             <div class="sec-head rv">
                 <span class="tag">Lo que dicen nuestros clientes</span>
                 <h2>Peludos Felices en el Quindío</h2>
-                <p>Cada día más familias confían en PataLlena para alimentar a sus mascotas</p>
+                <p>Cada día más familias confían en House Barf para alimentar a sus mascotas</p>
             </div>
             <div class="test-grid">
                 <div class="test-card rv rv-d1">
                     <div class="test-stars">★★★★★</div>
-                    <blockquote>"Mi Rocky no quería comer con otras marcas. Desde que probó PataLlena no deja ni una migaja. ¡Se le ve el pelaje más brillante!"</blockquote>
+                    <blockquote>"Mi Rocky no quería comer con otras marcas. Desde que probó House Barf no deja ni una migaja. ¡Se le ve el pelaje más brillante!"</blockquote>
                     <div class="test-author">
-                        <div class="test-avatar"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=100&q=70&fit=crop" alt="Rocky - Golden Retriever" loading="lazy" onerror="this.parentElement.style.background='var(--bg2)'"></div>
-                        <div><strong>Camila R.</strong><span>Armenia — Rocky, Golden Retriever</span></div>
+                        <div class="test-avatar"><img src="https://images.unsplash.com/photo-1567752881298-894bb81f9379?w=100&q=70&fit=crop" alt="Rocky - Rottweiler" loading="lazy" onerror="this.parentElement.style.background='var(--bg2)'"></div>
+                        <div><strong>Camila R.</strong><span>Armenia — Rocky, Rottweiler</span></div>
                     </div>
                 </div>
                 <div class="test-card rv rv-d2">
                     <div class="test-stars">★★★★★</div>
                     <blockquote>"Excelente servicio, me llegan super rápido a Calarcá. El concentrado es de muy buena calidad y mi Luna lo ama. 100% recomendado."</blockquote>
                     <div class="test-author">
-                        <div class="test-avatar"><img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=100&q=70&fit=crop" alt="Luna - Perrita pequeña" loading="lazy" onerror="this.parentElement.style.background='var(--bg2)'"></div>
-                        <div><strong>Andrés M.</strong><span>Calarcá — Luna, Mestiza</span></div>
+                        <div class="test-avatar"><img src="https://images.unsplash.com/photo-1543071220-6ee5bf71a54e?w=100&q=70&fit=crop" alt="Luna - Perrita pequeña" loading="lazy" onerror="this.parentElement.style.background='var(--bg2)'"></div>
+                        <div><strong>Andrés M.</strong><span>Calarcá — Luna, Rottweiler</span></div>
                     </div>
                 </div>
                 <div class="test-card rv rv-d3">
                     <div class="test-stars">★★★★★</div>
-                    <blockquote>"Tengo 3 perros y antes gastaba una fortuna. Con PataLlena la comida les encanta y los precios por cantidad son geniales. ¡Gracias Felipe!"</blockquote>
+                    <blockquote>"Tengo 3 perros y antes gastaba una fortuna. Con House Barf la comida les encanta y los precios por cantidad son geniales. ¡Gracias Felipe!"</blockquote>
                     <div class="test-author">
-                        <div class="test-avatar"><img src="https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=100&q=70&fit=crop" alt="Max - Pastor Alemán" loading="lazy" onerror="this.parentElement.style.background='var(--bg2)'"></div>
-                        <div><strong>María José P.</strong><span>Montenegro — Max, Pastor Alemán</span></div>
+                        <div class="test-avatar"><img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=100&q=70&fit=crop" alt="Max - Rottweiler" loading="lazy" onerror="this.parentElement.style.background='var(--bg2)'"></div>
+                        <div><strong>María José P.</strong><span>Montenegro — Max, Rottweiler</span></div>
                     </div>
                 </div>
             </div>
@@ -568,16 +665,16 @@
     <section id="galeria">
         <div class="container">
             <div class="sec-head rv">
-                <span class="tag">Galería PataLlena</span>
+                <span class="tag">Galería House Barf</span>
                 <h2>Peludos Bien Alimentados</h2>
             </div>
             <div class="gallery-grid rv">
-                <div class="gi"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80&fit=crop" alt="Golden Retriever feliz alimentado con PataLlena" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B35,#FFB74D)'"></div>
-                <div class="gi"><img src="https://images.unsplash.com/photo-1583337130417-13571c1ba79b?w=400&q=80&fit=crop" alt="Cachorro jugando después de comer PataLlena" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#8D6E63,#D7CCC8)'"></div>
-                <div class="gi"><img src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?w=400&q=80&fit=crop" alt="Perro corriendo con energía PataLlena" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#4CAF50,#81C784)'"></div>
-                <div class="gi"><img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400&q=80&fit=crop" alt="Perro pequeño bien nutrido con PataLlena" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#795548,#BCAAA4)'"></div>
-                <div class="gi"><img src="https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=400&q=80&fit=crop" alt="Pastor Alemán fuerte con PataLlena" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#3E2723,#8D6E63)'"></div>
-                <div class="gi"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&q=80&fit=crop" alt="Golden Retriever saludable con PataLlena" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFB74D,#FF8F00)'"></div>
+                <div class="gi"><img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=800&q=80&fit=crop" alt="Rottweiler feliz alimentado con House Barf" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FF6B35,#FFB74D)'"></div>
+                <div class="gi"><img src="https://images.unsplash.com/photo-1585559700398-1385b3a8aeb6?w=400&q=80&fit=crop" alt="Rottweiler cachorro jugando" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#8D6E63,#D7CCC8)'"></div>
+                <div class="gi"><img src="https://images.unsplash.com/photo-1632236542159-809925149e38?w=400&q=80&fit=crop" alt="Rottweiler corriendo con energía" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#4CAF50,#81C784)'"></div>
+                <div class="gi"><img src="https://images.unsplash.com/photo-1543071220-6ee5bf71a54e?w=400&q=80&fit=crop" alt="Rottweiler cachorro bien nutrido con House Barf" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#795548,#BCAAA4)'"></div>
+                <div class="gi"><img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=400&q=80&fit=crop" alt="Rottweiler fuerte con House Barf" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#3E2723,#8D6E63)'"></div>
+                <div class="gi"><img src="https://images.unsplash.com/photo-1567752881298-894bb81f9379?w=400&q=80&fit=crop" alt="Rottweiler saludable con House Barf" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg,#FFB74D,#FF8F00)'"></div>
             </div>
         </div>
     </section>
@@ -614,7 +711,7 @@
     <section id="beneficios">
         <div class="container">
             <div class="sec-head rv">
-                <span class="tag">¿Por qué PataLlena?</span>
+                <span class="tag">¿Por qué House Barf?</span>
                 <h2>Lo Mejor para tu Peludo</h2>
             </div>
             <div class="ben-grid">
@@ -625,8 +722,8 @@
                 </div>
                 <div class="ben rv rv-d2">
                     <div class="ben-ico"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
-                    <h3>Descuentos por Cantidad</h3>
-                    <p>Hasta 15% de descuento comprando más. Más pides, más ahorras para tu peludo.</p>
+                    <h3>Precio Justo</h3>
+                    <p>$4,500 la libra. Sin letras pequeñas, sin sorpresas. Calidad premium accesible.</p>
                 </div>
                 <div class="ben rv rv-d3">
                     <div class="ben-ico"><svg viewBox="0 0 24 24"><path d="M18 18.5a1.5 1.5 0 01-1.5-1.5 1.5 1.5 0 011.5-1.5 1.5 1.5 0 011.5 1.5 1.5 1.5 0 01-1.5 1.5zm1.5-9l-1.89-2.5H15V5H3c-1.1 0-2 .9-2 2v9h2a3 3 0 003 3 3 3 0 003-3h6a3 3 0 003 3 3 3 0 003-3h2v-5l-2.5-3.5zM6 18.5A1.5 1.5 0 014.5 17 1.5 1.5 0 016 15.5 1.5 1.5 0 017.5 17 1.5 1.5 0 016 18.5z"/></svg></div>
@@ -642,12 +739,39 @@
         </div>
     </section>
 
+    <!-- COMMUNITY -->
+    <section id="comunidad">
+        <div class="container">
+            <div class="community-wrap rv">
+                <div class="community-card">
+                    <svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>
+                    <h3>¿Te gustó House Barf?</h3>
+                    <p>Comparte tu experiencia con otros amantes de los peludos en el Quindío. ¡Tu recomendación nos ayuda a llegar a más patitas!</p>
+                    <div class="share-btns">
+                        <a href="https://wa.me/?text=Te%20recomiendo%20House%20Barf%20para%20tu%20perro!%20Concentrado%20premium%20a%20%244%2C500%2Flb%20con%20domicilio%20gratis%20en%20el%20Quind%C3%ADo.%20Pide%20al%20318%20587%205211%20🐾" class="share-btn share-btn-wa" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                            Compartir por WhatsApp
+                        </a>
+                        <a href="#" class="share-btn share-btn-fb" id="fbShareBtn">
+                            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            Facebook
+                        </a>
+                        <a href="#" class="share-btn share-btn-ig" id="igShareBtn">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- GUARANTEE -->
     <section id="garantia">
         <div class="container">
             <div class="guarantee-box rv">
                 <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-                <h3>Garantía PataLlena</h3>
+                <h3>Garantía House Barf</h3>
                 <p>Si tu peludo no queda satisfecho con nuestro concentrado, te reponemos el producto o te devolvemos tu dinero. Así de seguros estamos de la calidad. Sin preguntas, sin complicaciones.</p>
             </div>
         </div>
@@ -692,7 +816,7 @@
                 <div class="faq-i rv"><button class="faq-q">¿Hacen domicilio en todo el Quindío?<svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></button><div class="faq-a"><p>¡Sí! Entregamos en Armenia, Calarcá, Montenegro, Circasia, La Tebaida, Quimbaya y más municipios del Quindío. Escríbenos por WhatsApp con tu dirección.</p></div></div>
                 <div class="faq-i rv"><button class="faq-q">¿Cuáles son las formas de pago?<svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></button><div class="faq-a"><p>Aceptamos Nequi (escanea el QR o envía al 318 587 5211) y efectivo contra entrega. ¡Tú eliges!</p></div></div>
                 <div class="faq-i rv"><button class="faq-q">¿El concentrado es fresco?<svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></button><div class="faq-a"><p>¡Siempre! Alta rotación de producto garantiza frescura total en cada pedido.</p></div></div>
-                <div class="faq-i rv"><button class="faq-q">¿Tienen descuento por cantidad?<svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></button><div class="faq-a"><p>¡Sí! 3 libras: 5% off, 5 libras: 10% off, 10+ libras: 15% off. Más pides, más ahorras.</p></div></div>
+                <div class="faq-i rv"><button class="faq-q">¿Puedo pedir varias libras?<svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></button><div class="faq-a"><p>¡Claro! Vendemos desde 1 libra hasta la cantidad que necesites. Usa nuestra calculadora de porciones para saber cuánto necesita tu peludo al mes.</p></div></div>
                 <div class="faq-i rv"><button class="faq-q">¿Sirve para todas las razas?<svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></button><div class="faq-a"><p>¡Nuestro concentrado es ideal para perros de todas las razas y tamaños! Escríbenos y te asesoramos según las necesidades de tu peludo.</p></div></div>
             </div>
         </div>
@@ -733,7 +857,8 @@
     <footer>
         <div class="foot-in">
             <div>
-                <div class="foot-brand">PataLlena</div>
+                <div class="foot-brand">House Barf</div>
+                <p style="font-family:'Fredoka One',cursive;color:var(--a);font-size:.9rem;margin-bottom:8px">Patitas Llenas, Colas Contentas</p>
                 <p>Concentrado premium sabor carne para perros en Armenia y todo el Quindío. Nutrición real para tu peludo al mejor precio. Pedidos por WhatsApp, pago Nequi. Domicilio gratis.</p>
             </div>
             <div>
@@ -742,6 +867,7 @@
                     <li><a href="#producto">Producto</a></li>
                     <li><a href="#testimonios">Opiniones</a></li>
                     <li><a href="#como-pedir">Cómo Pedir</a></li>
+                    <li><a href="#calculadora">Calculadora</a></li>
                     <li><a href="#pago">Pago Nequi</a></li>
                     <li><a href="#faq">Preguntas</a></li>
                 </ul>
@@ -750,28 +876,29 @@
                 <h4>Contacto</h4>
                 <ul>
                     <li><a href="https://wa.me/573185875211" target="_blank" rel="noopener">WhatsApp: 318 587 5211</a></li>
+                    <li><a href="#" id="footFb">Facebook (próximamente)</a></li>
+                    <li><a href="#" id="footIg">Instagram (próximamente)</a></li>
                     <li><a href="#contacto">Armenia, Quindío</a></li>
-                    <li><a href="#pago">Pago Nequi</a></li>
                 </ul>
             </div>
         </div>
-        <div class="foot-bot">&copy; 2026 PataLlena — Gutierrez Felipe. Todos los derechos reservados.</div>
-        <div class="foot-seo">Comida para perros Armenia Quindío, concentrado premium mascotas, PataLlena concentrado carne, venta por libra, domicilio mascotas Armenia, domicilio Quindío, pago Nequi mascotas, alimento perros Quindío, tienda mascotas Armenia, comida perros Calarcá, Montenegro, Circasia, La Tebaida, Quimbaya, concentrado perros Colombia, alimento canino Quindío.</div>
+        <div class="foot-bot">&copy; 2026 House Barf — Gutierrez Felipe. Todos los derechos reservados.</div>
+        <div class="foot-seo">Comida para perros Armenia Quindío, concentrado premium mascotas, House Barf concentrado carne, venta por libra, domicilio mascotas Armenia, domicilio Quindío, pago Nequi mascotas, alimento perros Quindío, tienda mascotas Armenia, comida perros Calarcá, Montenegro, Circasia, La Tebaida, Quimbaya, concentrado perros Colombia, alimento canino Quindío.</div>
     </footer>
 
     <!-- WHATSAPP FLOAT -->
     <div class="wa-fl" id="waFloat">
-        <div class="wa-tip">¡Pide con 10% OFF!</div>
-        <a href="https://wa.me/573185875211?text=Hola%20PataLlena!%20Quiero%20mi%2010%25%20de%20descuento%20🐶" class="wa-fl-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <div class="wa-tip">¡Pide ahora!</div>
+        <a href="https://wa.me/573185875211?text=Hola%20House%20Barf!%20Quiero%20pedir%20concentrado%20🐶" class="wa-fl-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
             <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         </a>
     </div>
 
     <!-- MOBILE STICKY CTA -->
     <div class="mob-cta" id="mobCta">
-        <a href="https://wa.me/573185875211?text=Hola%20PataLlena!%20Quiero%20pedir%20concentrado%20🐶" target="_blank" rel="noopener">
+        <a href="https://wa.me/573185875211?text=Hola%20House%20Barf!%20Quiero%20pedir%20concentrado%20🐶" target="_blank" rel="noopener">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
-            Pedir por WhatsApp — ¡10% OFF!
+            Pedir por WhatsApp
         </a>
     </div>
 
@@ -788,19 +915,7 @@
         setTimeout(() => document.getElementById('loader').classList.add('hidden'), 800);
     });
 
-    // === COUNTDOWN (24h from first visit) ===
-    (function(){
-        let end = localStorage.getItem('pl_promo_end');
-        if(!end){ end = Date.now() + 24*60*60*1000; localStorage.setItem('pl_promo_end', end); }
-        const el = document.getElementById('countdown');
-        function upd(){
-            const diff = Math.max(0, end - Date.now());
-            if(diff <= 0){ el.textContent = '¡ÚLTIMA HORA!'; return; }
-            const h = Math.floor(diff/3600000), m = Math.floor((diff%3600000)/60000), s = Math.floor((diff%60000)/1000);
-            el.textContent = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
-        }
-        upd(); setInterval(upd, 1000);
-    })();
+    // (countdown removed - no promotions)
 
     // === QR CODE ===
     if(typeof QRious !== 'undefined') new QRious({element:document.getElementById('nequiQR'),value:'nequi:3185875211',size:180,backgroundAlpha:0,foreground:'#E91E63',level:'H'});
@@ -814,7 +929,7 @@
         const priceStr = price.toLocaleString('es-CO');
         btn.textContent = '';
         btn.innerHTML = `<svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Pedir ${qty} lb por WhatsApp — $${priceStr}`;
-        const msg = encodeURIComponent(`Hola PataLlena! 🐶 Quiero pedir ${qty} libra(s) de Concentrado Carne a $${priceStr}. ¡Quiero mi 10% de descuento de lanzamiento!`);
+        const msg = encodeURIComponent(`Hola House Barf! 🐶 Quiero pedir ${qty} libra(s) de Concentrado Carne por $${priceStr}.`);
         btn.href = `https://wa.me/${WA}?text=${msg}`;
     }
 
@@ -915,6 +1030,46 @@
 
     // === INITIAL ORDER BTN ===
     selQty(document.querySelector('.qty-opt.sel'));
+
+    // === PORTION CALCULATOR ===
+    let calcSize = 'medium';
+    function setCalcSize(size, btn){
+        calcSize = size;
+        document.querySelectorAll('.calc-size-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const slider = document.getElementById('calcSlider');
+        if(size === 'small'){ slider.min=1; slider.max=10; slider.value=Math.min(slider.value,10)||5; }
+        else if(size === 'medium'){ slider.min=10; slider.max=25; slider.value=Math.max(Math.min(slider.value,25),10)||15; }
+        else{ slider.min=25; slider.max=60; slider.value=Math.max(slider.value,25)||35; }
+        updateCalc();
+    }
+    function updateCalc(){
+        const w = parseInt(document.getElementById('calcSlider').value);
+        document.getElementById('calcWeightVal').textContent = w;
+        // Daily grams based on metabolic weight (w^0.75 * 15)
+        const dailyG = Math.round(Math.pow(w, 0.75) * 15);
+        const monthlyG = dailyG * 30;
+        const monthlyLb = Math.ceil(monthlyG / 453.6);
+        const monthlyCost = monthlyLb * 4500;
+        document.getElementById('calcDaily').textContent = dailyG + 'g';
+        document.getElementById('calcMonthly').textContent = monthlyLb + ' lb';
+        document.getElementById('calcCost').textContent = '$' + monthlyCost.toLocaleString('es-CO');
+        // Update dog visual size
+        const svg = document.getElementById('calcDogSvg');
+        const scale = 60 + (w / 60) * 100;
+        svg.style.width = scale + 'px';
+        svg.style.height = (scale * 0.66) + 'px';
+        svg.style.opacity = 0.4 + (w / 60) * 0.6;
+        // Update order button
+        const btn = document.getElementById('calcOrderBtn');
+        btn.textContent = '';
+        btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg> Pedir ${monthlyLb} lb por WhatsApp — $${monthlyCost.toLocaleString('es-CO')}`;
+        const msg = encodeURIComponent(`Hola House Barf! 🐶 Mi perro pesa ${w}kg. Quiero pedir ${monthlyLb} libras de Concentrado Carne por $${monthlyCost.toLocaleString('es-CO')}.`);
+        btn.href = `https://wa.me/${WA}?text=${msg}`;
+    }
+    updateCalc();
+
+    // === NAV CALCULATOR LINK ===
     </script>
 </body>
 </html>
