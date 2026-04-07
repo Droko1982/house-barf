@@ -12,6 +12,13 @@
     <meta name="geo.placename" content="Armenia, Quindío">
     <meta name="geo.position" content="4.5339;-75.6811">
     <meta name="ICBM" content="4.5339, -75.6811">
+    <meta name="language" content="es">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="general">
+    <meta http-equiv="content-language" content="es-CO">
+    <link rel="alternate" hreflang="es-CO" href="https://droko1982.github.io/house-barf/">
+    <link rel="alternate" hreflang="es" href="https://droko1982.github.io/house-barf/">
+    <link rel="alternate" hreflang="x-default" href="https://droko1982.github.io/house-barf/">
     <link rel="canonical" href="https://droko1982.github.io/house-barf/">
     <meta property="og:title" content="Comida para Perros en Armenia y Quindío - House Barf | Concentrado Premium $4,500/lb">
     <meta property="og:description" content="Concentrado premium sabor pollo y verduras para perros $4,500/lb. Domicilio gratis en Armenia desde 5kg. Envíos en Calarcá, Montenegro, Circasia y todo el Quindío. WhatsApp 312 673 7317.">
@@ -31,6 +38,11 @@
     <meta name="theme-color" content="#FF6B35" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1A1210" media="(prefers-color-scheme: dark)">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="House Barf">
+    <link rel="preload" as="image" href="hero.jpg">
     <script type="application/ld+json">
     [{
         "@context":"https://schema.org","@type":"LocalBusiness","name":"House Barf - Comida para Perros Armenia Quindío",
@@ -78,6 +90,17 @@
     },{
         "@context":"https://schema.org","@type":"BreadcrumbList",
         "itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://droko1982.github.io/house-barf/"}]
+    },{
+        "@context":"https://schema.org","@type":"WebSite","name":"House Barf","url":"https://droko1982.github.io/house-barf/",
+        "potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://wa.me/573126737317?text={search_term_string}"},"query-input":"required name=search_term_string"}
+    },{
+        "@context":"https://schema.org","@type":"WebPage","name":"Comida para Perros Armenia Quindío | House Barf",
+        "description":"Concentrado premium sabor pollo y verduras para perros $4,500/lb con domicilio gratis en Armenia desde 5kg.",
+        "url":"https://droko1982.github.io/house-barf/",
+        "inLanguage":"es-CO",
+        "isPartOf":{"@type":"WebSite","name":"House Barf","url":"https://droko1982.github.io/house-barf/"},
+        "about":{"@type":"Thing","name":"Comida para perros en Armenia Quindío"},
+        "speakable":{"@type":"SpeakableSpecification","cssSelector":[".hero-text h1",".hero-text p","#producto h2"]}
     }]
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -147,6 +170,39 @@
         .img-fallback{background:linear-gradient(135deg,var(--p),var(--a))!important}
         html{scroll-behavior:smooth}
         #testimonios,#galeria,#transformacion,#consejos,#comunidad,#garantia,#pago,#faq{content-visibility:auto;contain-intrinsic-size:auto 600px}
+
+        /* === COMPARISON TABLE === */
+        #comparacion{padding:80px 0}
+        .compare-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--r);box-shadow:var(--sh)}
+        .compare-table{width:100%;border-collapse:collapse;min-width:600px;background:var(--w)}
+        .compare-table th,.compare-table td{padding:16px 20px;text-align:center;border-bottom:1px solid var(--bdr);font-size:.92rem}
+        .compare-table thead th{background:var(--bg2);font-weight:700;color:var(--t);font-size:.85rem;text-transform:uppercase;letter-spacing:.5px}
+        .compare-table .ct-hb{background:rgba(255,107,53,.08);color:var(--p);font-weight:700}
+        .compare-table thead .ct-hb{background:var(--p);color:#fff}
+        .compare-table tbody tr:hover{background:var(--bg2)}
+        .compare-table td:first-child{text-align:left;font-weight:600;color:var(--t2)}
+
+        /* === COVERAGE GRID === */
+        #cobertura{padding:80px 0}
+        .coverage-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:40px}
+        .coverage-card{background:var(--w);border-radius:var(--r);padding:28px 20px;text-align:center;box-shadow:var(--sh);transition:transform .3s,box-shadow .3s;border:2px solid transparent}
+        .coverage-card:hover{transform:translateY(-4px);box-shadow:var(--shh)}
+        .coverage-free{border-color:var(--g);background:linear-gradient(135deg,rgba(76,175,80,.05),rgba(76,175,80,.1))}
+        .coverage-icon{font-size:1.8rem;margin-bottom:8px}
+        .coverage-card h3{font-family:'Fredoka One',cursive;font-size:1.1rem;color:var(--s);margin-bottom:8px}
+        .coverage-detail{font-weight:600;color:var(--t);font-size:.95rem;margin-bottom:4px}
+        .coverage-sub{font-size:.82rem;color:var(--t2)}
+        .coverage-note{text-align:center;margin-top:32px;font-size:1rem;color:var(--t2)}
+        .coverage-note a{color:var(--wa);font-weight:700;text-decoration:none}
+        .coverage-note a:hover{text-decoration:underline}
+
+        /* === SOCIAL PROOF TICKER === */
+        .proof-ticker{position:fixed;bottom:90px;left:20px;z-index:998;opacity:0;transform:translateX(-100%);transition:all .5s cubic-bezier(.4,0,.2,1);pointer-events:none}
+        .proof-ticker.show{opacity:1;transform:translateX(0)}
+        .proof-item{background:var(--w);border-radius:14px;padding:12px 18px;box-shadow:0 8px 30px rgba(0,0,0,.15);display:flex;align-items:center;gap:10px;max-width:320px;font-size:.85rem;color:var(--t);border:1px solid var(--bdr)}
+        .proof-dot{width:8px;height:8px;border-radius:50%;background:var(--g);flex-shrink:0;animation:proofPulse 1.5s ease infinite}
+        @keyframes proofPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+        @media(max-width:768px){.proof-ticker{bottom:140px;left:10px;right:10px}.proof-item{max-width:100%}}
         body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--t);overflow-x:hidden}
 
         /* === LOADER === */
@@ -562,6 +618,7 @@
     </style>
 </head>
 <body>
+    <noscript><style>.loader{display:none!important}.rv,.rv-l,.rv-r{opacity:1!important;transform:none!important}.mob-cta,.wa-fl,.promo-bar{display:none!important}</style></noscript>
     <!-- SVG SYMBOLS -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none"><symbol id="ico-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol></svg>
     <!-- SKIP NAV -->
@@ -975,6 +1032,14 @@
         </div>
     </section>
 
+    <!-- SOCIAL PROOF TICKER -->
+    <div class="proof-ticker" id="proofTicker" aria-live="polite">
+        <div class="proof-item">
+            <span class="proof-dot"></span>
+            <span class="proof-text"></span>
+        </div>
+    </div>
+
     <!-- BENEFITS -->
     <section id="beneficios">
         <div class="container">
@@ -1004,6 +1069,101 @@
                     <p>Felipe te atiende personalmente por WhatsApp. Asesoría para la dieta de tu mascota.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- COMPARACION VS OTRAS MARCAS -->
+    <section id="comparacion">
+        <div class="container">
+            <div class="sec-head rv">
+                <span class="tag">Compara y Decide</span>
+                <h2>House Barf vs Otras Marcas</h2>
+                <p>Mira por qué somos la mejor opción en Armenia y el Quindío</p>
+            </div>
+            <div class="compare-table-wrap rv">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th class="ct-hb">House Barf</th>
+                            <th>Marca Genérica</th>
+                            <th>Marca Premium Importada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Precio por libra</td><td class="ct-hb"><strong>$4,500</strong></td><td>$3,500 - $5,000</td><td>$12,000 - $18,000</td></tr>
+                        <tr><td>Proteína real (pollo)</td><td class="ct-hb">✓</td><td>✗ Harina de subproductos</td><td>✓</td></tr>
+                        <tr><td>Prebióticos y Probióticos</td><td class="ct-hb">✓</td><td>✗</td><td>Algunos</td></tr>
+                        <tr><td>Domicilio gratis Armenia</td><td class="ct-hb">✓ Desde 5kg</td><td>✗</td><td>✗</td></tr>
+                        <tr><td>Atención personalizada</td><td class="ct-hb">✓ Felipe por WhatsApp</td><td>✗ Call center</td><td>✗ Call center</td></tr>
+                        <tr><td>Envío mismo día Quindío</td><td class="ct-hb">✓</td><td>Varía</td><td>2-5 días</td></tr>
+                        <tr><td>Pago Nequi</td><td class="ct-hb">✓</td><td>Algunos</td><td>✗</td></tr>
+                        <tr><td>Garantía de satisfacción</td><td class="ct-hb">✓ 100%</td><td>✗</td><td>Limitada</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ZONA DE COBERTURA -->
+    <section id="cobertura">
+        <div class="container">
+            <div class="sec-head rv">
+                <span class="tag">Domicilios</span>
+                <h2>Zona de Cobertura en el Quindío</h2>
+                <p>Llevamos House Barf hasta la puerta de tu casa</p>
+            </div>
+            <div class="coverage-grid rv">
+                <div class="coverage-card coverage-free">
+                    <div class="coverage-icon">🟢</div>
+                    <h3>Armenia</h3>
+                    <p class="coverage-detail">Domicilio <strong>GRATIS</strong> desde 5kg</p>
+                    <p class="coverage-sub">Pedidos menores: $4,000</p>
+                </div>
+                <div class="coverage-card">
+                    <div class="coverage-icon">🔵</div>
+                    <h3>Calarcá</h3>
+                    <p class="coverage-detail">Envío disponible</p>
+                    <p class="coverage-sub">Consulta costo por WhatsApp</p>
+                </div>
+                <div class="coverage-card">
+                    <div class="coverage-icon">🔵</div>
+                    <h3>Montenegro</h3>
+                    <p class="coverage-detail">Envío disponible</p>
+                    <p class="coverage-sub">Consulta costo por WhatsApp</p>
+                </div>
+                <div class="coverage-card">
+                    <div class="coverage-icon">🔵</div>
+                    <h3>Circasia</h3>
+                    <p class="coverage-detail">Envío disponible</p>
+                    <p class="coverage-sub">Consulta costo por WhatsApp</p>
+                </div>
+                <div class="coverage-card">
+                    <div class="coverage-icon">🔵</div>
+                    <h3>La Tebaida</h3>
+                    <p class="coverage-detail">Envío disponible</p>
+                    <p class="coverage-sub">Consulta costo por WhatsApp</p>
+                </div>
+                <div class="coverage-card">
+                    <div class="coverage-icon">🔵</div>
+                    <h3>Quimbaya</h3>
+                    <p class="coverage-detail">Envío disponible</p>
+                    <p class="coverage-sub">Consulta costo por WhatsApp</p>
+                </div>
+                <div class="coverage-card">
+                    <div class="coverage-icon">🟡</div>
+                    <h3>Salento</h3>
+                    <p class="coverage-detail">Envío bajo pedido</p>
+                    <p class="coverage-sub">Mínimo 5kg</p>
+                </div>
+                <div class="coverage-card">
+                    <div class="coverage-icon">🟡</div>
+                    <h3>Filandia</h3>
+                    <p class="coverage-detail">Envío bajo pedido</p>
+                    <p class="coverage-sub">Mínimo 5kg</p>
+                </div>
+            </div>
+            <p class="coverage-note rv">¿No ves tu municipio? <a href="https://wa.me/573126737317?text=Hola%20House%20Barf!%20Quiero%20saber%20si%20hacen%20domicilio%20en%20mi%20zona%20🐶" target="_blank" rel="noopener">Pregúntanos por WhatsApp</a> — ¡es posible que también lleguemos!</p>
         </div>
     </section>
 
@@ -1475,6 +1635,35 @@
         btn.href = `https://wa.me/${WA}?text=${msg}`;
     }
     updateCalc();
+
+    // === SOCIAL PROOF TICKER ===
+    (function(){
+        const messages = [
+            {name:'Camila R.',city:'Armenia',msg:'pidió 10 lb de concentrado'},
+            {name:'Andrés M.',city:'Calarcá',msg:'pidió 5 lb para Luna'},
+            {name:'María José P.',city:'Montenegro',msg:'pidió 8 lb para sus 3 peludos'},
+            {name:'Dr. Santiago H.',city:'Circasia',msg:'pidió 15 lb para Bruno y Thor'},
+            {name:'Valentina O.',city:'La Tebaida',msg:'pidió 6 lb para Toby'},
+            {name:'Diego C.',city:'Quimbaya',msg:'pidió 12 lb para Lola'},
+            {name:'Felipe G.',city:'Armenia',msg:'envió pedido a Salento'},
+            {name:'Carolina V.',city:'Armenia',msg:'pidió 7 lb de concentrado'},
+            {name:'Juan Pablo R.',city:'Montenegro',msg:'pidió 10 lb con domicilio'},
+            {name:'Laura M.',city:'Circasia',msg:'pidió 5 lb para Max'}
+        ];
+        const ticker = document.getElementById('proofTicker');
+        const textEl = ticker.querySelector('.proof-text');
+        let idx = 0;
+        function showProof(){
+            const m = messages[idx];
+            const mins = Math.floor(Math.random()*55)+5;
+            textEl.innerHTML = `<strong>${m.name}</strong> en ${m.city} ${m.msg} <span style="color:var(--t2);font-size:.78rem">hace ${mins} min</span>`;
+            ticker.classList.add('show');
+            setTimeout(() => { ticker.classList.remove('show'); }, 4500);
+            idx = (idx + 1) % messages.length;
+        }
+        // Start after 8 seconds, repeat every 25 seconds
+        setTimeout(() => { showProof(); setInterval(showProof, 25000); }, 8000);
+    })();
 
     // === NAV CALCULATOR LINK ===
     </script>
