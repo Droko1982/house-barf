@@ -1,0 +1,18 @@
+{
+  "name": "House Barf - Comida para Perros Armenia Quindío",
+  "short_name": "House Barf",
+  "description": "Concentrado premium sabor pollo y verduras para perros $4,500/lb. Domicilio gratis en Armenia desde 5kg.",
+  "start_url": "/house-barf/",
+  "display": "standalone",
+  "background_color": "#FFF8F0",
+  "theme_color": "#FF6B35",
+  "lang": "es-CO",
+  "icons": [
+    {
+      "src": "hero.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
