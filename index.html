@@ -100,7 +100,19 @@
         "inLanguage":"es-CO",
         "isPartOf":{"@type":"WebSite","name":"House Barf","url":"https://droko1982.github.io/house-barf/"},
         "about":{"@type":"Thing","name":"Comida para perros en Armenia Quindío"},
-        "speakable":{"@type":"SpeakableSpecification","cssSelector":[".hero-text h1",".hero-text p","#producto h2"]}
+        "speakable":{"@type":"SpeakableSpecification","cssSelector":[".hero-text h1",".hero-text p","#producto h2","#ingredientes h2","#razas h2"]}
+    },{
+        "@context":"https://schema.org","@type":"ItemList","name":"Razas de Perros Populares en Armenia Quindío",
+        "description":"House Barf es ideal para todas las razas de perros en Armenia y el Quindío",
+        "numberOfItems":6,
+        "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Rottweiler","description":"Comida para Rottweiler en Armenia Quindío - House Barf concentrado premium"},
+            {"@type":"ListItem","position":2,"name":"Pastor Alemán","description":"Alimento para Pastor Alemán en Armenia - House Barf nutrición completa"},
+            {"@type":"ListItem","position":3,"name":"Golden Retriever","description":"Comida para Golden Retriever en Quindío - House Barf pelaje brillante"},
+            {"@type":"ListItem","position":4,"name":"Labrador","description":"Alimento para Labrador en Armenia Quindío - House Barf control de peso"},
+            {"@type":"ListItem","position":5,"name":"French Poodle","description":"Comida para French Poodle en Armenia - House Barf razas pequeñas"},
+            {"@type":"ListItem","position":6,"name":"Mestizo / Criollo","description":"Alimento para perros mestizos en Quindío - House Barf todas las razas"}
+        ]
     }]
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -169,7 +181,7 @@
         }
         .img-fallback{background:linear-gradient(135deg,var(--p),var(--a))!important}
         html{scroll-behavior:smooth}
-        #testimonios,#galeria,#transformacion,#consejos,#comunidad,#garantia,#pago,#faq{content-visibility:auto;contain-intrinsic-size:auto 600px}
+        #testimonios,#galeria,#transformacion,#consejos,#comunidad,#garantia,#pago,#faq,#comparacion,#cobertura,#ingredientes,#razas{content-visibility:auto;contain-intrinsic-size:auto 600px}
 
         /* === COMPARISON TABLE === */
         #comparacion{padding:80px 0}
@@ -203,6 +215,46 @@
         .proof-dot{width:8px;height:8px;border-radius:50%;background:var(--g);flex-shrink:0;animation:proofPulse 1.5s ease infinite}
         @keyframes proofPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
         @media(max-width:768px){.proof-ticker{bottom:140px;left:10px;right:10px}.proof-item{max-width:100%}}
+
+        /* === INGREDIENTS === */
+        #ingredientes{background:var(--bg2)}
+        .ingr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+        .ingr-card{background:var(--w);border-radius:var(--r);padding:32px 24px;text-align:center;box-shadow:var(--sh);transition:all .4s cubic-bezier(.4,0,.2,1);border-top:4px solid transparent}
+        .ingr-card:hover{transform:translateY(-6px);box-shadow:var(--shh);border-top-color:var(--p)}
+        .ingr-emoji{font-size:2.8rem;margin-bottom:14px}
+        .ingr-card h3{font-family:'Fredoka One',cursive;font-size:1.05rem;color:var(--s);margin-bottom:8px}
+        .ingr-card p{font-size:.88rem;color:var(--t2);line-height:1.65}
+
+        /* === BREEDS === */
+        #razas{background:var(--w)}
+        .breed-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+        .breed-card{background:var(--bg);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:all .4s cubic-bezier(.4,0,.2,1)}
+        .breed-card:hover{transform:translateY(-6px);box-shadow:var(--shh)}
+        .breed-img{height:180px;overflow:hidden}
+        .breed-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+        .breed-card:hover .breed-img img{transform:scale(1.08)}
+        .breed-card h3{font-family:'Fredoka One',cursive;font-size:1.1rem;color:var(--s);padding:16px 20px 4px}
+        .breed-card p{font-size:.85rem;color:var(--t2);line-height:1.6;padding:0 20px 12px}
+        .breed-tag{display:inline-block;background:var(--bg2);color:var(--p);padding:4px 14px;border-radius:20px;font-size:.72rem;font-weight:700;margin:0 20px 16px;text-transform:uppercase;letter-spacing:.5px}
+        .breed-cta{text-align:center;margin-top:40px;font-size:1rem;color:var(--t2);line-height:1.7}
+        .breed-cta a{color:var(--wa);font-weight:700;text-decoration:none}
+        .breed-cta a:hover{text-decoration:underline}
+
+        /* === BUNDLE QTY STYLES === */
+        .qty-opt.bundle{border-color:var(--g);position:relative}
+        .qty-opt.bundle .qsv{display:block;font-size:.72rem;color:var(--g);font-weight:700;margin-top:2px}
+
+        /* === DARK MODE FIXES FOR NEW SECTIONS === */
+        html.dark .compare-table{background:var(--w);border:1px solid var(--bdr)}
+        html.dark .compare-table th,html.dark .compare-table td{border-color:var(--bdr)}
+        html.dark .compare-table .ct-hb{background:rgba(255,123,69,.12)}
+        html.dark .compare-table thead .ct-hb{background:var(--p);color:#fff}
+        html.dark .compare-table tbody tr:hover{background:rgba(255,255,255,.03)}
+        html.dark .coverage-card{background:var(--w);border-color:var(--bdr)}
+        html.dark .coverage-free{border-color:var(--g);background:linear-gradient(135deg,rgba(102,187,106,.08),rgba(102,187,106,.15))}
+        html.dark .ingr-card{background:var(--w)}
+        html.dark .breed-card{background:var(--bg2)}
+        html.dark .breed-img img{filter:brightness(.9)}
         body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--t);overflow-x:hidden}
 
         /* === LOADER === */
@@ -650,6 +702,7 @@
                 <li><a href="#testimonios">Opiniones</a></li>
                 <li><a href="#calculadora">Calculadora</a></li>
                 <li><a href="#como-pedir">Cómo Pedir</a></li>
+                <li><a href="#ingredientes">Ingredientes</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#distribuidor">Distribuidores</a></li>
                 <li><a href="https://wa.me/573126737317?text=Hola%20House%20Barf!%20Quiero%20pedir%20concentrado%20%F0%9F%90%B6%20(desde%20men%C3%BA)" class="nav-cta" target="_blank" rel="noopener">¡Pedir Ahora!</a></li>
@@ -666,7 +719,7 @@
     <!-- HERO -->
     <section class="hero" id="inicio">
         <div class="hero-bg">
-            <img src="hero.jpg" alt="Tres Rottweilers felices - House Barf comida para perros Armenia Quindío" loading="eager" fetchpriority="high" onerror="this.src='https://images.unsplash.com/photo-1665333354010-050f08f35907?w=1400&q=80&fit=crop'">
+            <img src="hero.jpg" alt="Tres Rottweilers felices - House Barf comida para perros Armenia Quindío" width="1400" height="933" loading="eager" fetchpriority="high" onerror="this.src='https://images.unsplash.com/photo-1665333354010-050f08f35907?w=1400&q=80&fit=crop'">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-in">
@@ -797,6 +850,18 @@
                                 <span class="qlb">10 lb</span>
                                 <span class="qpr">$45,000</span>
                             </div>
+                            <div class="qty-opt bundle" data-qty="20" data-price="88000" onclick="selQty(this)">
+                                <span class="qdsc">AHORRA</span>
+                                <span class="qlb">20 lb</span>
+                                <span class="qpr">$88,000</span>
+                                <span class="qsv">$4,400/lb</span>
+                            </div>
+                            <div class="qty-opt bundle" data-qty="30" data-price="127500" onclick="selQty(this)">
+                                <span class="qdsc">MEJOR PRECIO</span>
+                                <span class="qlb">30 lb</span>
+                                <span class="qpr">$127,500</span>
+                                <span class="qsv">$4,250/lb</span>
+                            </div>
                         </div>
                         <div class="qty-custom">
                             <label for="customQty">Otra cantidad:</label>
@@ -808,6 +873,49 @@
                         <svg width="22" height="22" fill="#fff"><use href="#ico-wa"/></svg>
                         Pedir 1 lb por WhatsApp — $4,500
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INGREDIENTES -->
+    <section id="ingredientes">
+        <div class="container">
+            <div class="sec-head rv">
+                <span class="tag">Nutrición Real</span>
+                <h2>¿Qué Contiene House Barf?</h2>
+                <p>Ingredientes de calidad que tu peludo merece — sin rellenos, sin harinas de subproductos</p>
+            </div>
+            <div class="ingr-grid">
+                <div class="ingr-card rv rv-d1">
+                    <div class="ingr-emoji">🍗</div>
+                    <h3>Proteína de Pollo</h3>
+                    <p>Pollo real como ingrediente principal. Músculos fuertes y energía sostenida todo el día.</p>
+                </div>
+                <div class="ingr-card rv rv-d2">
+                    <div class="ingr-emoji">🥕</div>
+                    <h3>Verduras Frescas</h3>
+                    <p>Vitaminas y minerales esenciales de verduras seleccionadas para una nutrición completa.</p>
+                </div>
+                <div class="ingr-card rv rv-d3">
+                    <div class="ingr-emoji">🦠</div>
+                    <h3>Prebióticos</h3>
+                    <p>Fibras especiales que alimentan las bacterias buenas del intestino de tu perro.</p>
+                </div>
+                <div class="ingr-card rv rv-d4">
+                    <div class="ingr-emoji">💊</div>
+                    <h3>Probióticos</h3>
+                    <p>Bacterias beneficiosas para una flora intestinal saludable. Menos gases, mejor digestión.</p>
+                </div>
+                <div class="ingr-card rv rv-d1">
+                    <div class="ingr-emoji">✨</div>
+                    <h3>Vitaminas y Minerales</h3>
+                    <p>Fórmula enriquecida para pelaje brillante, huesos fuertes y sistema inmune activo.</p>
+                </div>
+                <div class="ingr-card rv rv-d2">
+                    <div class="ingr-emoji">🚫</div>
+                    <h3>Sin Rellenos</h3>
+                    <p>Cero harinas de subproductos, cero colorantes artificiales, cero conservantes dañinos.</p>
                 </div>
             </div>
         </div>
@@ -1279,6 +1387,56 @@
         </div>
     </section>
 
+    <!-- RAZAS POPULARES -->
+    <section id="razas">
+        <div class="container">
+            <div class="sec-head rv">
+                <span class="tag">Para Todas las Razas</span>
+                <h2>Comida para Perros por Raza en Armenia</h2>
+                <p>House Barf es ideal para perros de todas las razas y tamaños en el Quindío</p>
+            </div>
+            <div class="breed-grid">
+                <div class="breed-card rv rv-d1">
+                    <div class="breed-img"><img src="https://images.unsplash.com/photo-1656138899262-1faa4ae4bef6?w=300&q=75&fit=crop" alt="Rottweiler en Armenia Quindío - House Barf" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('img-fallback')"></div>
+                    <h3>Rottweiler</h3>
+                    <p>Raza grande (35-60kg). Necesitan alta proteína para masa muscular. <strong>Porción: 400-500g/día</strong></p>
+                    <span class="breed-tag">Popular en Armenia</span>
+                </div>
+                <div class="breed-card rv rv-d2">
+                    <div class="breed-img"><img src="https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=300&q=75&fit=crop" alt="Pastor Alemán en Quindío - House Barf" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('img-fallback')"></div>
+                    <h3>Pastor Alemán</h3>
+                    <p>Raza grande (30-40kg). Alta energía, necesitan nutrición balanceada. <strong>Porción: 350-450g/día</strong></p>
+                    <span class="breed-tag">Muy activo</span>
+                </div>
+                <div class="breed-card rv rv-d3">
+                    <div class="breed-img"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=300&q=75&fit=crop" alt="Golden Retriever en Armenia - House Barf" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('img-fallback')"></div>
+                    <h3>Golden Retriever</h3>
+                    <p>Raza grande (25-34kg). Pelaje dorado necesita omega y proteína. <strong>Porción: 300-400g/día</strong></p>
+                    <span class="breed-tag">Pelaje hermoso</span>
+                </div>
+                <div class="breed-card rv rv-d4">
+                    <div class="breed-img"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300&q=75&fit=crop" alt="Labrador en Quindío Colombia - House Barf" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('img-fallback')"></div>
+                    <h3>Labrador</h3>
+                    <p>Raza grande (25-36kg). Propensos a sobrepeso, porciones controladas. <strong>Porción: 300-380g/día</strong></p>
+                    <span class="breed-tag">Control peso</span>
+                </div>
+                <div class="breed-card rv rv-d1">
+                    <div class="breed-img"><img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=300&q=75&fit=crop" alt="French Poodle en Armenia Quindío - House Barf" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('img-fallback')"></div>
+                    <h3>French Poodle</h3>
+                    <p>Raza pequeña-mediana (3-22kg). Inteligentes y activos, necesitan energía. <strong>Porción: 80-250g/día</strong></p>
+                    <span class="breed-tag">Raza popular</span>
+                </div>
+                <div class="breed-card rv rv-d2">
+                    <div class="breed-img"><img src="https://images.unsplash.com/photo-1598819849325-f0152d605b08?w=300&q=75&fit=crop" alt="Perro mestizo en Armenia Quindío - House Barf" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('img-fallback')"></div>
+                    <h3>Mestizo / Criollo</h3>
+                    <p>Todos los tamaños. Fuertes y adaptables, merecen la mejor nutrición. <strong>Porción: según peso</strong></p>
+                    <span class="breed-tag">Los más queridos</span>
+                </div>
+            </div>
+            <p class="breed-cta rv">¿No ves la raza de tu peludo? <strong>¡No importa!</strong> House Barf es ideal para todas las razas. <a href="https://wa.me/573126737317?text=Hola%20House%20Barf!%20Tengo%20un%20perro%20raza%20____,%20%C2%BFcu%C3%A1nto%20debe%20comer%3F%20🐶" target="_blank" rel="noopener">Pregúntale a Felipe →</a></p>
+        </div>
+    </section>
+
     <!-- FAQ -->
     <section id="faq">
         <div class="container">
@@ -1380,6 +1538,9 @@
                     <li><a href="#testimonios">Opiniones</a></li>
                     <li><a href="#como-pedir">Cómo Pedir</a></li>
                     <li><a href="#calculadora">Calculadora</a></li>
+                    <li><a href="#ingredientes">Ingredientes</a></li>
+                    <li><a href="#razas">Razas</a></li>
+                    <li><a href="#cobertura">Cobertura</a></li>
                     <li><a href="#pago">Pago Nequi</a></li>
                     <li><a href="#faq">Preguntas</a></li>
                     <li><a href="#distribuidor">Distribuidores</a></li>
@@ -1664,6 +1825,13 @@
         // Start after 8 seconds, repeat every 25 seconds
         setTimeout(() => { showProof(); setInterval(showProof, 25000); }, 8000);
     })();
+
+    // === SERVICE WORKER ===
+    if('serviceWorker' in navigator){
+        window.addEventListener('load',()=>{
+            navigator.serviceWorker.register('sw.js').catch(()=>{});
+        });
+    }
 
     // === NAV CALCULATOR LINK ===
     </script>
