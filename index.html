@@ -550,11 +550,6 @@
         #calculadora{background:var(--w);overflow:hidden}
         .calc-wrap{max-width:700px;margin:0 auto}
         .calc-card{background:var(--bg);border-radius:24px;padding:40px 36px;box-shadow:var(--sh)}
-        .calc-size-btns{display:flex;gap:10px;margin-bottom:28px;justify-content:center}
-        .calc-size-btn{padding:12px 24px;border-radius:50px;border:2px solid var(--bdr);background:var(--w);cursor:pointer;font-family:inherit;font-weight:700;font-size:.88rem;color:var(--t2);transition:all .3s;display:flex;align-items:center;gap:8px}
-        .calc-size-btn:hover,.calc-size-btn.active{border-color:var(--p);background:var(--bg2);color:var(--p)}
-        .calc-size-btn svg{width:28px;height:28px;transition:transform .3s}
-        .calc-size-btn.active svg{transform:scale(1.15)}
         .calc-slider-wrap{margin-bottom:32px;text-align:center}
         .calc-slider-wrap label{font-weight:700;font-size:.95rem;color:var(--s);display:block;margin-bottom:14px}
         .calc-weight-display{font-family:'Fredoka One',cursive;font-size:2.4rem;color:var(--p);margin-bottom:6px}
@@ -563,8 +558,13 @@
         .calc-slider::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;border-radius:50%;background:var(--p);cursor:pointer;box-shadow:0 4px 15px rgba(255,107,53,.4);border:3px solid var(--w);transition:transform .2s}
         .calc-slider::-webkit-slider-thumb:hover{transform:scale(1.15)}
         .calc-slider::-moz-range-thumb{width:30px;height:30px;border-radius:50%;background:var(--p);cursor:pointer;box-shadow:0 4px 15px rgba(255,107,53,.4);border:3px solid var(--w)}
-        .calc-dog-visual{display:flex;justify-content:center;margin-bottom:24px;height:80px;align-items:flex-end}
-        .calc-dog-visual svg{fill:var(--s);transition:all .5s cubic-bezier(.4,0,.2,1);opacity:.6}
+        .calc-dog-visual{display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:22px;gap:10px;min-height:200px}
+        .calc-dog-img-wrap{width:170px;height:170px;border-radius:50%;overflow:hidden;border:5px solid var(--w);box-shadow:0 10px 35px rgba(0,0,0,.15);background:var(--bg2);transition:transform .5s cubic-bezier(.4,0,.2,1)}
+        .calc-dog-img-wrap.swap{transform:scale(.92)}
+        .calc-dog-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .35s ease}
+        .calc-dog-img-wrap img.fade{opacity:0}
+        .calc-dog-label{font-family:'Fredoka One',cursive;font-size:1.15rem;color:var(--s);text-align:center;letter-spacing:.3px}
+        .calc-dog-label small{display:block;font-family:'Poppins',sans-serif;font-weight:600;font-size:.78rem;color:var(--t2);margin-top:2px;letter-spacing:0}
         .calc-results{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
         .calc-result{background:var(--w);border-radius:16px;padding:20px 16px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,.05)}
         .calc-result .cr-val{font-family:'Fredoka One',cursive;font-size:1.5rem;color:var(--p);display:block;margin-bottom:4px}
@@ -663,8 +663,8 @@
             .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,140px)}
             .trust-bar-in{flex-direction:column;align-items:center;gap:14px}
             .calc-results{grid-template-columns:1fr}
-            .calc-size-btns{flex-direction:column;align-items:center}
             .calc-card{padding:28px 20px}
+            .calc-dog-img-wrap{width:140px;height:140px}
             .share-btns{flex-direction:column;align-items:center}
         }
     </style>
@@ -927,51 +927,38 @@
             <div class="sec-head rv">
                 <span class="tag">Calculadora de Porciones</span>
                 <h2>¿Cuánto Necesita tu Peludo?</h2>
-                <p>Selecciona el tamaño y peso de tu perro para saber la porción diaria y cuánto pedir al mes</p>
+                <p>Mueve el deslizador con el peso de tu perro para ver la porción diaria y cuánto pedir al mes</p>
             </div>
             <div class="calc-wrap rv">
                 <div class="calc-card">
-                    <div class="calc-size-btns">
-                        <button class="calc-size-btn" data-size="small" onclick="setCalcSize('small',this)">
-                            <svg viewBox="0 0 40 40"><circle cx="26" cy="12" r="6"/><ellipse cx="20" cy="22" rx="12" ry="8"/><rect x="10" y="28" width="4" height="8" rx="2"/><rect x="18" y="28" width="4" height="9" rx="2"/><rect x="26" y="28" width="4" height="8" rx="2"/></svg>
-                            Pequeño
-                        </button>
-                        <button class="calc-size-btn active" data-size="medium" onclick="setCalcSize('medium',this)">
-                            <svg viewBox="0 0 50 40"><circle cx="34" cy="10" r="7"/><ellipse cx="25" cy="22" rx="16" ry="10"/><rect x="12" y="30" width="5" height="10" rx="2.5"/><rect x="21" y="30" width="5" height="11" rx="2.5"/><rect x="30" y="30" width="5" height="10" rx="2.5"/></svg>
-                            Mediano
-                        </button>
-                        <button class="calc-size-btn" data-size="large" onclick="setCalcSize('large',this)">
-                            <svg viewBox="0 0 60 40"><circle cx="42" cy="8" r="8"/><ellipse cx="30" cy="22" rx="20" ry="12"/><rect x="14" y="32" width="6" height="12" rx="3"/><rect x="24" y="32" width="6" height="13" rx="3"/><rect x="34" y="32" width="6" height="12" rx="3"/><rect x="44" y="32" width="6" height="11" rx="3"/></svg>
-                            Grande
-                        </button>
-                    </div>
-                    <div class="calc-dog-visual" id="calcDogVis">
-                        <svg id="calcDogSvg" viewBox="0 0 120 80" width="100" height="66">
-                            <circle cx="85" cy="18" r="14"/><ellipse cx="60" cy="40" rx="35" ry="22"/><rect x="30" y="58" width="10" height="20" rx="5"/><rect x="46" y="58" width="10" height="22" rx="5"/><rect x="64" y="58" width="10" height="20" rx="5"/><rect x="78" y="58" width="10" height="18" rx="5"/><ellipse cx="96" cy="16" rx="4" ry="7"/>
-                        </svg>
+                    <div class="calc-dog-visual">
+                        <div class="calc-dog-img-wrap" id="calcDogImgWrap">
+                            <img id="calcDogImg" src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&q=80&fit=crop" alt="Perro mediano - Cocker Spaniel" loading="lazy" decoding="async" onerror="this.parentElement.style.background='linear-gradient(135deg,var(--p),var(--s))'">
+                        </div>
+                        <div class="calc-dog-label" id="calcDogLabel">Como un Cocker Spaniel<small>16 - 20 kg</small></div>
                     </div>
                     <div class="calc-slider-wrap">
-                        <div class="calc-weight-display"><span id="calcWeightVal">15</span> <small>kg</small></div>
-                        <input type="range" class="calc-slider" id="calcSlider" min="1" max="60" value="15" oninput="updateCalc()">
-                        <div style="display:flex;justify-content:space-between;font-size:.75rem;color:var(--t2);font-weight:600"><span>1 kg</span><span>60 kg</span></div>
+                        <div class="calc-weight-display"><span id="calcWeightVal">18</span> <small>kg</small></div>
+                        <input type="range" class="calc-slider" id="calcSlider" min="2" max="50" value="18" step="1" oninput="updateCalc()">
+                        <div style="display:flex;justify-content:space-between;font-size:.75rem;color:var(--t2);font-weight:600"><span>2 kg</span><span>50 kg</span></div>
                     </div>
                     <div class="calc-results" id="calcResults">
                         <div class="calc-result">
-                            <span class="cr-val" id="calcDaily">200g</span>
+                            <span class="cr-val" id="calcDaily">320 - 400g</span>
                             <span class="cr-label">Porción diaria</span>
                         </div>
                         <div class="calc-result">
-                            <span class="cr-val" id="calcMonthly">13 lb</span>
+                            <span class="cr-val" id="calcMonthly">24 lb</span>
                             <span class="cr-label">Necesitas al mes</span>
                         </div>
                         <div class="calc-result">
-                            <span class="cr-val" id="calcCost">$58,500</span>
+                            <span class="cr-val" id="calcCost">$108,000</span>
                             <span class="cr-label">Costo mensual</span>
                         </div>
                     </div>
                     <a href="#" id="calcOrderBtn" class="calc-order-btn" target="_blank" rel="noopener">
                         <svg width="20" height="20" fill="#fff"><use href="#ico-wa"/></svg>
-                        Pedir 13 lb por WhatsApp — $58,500
+                        Pedir 24 lb por WhatsApp — $108,000
                     </a>
                 </div>
             </div>
@@ -1759,40 +1746,55 @@
     // === INITIAL ORDER BTN ===
     selQty(document.querySelector('.qty-opt.sel'));
 
-    // === PORTION CALCULATOR ===
-    let calcSize = 'medium';
-    function setCalcSize(size, btn){
-        calcSize = size;
-        document.querySelectorAll('.calc-size-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const slider = document.getElementById('calcSlider');
-        if(size === 'small'){ slider.min=1; slider.max=10; slider.value=Math.min(slider.value,10)||5; }
-        else if(size === 'medium'){ slider.min=10; slider.max=25; slider.value=Math.max(Math.min(slider.value,25),10)||15; }
-        else{ slider.min=25; slider.max=60; slider.value=Math.max(slider.value,25)||35; }
-        updateCalc();
+    // === PORTION CALCULATOR (chart-based) ===
+    const PORTION_RANGES = [
+        {max:5,  dailyMin:90,   dailyMax:120,  breed:'Chihuahua',         label:'2 - 5 kg',  img:'1583511655857-d19b40a7a54e'},
+        {max:8,  dailyMin:120,  dailyMax:160,  breed:'Bulldog Francés',   label:'5 - 8 kg',  img:'1629798358432-335e108ebe3f'},
+        {max:10, dailyMin:160,  dailyMax:200,  breed:'Pug',               label:'8 - 10 kg', img:'1598819849325-f0152d605b08'},
+        {max:13, dailyMin:220,  dailyMax:260,  breed:'Schnauzer',         label:'11 - 13 kg',img:'1583511655857-d19b40a7a54e'},
+        {max:15, dailyMin:260,  dailyMax:300,  breed:'Beagle',            label:'13 - 15 kg',img:'1598819849325-f0152d605b08'},
+        {max:20, dailyMin:320,  dailyMax:400,  breed:'Cocker Spaniel',    label:'16 - 20 kg',img:'1552053831-71594a27632d'},
+        {max:29, dailyMin:420,  dailyMax:580,  breed:'Labrador',          label:'21 - 29 kg',img:'1587300003388-59208cc962cb'},
+        {max:37, dailyMin:600,  dailyMax:800,  breed:'Rottweiler',        label:'30 - 37 kg',img:'1665333354010-050f08f35907'},
+        {max:50, dailyMin:1000, dailyMax:1200, breed:'Pastor Alemán',     label:'38 - 50 kg',img:'1589941013453-ec89f33b5e95'}
+    ];
+    function rangeForWeight(w){
+        for(const r of PORTION_RANGES){ if(w <= r.max) return r; }
+        return PORTION_RANGES[PORTION_RANGES.length-1];
     }
+    let lastImgId = null;
     function updateCalc(){
         const w = parseInt(document.getElementById('calcSlider').value);
+        const r = rangeForWeight(w);
         document.getElementById('calcWeightVal').textContent = w;
-        // Daily grams based on metabolic weight (w^0.75 * 15)
-        const dailyG = Math.round(Math.pow(w, 0.75) * 15);
-        const monthlyG = dailyG * 30;
+        // Use the midpoint of the daily range for monthly forecast
+        const avgDaily = Math.round((r.dailyMin + r.dailyMax) / 2);
+        const monthlyG = avgDaily * 30;
         const monthlyLb = Math.ceil(monthlyG / 453.6);
         const monthlyCost = monthlyLb * 4500;
-        document.getElementById('calcDaily').textContent = dailyG + 'g';
+        document.getElementById('calcDaily').textContent = r.dailyMin + ' - ' + r.dailyMax + 'g';
         document.getElementById('calcMonthly').textContent = monthlyLb + ' lb';
         document.getElementById('calcCost').textContent = '$' + monthlyCost.toLocaleString('es-CO');
-        // Update dog visual size
-        const svg = document.getElementById('calcDogSvg');
-        const scale = 60 + (w / 60) * 100;
-        svg.style.width = scale + 'px';
-        svg.style.height = (scale * 0.66) + 'px';
-        svg.style.opacity = 0.4 + (w / 60) * 0.6;
+        // Update breed label
+        document.getElementById('calcDogLabel').innerHTML = 'Como un ' + r.breed + '<small>' + r.label + '</small>';
+        // Swap dog photo when range changes (with subtle fade)
+        if(r.img !== lastImgId){
+            lastImgId = r.img;
+            const img = document.getElementById('calcDogImg');
+            const wrap = document.getElementById('calcDogImgWrap');
+            wrap.classList.add('swap');
+            img.classList.add('fade');
+            setTimeout(() => {
+                img.src = 'https://images.unsplash.com/photo-' + r.img + '?w=400&q=80&fit=crop';
+                img.alt = 'Perro tamaño ' + r.breed;
+                img.classList.remove('fade');
+                wrap.classList.remove('swap');
+            }, 180);
+        }
         // Update order button
         const btn = document.getElementById('calcOrderBtn');
-        btn.textContent = '';
         btn.innerHTML = `<svg width="20" height="20" fill="#fff"><use href="#ico-wa"/></svg> Pedir ${monthlyLb} lb por WhatsApp — $${monthlyCost.toLocaleString('es-CO')}`;
-        const msg = encodeURIComponent(`Hola House Barf! 🐶 Mi perro pesa ${w}kg. Quiero pedir ${monthlyLb} libras de Concentrado Pollo y Verduras por $${monthlyCost.toLocaleString('es-CO')}. (desde calculadora)`);
+        const msg = encodeURIComponent(`Hola House Barf! 🐶 Mi perro pesa ${w}kg (tamaño ${r.breed}). Quiero pedir ${monthlyLb} libras de Concentrado Pollo y Verduras por $${monthlyCost.toLocaleString('es-CO')}. (desde calculadora)`);
         btn.href = `https://wa.me/${WA}?text=${msg}`;
     }
     updateCalc();
