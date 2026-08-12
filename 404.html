@@ -3,30 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página no encontrada - House Barf</title>
+    <title>Página no encontrada · Page not found - House Barf</title>
     <meta name="robots" content="noindex, follow">
     <meta name="description" content="Esta página no existe. Vuelve al inicio de House Barf para pedir comida para perros en Armenia, el Quindío y el Eje Cafetero.">
-    <meta name="theme-color" content="#FF6B35">
+    <meta name="theme-color" content="#FF6B35" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1A1210" media="(prefers-color-scheme: dark)">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
     <link rel="canonical" href="https://droko1982.github.io/house-barf/">
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',Tahoma,sans-serif;background:#FFF8F0;color:#2C1810;display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center;padding:24px}
-        .wrap{max-width:480px}
-        .paw{font-size:5rem;margin-bottom:16px;animation:bounce 1.5s ease infinite}
+        :root{
+            --bg:#FFF8F0;--t:#2C1810;--t2:#5D4037;--p:#C4400F;--wa:#167F3D;--card:#fff;--bdr:#e0d5cc;
+        }
+        @media(prefers-color-scheme:dark){
+            :root{--bg:#1A1210;--t:#F5E6D8;--t2:#BCAAA4;--p:#FF7B45;--wa:#2BDB6E;--card:#2A1F1A;--bdr:#3E2E26}
+            .btn-wa{color:#08240F!important}
+        }
+        body{font-family:'Segoe UI',Tahoma,sans-serif;background:var(--bg);color:var(--t);
+             display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center;padding:24px}
+        .wrap{max-width:540px;width:100%}
+        .paw{font-size:4.5rem;margin-bottom:12px;animation:bounce 1.5s ease infinite}
         @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
-        h1{font-size:2.5rem;color:#FF6B35;margin-bottom:8px}
-        p{font-size:1.1rem;color:#5D4037;margin-bottom:24px;line-height:1.6}
-        a{display:inline-block;background:#25D366;color:#fff;text-decoration:none;padding:14px 32px;border-radius:50px;font-weight:700;font-size:1rem;transition:transform .3s,box-shadow .3s}
-        a:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,211,102,.4)}
+        @media(prefers-reduced-motion:reduce){.paw{animation:none}}
+        h1{font-size:2.6rem;color:var(--p);margin-bottom:20px;line-height:1}
+        .block{padding:20px 0}
+        .block+.block{border-top:1px solid var(--bdr);margin-top:8px}
+        .lang{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t2);opacity:.7;margin-bottom:8px;display:block}
+        p{font-size:1.05rem;color:var(--t2);margin-bottom:18px;line-height:1.6}
+        a.btn-wa{display:inline-block;background:var(--wa);color:#fff;text-decoration:none;padding:13px 30px;
+             border-radius:50px;font-weight:700;font-size:1rem;transition:transform .3s,box-shadow .3s}
+        a.btn-wa:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(22,127,61,.35)}
+        a.btn-wa:focus-visible{outline:3px solid var(--p);outline-offset:3px}
     </style>
 </head>
 <body>
     <div class="wrap">
         <div class="paw">🐾</div>
         <h1>404</h1>
-        <p>Esta página se fue a pasear... ¡pero tu peludo sigue con hambre! Vuelve al inicio y haz tu pedido.</p>
-        <a href="/house-barf/">Volver al Inicio</a>
+
+        <div class="block" lang="es">
+            <span class="lang">Español</span>
+            <p>Esta página se fue a pasear… ¡pero tu peludo sigue con hambre! Vuelve al inicio y haz tu pedido.</p>
+            <a class="btn-wa" href="/house-barf/">Volver al inicio</a>
+        </div>
+
+        <div class="block" lang="en">
+            <span class="lang">English</span>
+            <p>This page went for a walk — but your dog is still hungry. Head back and place your order.</p>
+            <a class="btn-wa" href="/house-barf/en/">Back to the English site</a>
+        </div>
     </div>
 </body>
 </html>
