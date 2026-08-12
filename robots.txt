@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /404.html
 
 Sitemap: https://droko1982.github.io/house-barf/sitemap.xml
