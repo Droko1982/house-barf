@@ -519,3 +519,65 @@ A.update({
 J.update({
 "' kilogramos'": "' kilograms'",
 })
+
+
+# ---- fifth pass: "concentrado" renamed to "alimento", flavour named "Sabor Tradicional" ----
+_T5 = {
+"Alimento Premium Sabor Tradicional Pollo y Verduras para Perros en el Quindío":
+  "Premium Traditional Chicken & Vegetable Dog Food in Quindío and the Coffee Region",
+"Alimento Sabor Tradicional Pollo y Verduras":
+  "Traditional Chicken & Vegetable Dog Food",
+"House Barf Alimento Sabor Tradicional Pollo y Verduras":
+  "House Barf Traditional Chicken & Vegetable Dog Food",
+"Alimento premium sabor tradicional pollo y verduras a":
+  "Premium traditional chicken & vegetable dog food at",
+"Alimento premium a precio justo que se vende solo. Clientes satisfechos que recompran.":
+  "Premium food at a fair price that sells itself, with happy customers who reorder.",
+"Alimento premium sabor tradicional pollo y verduras para perros en Armenia, todo el Quindío y el Eje Cafetero. Nutrición real para tu peludo al mejor precio. Pedidos por WhatsApp, pago Nequi. Domicilio gratis en Armenia desde 5kg y envíos a Pereira, Manizales y más.":
+  "Premium traditional chicken & vegetable dog food in Armenia, all of Quindío and the Coffee Region. Real nutrition for your dog at the best price. Order on WhatsApp, pay with Nequi. Free delivery in Armenia on 5kg+ and shipping to Pereira, Manizales and beyond.",
+"En House Barf vendemos alimento premium sabor tradicional pollo y verduras a $4,500 la libra. Domicilio gratis en Armenia desde 5kg ($4,000 pedidos menores). Envíos en Calarcá, Montenegro, Circasia, La Tebaida y todo el Quindío. Precio justo, calidad premium.":
+  "At House Barf we sell premium traditional chicken and vegetable dog food at $4,500 a pound. Free delivery in Armenia on 5kg+ ($4,000 for smaller orders). We ship to Calarcá, Montenegro, Circasia, La Tebaida and all of Quindío. Fair price, premium quality.",
+"House Barf es la mejor opción de comida para perros en Armenia, Quindío. Alimento premium sabor tradicional pollo y verduras a $4,500/lb. Domicilio gratis desde 5kg en Armenia. Pide por WhatsApp al 312 673 7317.":
+  "House Barf is the best option for dog food in Armenia, Quindío. Premium traditional chicken and vegetable food at $4,500/lb, with free delivery in Armenia on 5kg+. Order on WhatsApp at 312 673 7317.",
+"House Barf es un alimento premium sabor tradicional pollo y verduras, enriquecido con prebióticos y probióticos. Esto mejora la digestión, fortalece el sistema inmunológico y promueve un pelaje brillante y saludable. Ideal para perros de todas las razas y edades.":
+  "House Barf is a premium traditional chicken and vegetable dog food enriched with prebiotics and probiotics. That improves digestion, strengthens the immune system and promotes a shiny, healthy coat. Ideal for dogs of every breed and age.",
+"House Barf ofrece alimento premium sabor tradicional pollo y verduras con proteína real y fórmula enriquecida con prebióticos y probióticos, ideal para perros de todas las razas. Domicilio gratis en Armenia desde 5kg y envíos en todo el Quindío y el Eje Cafetero, a $4,500 la libra.":
+  "House Barf offers premium traditional chicken and vegetable food with real protein and a formula enriched with prebiotics and probiotics, ideal for every breed. Free delivery in Armenia on 5kg+ and shipping across Quindío and the Coffee Region, at $4,500 a pound.",
+"Sí. House Barf despacha su alimento premium a $4,500 la libra hacia Pereira, Dosquebradas, Santa Rosa de Cabal, Manizales y Chinchiná. Escríbenos por WhatsApp con tu dirección y te confirmamos el costo y el tiempo de entrega.":
+  "Yes. House Barf ships its premium dog food at $4,500 a pound to Pereira, Dosquebradas, Santa Rosa de Cabal, Manizales and Chinchiná. Message us on WhatsApp with your address and we will confirm the cost and delivery time.",
+"Si tu peludo no queda satisfecho con nuestro alimento, te reponemos el producto o te devolvemos tu dinero. Así de seguros estamos de la calidad. Sin preguntas, sin complicaciones.":
+  "If your dog is not satisfied with our food, we will replace the product or refund your money. That is how confident we are in the quality. No questions, no hassle.",
+"Ver nuestro alimento →":
+  "See our dog food →",
+"¿El alimento es fresco?":
+  "Is the food fresh?",
+"¿Qué contiene el alimento House Barf?":
+  "What does House Barf dog food contain?",
+"¿Es bueno el alimento con probióticos para perros?":
+  "Is dog food with probiotics good for dogs?",
+"¡Nuestro alimento es ideal para perros de todas las razas y tamaños! Rottweilers, Pastores Alemanes, French Poodles, mestizos y más. Escríbenos y te asesoramos.":
+  "Our food suits dogs of every breed and size! Rottweilers, German Shepherds, French Poodles, mixed breeds and more. Message us and we will advise you.",
+"¡Sí! Nuestro alimento es ideal para Rottweilers y razas grandes. Rico en pollo y verduras con prebióticos y probióticos para músculos fuertes y pelaje brillante. Usa nuestra calculadora para saber la porción exacta según el peso de tu Rottweiler.":
+  "Yes! Our food is ideal for Rottweilers and large breeds. Rich in chicken and vegetables with prebiotics and probiotics for strong muscles and a shiny coat. Use our calculator to find the exact portion for your Rottweiler's weight.",
+"¡Sí! Los prebióticos y probióticos mejoran la flora intestinal de tu perro, lo que se traduce en mejor digestión, menos gases, heces firmes y mayor absorción de nutrientes. House Barf es el único alimento en Armenia con esta fórmula enriquecida.":
+  "Yes! Prebiotics and probiotics improve your dog's gut flora, which means better digestion, less gas, firmer stools and greater nutrient absorption. House Barf is the only food in Armenia with this enriched formula.",
+"Un pelaje brillante y suave, encías rosadas, energía constante durante el día, heces firmes y un peso estable son las 5 señales clave. Si tu perro en Armenia o el Quindío no muestra estas señales, puede ser hora de cambiar a un alimento de calidad con proteína real.":
+  "A shiny, soft coat, pink gums, steady energy through the day, firm stools and a stable weight are the 5 key signs. If your dog is not showing them, it may be time to switch to a quality food with real protein.",
+}
+T.update(_T5)
+
+_A5 = {
+"Cachorro Rottweiler nutrido con alimento House Barf Armenia": "A Rottweiler puppy nourished with House Barf dog food, Armenia",
+"Pastor Alemán fuerte alimentado con alimento House Barf": "A strong German Shepherd fed with House Barf dog food",
+"Pastor Alemán fuerte alimentado con alimento House Barf Quindío": "A strong German Shepherd fed with House Barf dog food, Quindío",
+"Rottweiler aventurero - alimento premium House Barf Quindío Colombia": "An adventurous Rottweiler - House Barf premium dog food, Quindío, Colombia",
+"Rottweiler feliz después de comer alimento House Barf": "A happy Rottweiler after a House Barf meal",
+}
+A.update(_A5)
+
+
+# footer keyword line (regenerated when terminology changed)
+T["Alimento para perros en Armenia Quindío, comida para perros en Armenia Quindío, comida para perros Eje Cafetero, concentrado premium para mascotas Armenia, House Barf concentrado sabor pollo y verduras, concentrado pollo verduras perros Armenia, prebióticos probióticos perros Armenia, alimento enriquecido perros Quindío, venta de comida para perros por libra Armenia, domicilio comida para mascotas Armenia, domicilio alimento perros Quindío, domicilio comida perros Eje Cafetero, pago Nequi mascotas Armenia, alimento para perros Quindío Colombia, tienda de mascotas Armenia Quindío, comida para perros Calarcá, comida para perros Montenegro Quindío, comida para perros Circasia, alimento canino La Tebaida, comida perros Quimbaya, comida perros Salento, comida perros Filandia, comida para perros Pereira, concentrado para perros Pereira Risaralda, comida para perros Dosquebradas, alimento perros Santa Rosa de Cabal, comida para perros Manizales, concentrado perros Manizales Caldas, comida perros Chinchiná, alimento canino Risaralda, alimento canino Caldas, concentrado para perros Colombia, alimento canino Quindío, dónde comprar comida para perros Armenia, dónde comprar comida para perros en el Eje Cafetero, mejor comida para perros Quindío, mejor comida para perros Eje Cafetero, comida para perros barata Armenia, comida para perros domicilio gratis Armenia 5kg, concentrado para mascotas Armenia Colombia, venta alimento perros Armenia Quindío, comida para perros cerca de mi Armenia, nutrición canina Armenia, nutrición canina Eje Cafetero, tienda para mascotas Armenia Quindío Colombia, comida premium perros Eje Cafetero, concentrado perros rottweiler Armenia, comida perros raza grande Armenia Quindío, concentrado con probióticos perros Colombia, alimento digestivo perros Armenia, distribuidores comida para perros Eje Cafetero."] = "Dog food in Armenia Quindio, premium dog food Armenia, dog food Coffee Region Colombia, House Barf traditional chicken and vegetable dog food, dog food with prebiotics and probiotics Armenia, dog food delivery Armenia, dog food delivery Quindio, dog food delivery Coffee Region, buy dog food by the pound Armenia, pet food store Armenia Quindio, dog food Calarca, dog food Montenegro Quindio, dog food Circasia, dog food La Tebaida, dog food Quimbaya, dog food Salento, dog food Filandia, dog food Pereira, dog food Pereira Risaralda, dog food Dosquebradas, dog food Santa Rosa de Cabal, dog food Manizales, dog food Manizales Caldas, dog food Chinchina, dog food Risaralda, dog food Caldas, dog food Colombia, where to buy dog food in Armenia Colombia, where to buy dog food in the Coffee Region, best dog food Quindio, best dog food Coffee Region, affordable dog food Armenia, free dog food delivery Armenia 5kg, English speaking dog food supplier Quindio, dog food near me Armenia, dog nutrition Armenia, dog nutrition Coffee Region, pet shop Armenia Quindio Colombia, premium dog food Coffee Region, Rottweiler dog food Armenia, large breed dog food Armenia Quindio, probiotic dog food Colombia, digestive dog food Armenia, dog food distributors Coffee Region."
+
+# privacy notice link (bilingual page at /privacidad.html)
+T["Política de datos"] = "Privacy notice"

@@ -55,10 +55,10 @@ body = re.sub(r'\b(alt|aria-label|title|placeholder)="([^"]*)"', attr_sub, body)
 
 # ==================================================== 3. WHATSAPP MESSAGES
 WA = {
- "Hola House Barf! Quiero pedir concentrado 🐶 (desde menú)": "Hi House Barf! I'd like to order dog food 🐶 (from the menu)",
- "Hola House Barf! Quiero pedir concentrado 🐶 (ví la página web)": "Hi House Barf! I'd like to order dog food 🐶 (from your website)",
- "Hola House Barf! Quiero pedir concentrado 🐶 (botón flotante)": "Hi House Barf! I'd like to order dog food 🐶 (floating button)",
- "Hola House Barf! Quiero pedir concentrado 🐶 (desde celular)": "Hi House Barf! I'd like to order dog food 🐶 (from mobile)",
+ "Hola House Barf! Quiero pedir alimento 🐶 (desde menú)": "Hi House Barf! I'd like to order dog food 🐶 (from the menu)",
+ "Hola House Barf! Quiero pedir alimento 🐶 (ví la página web)": "Hi House Barf! I'd like to order dog food 🐶 (from your website)",
+ "Hola House Barf! Quiero pedir alimento 🐶 (botón flotante)": "Hi House Barf! I'd like to order dog food 🐶 (floating button)",
+ "Hola House Barf! Quiero pedir alimento 🐶 (desde celular)": "Hi House Barf! I'd like to order dog food 🐶 (from mobile)",
  "Hola House Barf! Quiero saber si hacen domicilio en mi zona del Eje Cafetero 🐶":
    "Hi House Barf! I'd like to know if you deliver to my area in the Coffee Region 🐶",
  "Hola House Barf! Quiero asesoría sobre la alimentación de mi perro 🐶":
@@ -84,8 +84,8 @@ body = re.sub(r'wa\.me/573126737317\?text=([^"\'\s>]+)', wa_sub, body)
 
 # the "share with a friend" link has no phone number, so the regex above skips it.
 # match on the decoded text so we never depend on a particular percent-encoding.
-SHARE_EN = ("I recommend House Barf for your dog! Premium dog food at $4,500/lb with free delivery "
-            "in Armenia on 5kg+. Order at 318 587 5211 \U0001F43E")
+SHARE_EN = ("I recommend House Barf for your dog! Premium traditional chicken & vegetable dog food "
+            "at $4,500/lb with free delivery in Armenia on 5kg+. Order at 318 587 5211 \U0001F43E")
 def share_sub(m):
     dec = urllib.parse.unquote(m.group(1))
     if 'recomiendo House Barf' not in dec:
@@ -99,11 +99,11 @@ def js_translate(m):
     for es, en in sorted(J.items(), key=lambda kv: -len(kv[0])):
         block = block.replace(es, en)
     block = block.replace(
-      "Hola House Barf! 🐶 Mi perro pesa ${w}kg (tamaño ${r.breed}). Quiero pedir ${monthlyLb} libras de Concentrado Pollo y Verduras por $${monthlyCost.toLocaleString('es-CO')}. (desde calculadora)",
-      "Hi House Barf! 🐶 My dog weighs ${w}kg (${r.breed} size). I'd like to order ${monthlyLb} pounds of Chicken & Vegetable dog food for $${monthlyCost.toLocaleString('es-CO')}. (from the calculator)")
+      "Hola House Barf! 🐶 Mi perro pesa ${w}kg (tamaño ${r.breed}). Quiero pedir ${monthlyLb} libras de Alimento Sabor Tradicional Pollo y Verduras por $${monthlyCost.toLocaleString('es-CO')}. (desde calculadora)",
+      "Hi House Barf! 🐶 My dog weighs ${w}kg (${r.breed} size). I'd like to order ${monthlyLb} pounds of Traditional Chicken & Vegetable dog food for $${monthlyCost.toLocaleString('es-CO')}. (from the calculator)")
     block = block.replace(
-      "Hola House Barf! \U0001F436 Quiero pedir ${qty} libra(s) de Concentrado Pollo y Verduras por $${priceStr}. (desde producto)",
-      "Hi House Barf! \U0001F436 I'd like to order ${qty} pound(s) of Chicken & Vegetable dog food for $${priceStr}. (from the product section)")
+      "Hola House Barf! \U0001F436 Quiero pedir ${qty} libra(s) de Alimento Sabor Tradicional Pollo y Verduras por $${priceStr}. (desde producto)",
+      "Hi House Barf! \U0001F436 I'd like to order ${qty} pound(s) of Traditional Chicken & Vegetable dog food for $${priceStr}. (from the product section)")
     block = block.replace("'Como un ' + r.breed", "'About the size of a ' + r.breed")
     block = block.replace("Pedir ${monthlyLb} lb por WhatsApp", "Order ${monthlyLb} lb on WhatsApp")
     block = block.replace("Pedir ${qty} lb por WhatsApp", "Order ${qty} lb on WhatsApp")
@@ -116,10 +116,13 @@ def js_translate(m):
 body = re.sub(r'<script(?![^>]*type="application/ld)(?![^>]*src=)[^>]*>.*?</script>', js_translate, body, flags=re.S)
 
 # ==================================================== 5. RELATIVE ASSET PATHS
-for a in ('hero.jpg', 'icon-192.png', 'manifest.json'):
+for a in ('hero.jpg', 'icon-192.png', 'privacidad.html'):
     body = body.replace(f'"{a}"', f'"../{a}"')
     head = head.replace(f'"{a}"', f'"../{a}"')
 body = body.replace("register('sw.js')", "register('../sw.js')")
+# /en/ has its own manifest (English name, English shortcuts, its own scope),
+# so this one stays a sibling reference rather than being rewritten to ../
+assert 'rel="manifest" href="manifest.json"' in head, 'manifest link not found'
 
 # ============================================================== 6. HEAD
 head = head.replace('<html lang="es">', '<html lang="en">')
@@ -171,7 +174,7 @@ for e in data:
         e['slogan'] = 'Full Bellies, Happy Tails'
         e['knowsLanguage'] = ['es', 'en']
     elif t == 'Product':
-        e['name'] = 'House Barf Chicken & Vegetable Dry Dog Food'
+        e['name'] = 'House Barf Traditional Chicken & Vegetable Dog Food'
         e['description'] = ("Premium chicken and vegetable dry dog food for every breed and size. Sold by the pound. "
             "Free delivery in Armenia on 5kg+ and shipping across Quindío and the Coffee Region.")
         e['category'] = 'Dog Food'
