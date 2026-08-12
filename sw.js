@@ -1,8 +1,11 @@
-const CACHE_NAME = 'house-barf-v3';
+const CACHE_NAME = 'house-barf-v4';
 const ASSETS = [
   '/house-barf/',
   '/house-barf/index.html',
   '/house-barf/hero.jpg',
+  '/house-barf/og-image.jpg',
+  '/house-barf/icon-192.png',
+  '/house-barf/icon-512.png',
   '/house-barf/manifest.json',
   '/house-barf/404.html'
 ];

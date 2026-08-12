@@ -1,18 +1,49 @@
 {
-  "name": "House Barf - Comida para Perros Armenia Quindío",
+  "id": "/house-barf/",
+  "name": "House Barf - Comida para Perros Armenia, Quindío y Eje Cafetero",
   "short_name": "House Barf",
-  "description": "Concentrado premium sabor pollo y verduras para perros $4,500/lb. Domicilio gratis en Armenia desde 5kg.",
+  "description": "Concentrado premium sabor pollo y verduras para perros $4,500/lb. Domicilio gratis en Armenia desde 5kg y envíos en todo el Quindío y el Eje Cafetero.",
   "start_url": "/house-barf/",
+  "scope": "/house-barf/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#FFF8F0",
   "theme_color": "#FF6B35",
   "lang": "es-CO",
+  "dir": "ltr",
+  "categories": ["shopping", "food", "lifestyle"],
   "icons": [
     {
-      "src": "hero.jpg",
-      "sizes": "512x512",
-      "type": "image/jpeg",
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Pedir por WhatsApp",
+      "short_name": "Pedir",
+      "url": "/house-barf/#como-pedir",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Calculadora de porciones",
+      "short_name": "Calculadora",
+      "url": "/house-barf/#calculadora",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }]
     }
   ]
 }
