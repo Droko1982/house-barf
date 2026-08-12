@@ -1,7 +1,9 @@
-const CACHE_NAME = 'house-barf-v4';
+const CACHE_NAME = 'house-barf-v5';
 const ASSETS = [
   '/house-barf/',
   '/house-barf/index.html',
+  '/house-barf/en/',
+  '/house-barf/en/index.html',
   '/house-barf/hero.jpg',
   '/house-barf/og-image.jpg',
   '/house-barf/icon-192.png',
@@ -41,7 +43,9 @@ self.addEventListener('fetch', e => {
           caches.open(CACHE_NAME).then(cache => cache.put(e.request, clone));
           return res;
         })
-        .catch(() => caches.match(e.request).then(r => r || caches.match('/house-barf/')))
+        .catch(() => caches.match(e.request).then(r =>
+          // fall back to the shell for the language the request belongs to
+          r || caches.match(url.pathname.startsWith('/house-barf/en') ? '/house-barf/en/' : '/house-barf/')))
     );
     return;
   }
