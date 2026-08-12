@@ -9,6 +9,7 @@
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es-CO" href="https://droko1982.github.io/house-barf/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://droko1982.github.io/house-barf/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droko1982.github.io/house-barf/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://droko1982.github.io/house-barf/"/>
     <image:image>
       <image:loc>https://droko1982.github.io/house-barf/og-image.jpg</image:loc>
@@ -17,6 +18,20 @@
     <image:image>
       <image:loc>https://droko1982.github.io/house-barf/hero.jpg</image:loc>
       <image:title>Rottweilers felices alimentados con House Barf en Armenia, Quindío</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://droko1982.github.io/house-barf/en/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://droko1982.github.io/house-barf/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://droko1982.github.io/house-barf/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://droko1982.github.io/house-barf/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droko1982.github.io/house-barf/"/>
+    <image:image>
+      <image:loc>https://droko1982.github.io/house-barf/og-image.jpg</image:loc>
+      <image:title>House Barf - dog food in Armenia, Quindío and the Coffee Region</image:title>
     </image:image>
   </url>
 </urlset>
