@@ -1,10 +1,10 @@
 {
-  "id": "/house-barf/",
+  "id": "/",
   "name": "House Barf - Comida para Perros Armenia, Quindío y Eje Cafetero",
   "short_name": "House Barf",
   "description": "Alimento premium sabor tradicional pollo y verduras para perros $4,500/lb. Domicilio gratis en Armenia desde 5kg y envíos en todo el Quindío y el Eje Cafetero.",
-  "start_url": "/house-barf/",
-  "scope": "/house-barf/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#FFF8F0",
@@ -36,13 +36,13 @@
     {
       "name": "Pedir por WhatsApp",
       "short_name": "Pedir",
-      "url": "/house-barf/#como-pedir",
+      "url": "/#como-pedir",
       "icons": [{ "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }]
     },
     {
       "name": "Calculadora de porciones",
       "short_name": "Calculadora",
-      "url": "/house-barf/#calculadora",
+      "url": "/#calculadora",
       "icons": [{ "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }]
     }
   ]
