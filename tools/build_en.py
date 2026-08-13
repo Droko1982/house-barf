@@ -55,20 +55,24 @@ body = re.sub(r'\b(alt|aria-label|title|placeholder)="([^"]*)"', attr_sub, body)
 
 # ==================================================== 3. WHATSAPP MESSAGES
 WA = {
- "Hola House Barf! Quiero pedir alimento 🐶 (desde menú)": "Hi House Barf! I'd like to order dog food 🐶 (from the menu)",
- "Hola House Barf! Quiero pedir alimento 🐶 (ví la página web)": "Hi House Barf! I'd like to order dog food 🐶 (from your website)",
- "Hola House Barf! Quiero pedir alimento 🐶 (botón flotante)": "Hi House Barf! I'd like to order dog food 🐶 (floating button)",
- "Hola House Barf! Quiero pedir alimento 🐶 (desde celular)": "Hi House Barf! I'd like to order dog food 🐶 (from mobile)",
- "Hola House Barf! Quiero saber si hacen domicilio en mi zona del Eje Cafetero 🐶":
-   "Hi House Barf! I'd like to know if you deliver to my area in the Coffee Region 🐶",
- "Hola House Barf! Quiero asesoría sobre la alimentación de mi perro 🐶":
-   "Hi House Barf! I'd like some advice about feeding my dog 🐶",
- "Hola House Barf! Tengo un perro raza ____, ¿cuánto debe comer? 🐶":
-   "Hi House Barf! I have a ____ breed dog, how much should it eat? 🐶",
- "Hola House Barf! Quiero ser distribuidor / trabajar con ustedes 🤝":
-   "Hi House Barf! I'd like to become a distributor / work with you 🤝",
- "Mira House Barf! Comida para perros en Armenia Quindío a $4,500/lb con domicilio gratis desde 5kg 🐶":
-   "Check out House Barf! Dog food in Armenia, Quindío at $4,500/lb with free delivery on 5kg+ 🐶",
+ "\U0001F310 WEB \u00b7 Men\u00fa\nHola House Barf! Quiero pedir alimento para mi perro \U0001F436":
+   "\U0001F310 WEB \u00b7 EN \u00b7 Menu\nHi House Barf! I'd like to order food for my dog \U0001F436",
+ "\U0001F310 WEB \u00b7 Inicio\nHola House Barf! Quiero pedir alimento para mi perro \U0001F436":
+   "\U0001F310 WEB \u00b7 EN \u00b7 Home\nHi House Barf! I'd like to order food for my dog \U0001F436",
+ "\U0001F310 WEB \u00b7 Bot\u00f3n flotante\nHola House Barf! Quiero pedir alimento para mi perro \U0001F436":
+   "\U0001F310 WEB \u00b7 EN \u00b7 Floating button\nHi House Barf! I'd like to order food for my dog \U0001F436",
+ "\U0001F310 WEB \u00b7 Barra m\u00f3vil\nHola House Barf! Quiero pedir alimento para mi perro \U0001F436":
+   "\U0001F310 WEB \u00b7 EN \u00b7 Mobile bar\nHi House Barf! I'd like to order food for my dog \U0001F436",
+ "\U0001F310 WEB \u00b7 Cobertura\nHola House Barf! \u00bfHacen domicilio en mi zona? Mi direcci\u00f3n es: \U0001F436":
+   "\U0001F310 WEB \u00b7 EN \u00b7 Delivery areas\nHi House Barf! Do you deliver to my area? My address is: \U0001F436",
+ "\U0001F310 WEB \u00b7 Consejos\nHola House Barf! Quiero asesor\u00eda sobre la alimentaci\u00f3n de mi perro \U0001F436":
+   "\U0001F310 WEB \u00b7 EN \u00b7 Guides\nHi House Barf! I'd like some advice about feeding my dog \U0001F436",
+ "\U0001F310 WEB \u00b7 Razas\nHola House Barf! Tengo un perro raza ____, \u00bfcu\u00e1nto debe comer? \U0001F436":
+   "\U0001F310 WEB \u00b7 EN \u00b7 Breeds\nHi House Barf! I have a ____ breed dog, how much should it eat? \U0001F436",
+ "\U0001F310 WEB \u00b7 Distribuidores\nHola House Barf! Quiero ser distribuidor / trabajar con ustedes \U0001F91D":
+   "\U0001F310 WEB \u00b7 EN \u00b7 Distributors\nHi House Barf! I'd like to become a distributor / work with you \U0001F91D",
+ "\U0001F310 WEB \u00b7 Contacto\nHola House Barf! Tengo una pregunta \U0001F436":
+   "\U0001F310 WEB \u00b7 EN \u00b7 Contact\nHi House Barf! I have a question \U0001F436",
 }
 unknown_wa = []
 def wa_sub(m):
@@ -99,11 +103,11 @@ def js_translate(m):
     for es, en in sorted(J.items(), key=lambda kv: -len(kv[0])):
         block = block.replace(es, en)
     block = block.replace(
-      "Hola House Barf! 🐶 Mi perro pesa ${w}kg (tamaño ${r.breed}). Quiero pedir ${monthlyLb} libras de Alimento Sabor Tradicional Pollo y Verduras por $${monthlyCost.toLocaleString('es-CO')}. (desde calculadora)",
-      "Hi House Barf! 🐶 My dog weighs ${w}kg (${r.breed} size). I'd like to order ${monthlyLb} pounds of Traditional Chicken & Vegetable dog food for $${monthlyCost.toLocaleString('es-CO')}. (from the calculator)")
+      "\U0001F310 WEB · Calculadora\\nHola House Barf! Mi perro pesa ${w} kg (tamaño ${r.breed}). Quiero pedir ${monthlyLb} lb — $${monthlyCost.toLocaleString('es-CO')} \U0001F436",
+      "\U0001F310 WEB · EN · Calculator\\nHi House Barf! My dog weighs ${w} kg ({r.breed}). I'd like to order ${monthlyLb} lb — $${monthlyCost.toLocaleString('es-CO')} \U0001F436".replace('{r.breed}', '${r.breed}'))
     block = block.replace(
-      "Hola House Barf! \U0001F436 Quiero pedir ${qty} libra(s) de Alimento Sabor Tradicional Pollo y Verduras por $${priceStr}. (desde producto)",
-      "Hi House Barf! \U0001F436 I'd like to order ${qty} pound(s) of Traditional Chicken & Vegetable dog food for $${priceStr}. (from the product section)")
+      "\U0001F310 WEB \u00b7 Producto\\nHola House Barf! Quiero pedir ${qty} lb de Alimento Sabor Tradicional Pollo y Verduras \u2014 $${priceStr} \U0001F436",
+      "\U0001F310 WEB \u00b7 EN \u00b7 Product\\nHi House Barf! I'd like to order ${qty} lb of Traditional Chicken & Vegetable dog food \u2014 $${priceStr} \U0001F436")
     block = block.replace("'Como un ' + r.breed", "'About the size of a ' + r.breed")
     block = block.replace("Pedir ${monthlyLb} lb por WhatsApp", "Order ${monthlyLb} lb on WhatsApp")
     block = block.replace("Pedir ${qty} lb por WhatsApp", "Order ${qty} lb on WhatsApp")

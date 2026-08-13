@@ -98,7 +98,10 @@ def build(c):
     tier = TIERS[c['tier']]
     name, dept, slug = c['name'], c['dept'], c['slug']
     url = f'{BASE}{slug}/'
-    wa_msg = f'Hola House Barf! Quiero pedir alimento para mi perro en {name} 🐶'
+    # first line is what WhatsApp previews in the chat list, so it carries the
+    # town and its delivery terms - Felipe can quote without opening the message
+    wa_msg = (f'🌐 WEB · {name} ({dept}) · {tier["wa"]}\n'
+              f'Hola House Barf! Quiero pedir alimento para mi perro en {name} 🐶')
     wa = f'https://wa.me/{WA}?text=' + urllib.parse.quote(wa_msg, safe='')
     dist = ('' if c['km'] == 0 else
             f' Estamos a unos {c["km"]} km, así que el despacho es rápido.' if c['km'] <= 25 else

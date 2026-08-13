@@ -171,16 +171,19 @@ CITIES = [
 
 TIERS = {
  'free': dict(
+    wa='domicilio gratis 5kg+',
     badge='Domicilio GRATIS',
     line='Domicilio <strong>gratis</strong> para pedidos de 5kg o más. Pedidos menores: $4,000.',
     faq='En Armenia el domicilio es gratis para pedidos de 5kg o más. Los pedidos menores tienen un '
         'costo de $4,000. Escríbenos por WhatsApp con tu dirección y coordinamos la entrega.'),
  'local': dict(
+    wa='envío a confirmar',
     badge='Envío disponible',
     line='Envío disponible. El costo se confirma por WhatsApp según tu dirección.',
     faq='Sí, entregamos en {city} con regularidad. El costo del envío se confirma por WhatsApp según tu '
         'dirección exacta, y en Armenia el domicilio es gratis desde 5kg.'),
  'request': dict(
+    wa='envío bajo pedido, mín. 5kg',
     badge='Envío bajo pedido',
     line='Envío bajo pedido, con un <strong>mínimo de 5kg</strong>. El costo se cotiza por WhatsApp.',
     faq='Sí. Despachamos a {city} bajo pedido, con un mínimo de 5kg, y cotizamos el costo del envío por '
