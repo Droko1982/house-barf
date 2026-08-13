@@ -1,0 +1,267 @@
+# -*- coding: utf-8 -*-
+"""Build one landing page per town in the Eje Cafetero.
+
+    python tools/build_cities.py
+
+Each page carries that town's real delivery terms, its own copy, its own FAQ and
+its own schema. They are deliberately light — no carousel, no calculator JS — and
+they link back to the main page for the interactive parts.
+"""
+import os, sys, json, re, urllib.parse
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.stdout.reconfigure(encoding='utf-8')
+from cities import CITIES, TIERS
+
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE = 'https://www.housebarf.com/'
+WA = '573126737317'
+BY = {c['slug']: c for c in CITIES}
+
+PRICES = [(1, 4500), (3, 13500), (5, 22500), (10, 45000), (20, 88000), (30, 127500)]
+
+CSS = """*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#FFF8F0;--bg2:#FFF3E0;--w:#fff;--t:#2C1810;--t2:#5D4037;--p:#FF6B35;--p-txt:#C4400F;
+--a:#FFB74D;--wa:#167F3D;--on-wa:#fff;--g:#2E7D32;--bdr:#e0d5cc;--foot:#1B0E0A;--r:16px;
+--sh:0 6px 24px rgba(62,39,35,.10)}
+@media(prefers-color-scheme:dark){:root{--bg:#1A1210;--bg2:#2C1E18;--w:#2A1F1A;--t:#F5E6D8;--t2:#BCAAA4;
+--p:#FF7B45;--p-txt:#FF7B45;--a:#FFCC80;--wa:#2BDB6E;--on-wa:#08240F;--g:#66BB6A;--bdr:#3E2E26;
+--foot:#110C09;--sh:0 6px 24px rgba(0,0,0,.35)}}
+body{background:var(--bg);color:var(--t);font-family:'Segoe UI',Tahoma,sans-serif;line-height:1.65}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+a{color:var(--p-txt)}
+header.top{background:var(--foot);padding:12px 0}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{color:#fff;font-weight:800;font-size:1.15rem;text-decoration:none;letter-spacing:-.02em}
+.brand span{color:var(--a)}
+.top a.back{color:rgba(255,255,255,.75);font-size:.85rem;text-decoration:none}
+.top a.back:hover{color:#fff}
+main{padding:40px 0 64px}
+.eyebrow{display:inline-block;background:var(--bg2);color:var(--p-txt);font-size:.72rem;font-weight:800;
+letter-spacing:.12em;text-transform:uppercase;padding:6px 14px;border-radius:50px;margin-bottom:14px}
+h1{font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.15;margin-bottom:14px;letter-spacing:-.02em}
+.lede{font-size:1.05rem;color:var(--t2);margin-bottom:26px;max-width:64ch}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--bg2);border:2px solid var(--p);
+border-radius:50px;padding:8px 18px;font-weight:700;font-size:.9rem;margin-bottom:8px}
+.card{background:var(--w);border:1px solid var(--bdr);border-radius:var(--r);padding:22px 24px;
+margin:22px 0;box-shadow:var(--sh)}
+.card h2{font-size:1.25rem;margin-bottom:10px;letter-spacing:-.015em}
+.card p{color:var(--t2);margin-bottom:10px}
+.card p:last-child{margin-bottom:0}
+h2.sec{font-size:1.45rem;margin:36px 0 12px;letter-spacing:-.02em}
+table{width:100%;border-collapse:collapse;margin:8px 0;font-size:.95rem}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--bdr)}
+th{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);background:var(--bg2)}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+.save{color:var(--g);font-weight:700}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--wa);color:var(--on-wa);
+padding:14px 28px;border-radius:50px;font-weight:800;text-decoration:none;margin:6px 0;
+box-shadow:0 6px 20px rgba(22,127,61,.28)}
+.cta:hover{transform:translateY(-2px)}
+.cta svg{width:20px;height:20px;fill:currentColor}
+details{background:var(--w);border:1px solid var(--bdr);border-radius:12px;margin-bottom:10px;overflow:hidden}
+summary{padding:14px 18px;font-weight:700;cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';float:right;color:var(--p-txt);font-weight:800}
+details[open] summary::after{content:'\\2212'}
+details p{padding:0 18px 16px;color:var(--t2);margin:0}
+.near{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.near a{background:var(--bg2);border:1px solid var(--bdr);border-radius:50px;padding:7px 16px;
+font-size:.88rem;text-decoration:none;font-weight:600}
+.near a:hover{border-color:var(--p)}
+footer{background:var(--foot);color:rgba(255,255,255,.6);padding:28px 0;font-size:.85rem;margin-top:48px}
+footer a{color:var(--a)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+:focus-visible{outline:3px solid var(--p);outline-offset:3px;border-radius:6px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}"""
+
+WA_SVG = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967'
+          '-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463'
+          '-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149'
+          '-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5'
+          '-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462'
+          ' 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195'
+          ' 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347'
+          'm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0'
+          ' 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893'
+          ' 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157'
+          ' 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0'
+          ' 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>')
+
+
+def esc(t):
+    return t.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
+
+def build(c):
+    tier = TIERS[c['tier']]
+    name, dept, slug = c['name'], c['dept'], c['slug']
+    url = f'{BASE}{slug}/'
+    wa_msg = f'Hola House Barf! Quiero pedir alimento para mi perro en {name} 🐶'
+    wa = f'https://wa.me/{WA}?text=' + urllib.parse.quote(wa_msg, safe='')
+    dist = ('' if c['km'] == 0 else
+            f' Estamos a unos {c["km"]} km, así que el despacho es rápido.' if c['km'] <= 25 else
+            f' Desde Armenia son unos {c["km"]} km, y coordinamos el envío contigo por WhatsApp.')
+
+    # Spanish uses a period as the thousands separator
+    alt_es = f"{c['alt']:,}".replace(',', '.')
+    title = f'Alimento para Perros en {name} ({dept}) | House Barf'
+    desc = (f'Alimento premium sabor tradicional pollo y verduras para perros en {name}, {dept}, '
+            f'a $4,500 la libra. {tier["badge"]}. Pedidos por WhatsApp al 312 673 7317.')
+
+    nearby_names = ', '.join(BY[s]['name'] for s in c['near'] if s in BY)
+    faqs = [
+        (f'¿Hacen entregas de alimento para perros en {name}?', tier['faq'].format(city=name)),
+        (f'¿Cuánto tarda el pedido en llegar a {name}?', c['logistics']),
+        (f'¿El clima de {name} cambia cuánto debe comer mi perro?', c['climate']),
+        (f'¿A qué zonas de {name} llegan?',
+         f'{c["local"]} Si tu dirección no aparece en esa lista, escríbenos igual: casi siempre podemos '
+         f'llegar. También entregamos en {nearby_names}.'),
+        (f'¿Cuánto cuesta el alimento para perros en {name}?',
+         f'La libra cuesta $4,500. Al pedir 20 libras baja a $4,400 por libra y al pedir 30 libras a '
+         f'$4,250 por libra. En {name} {"el domicilio es gratis desde 5kg" if c["tier"] == "free" else "el costo del envío se confirma por WhatsApp"}.'),
+    ]
+
+    ld = [
+        {"@context": "https://schema.org", "@type": "LocalBusiness",
+         "@id": url + "#business",
+         "name": f"House Barf — Alimento para Perros en {name}",
+         "description": (f"Venta y entrega de alimento premium para perros en {name}, {dept}. "
+                         f"Sabor tradicional pollo y verduras a $4,500 la libra. Pedidos por WhatsApp."),
+         "url": url, "telephone": "+57" + WA,
+         "image": BASE + "og-image.jpg", "logo": BASE + "icon-512.png",
+         "priceRange": "$4,500 COP/lb", "paymentAccepted": "Nequi, Efectivo", "currenciesAccepted": "COP",
+         "address": {"@type": "PostalAddress", "addressLocality": "Armenia",
+                     "addressRegion": "Quindío", "addressCountry": "CO"},
+         "areaServed": {"@type": "City", "name": name,
+                        "containedInPlace": {"@type": "AdministrativeArea", "name": dept}},
+         "parentOrganization": {"@id": BASE + "#organization"},
+         "openingHoursSpecification": {"@type": "OpeningHoursSpecification",
+                                       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                                       "opens": "08:00", "closes": "19:00"},
+         "knowsLanguage": "es"},
+        {"@context": "https://schema.org", "@type": "BreadcrumbList",
+         "itemListElement": [
+             {"@type": "ListItem", "position": 1, "name": "Inicio", "item": BASE},
+             {"@type": "ListItem", "position": 2, "name": f"Alimento para perros en {name}", "item": url}]},
+        {"@context": "https://schema.org", "@type": "FAQPage", "@id": url + "#faq", "inLanguage": "es-CO",
+         "mainEntity": [{"@type": "Question", "name": q,
+                         "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]},
+        {"@context": "https://schema.org", "@type": "WebPage", "@id": url + "#page",
+         "name": title, "description": desc, "url": url, "inLanguage": "es-CO",
+         "isPartOf": {"@type": "WebSite", "name": "House Barf", "url": BASE},
+         "about": {"@type": "Thing", "name": f"Alimento para perros en {name}, {dept}"},
+         "primaryImageOfPage": {"@type": "ImageObject", "url": BASE + "og-image.jpg"}},
+    ]
+
+    rows = ''.join(
+        f'<tr><td>{q} {"libra" if q == 1 else "libras"}</td><td class="n">${p:,}</td>'
+        f'<td class="n">{"—" if p / q == 4500 else f"<span class=\'save\'>${int(p / q):,}/lb</span>"}</td></tr>'
+        for q, p in PRICES)
+
+    near = ''.join(f'<a href="../{s}/">{BY[s]["name"]}</a>' for s in c['near'] if s in BY)
+    faq_html = ''.join(f'<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in faqs)
+
+    return f"""<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{esc(title)}</title>
+<meta name="description" content="{esc(desc)}">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="geo.region" content="CO-{'QUI' if dept == 'Quindío' else 'RIS' if dept == 'Risaralda' else 'CAL'}">
+<meta name="geo.placename" content="{esc(name)}, {esc(dept)}">
+<link rel="canonical" href="{url}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:url" content="{url}">
+<meta property="og:site_name" content="House Barf">
+<meta property="og:title" content="{esc(title)}">
+<meta property="og:description" content="{esc(desc)}">
+<meta property="og:image" content="{BASE}og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FF6B35" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1A1210" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False, separators=(',', ':'))}</script>
+<style>{CSS}</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../">House <span>Barf</span></a>
+  <a class="back" href="../">← Ver el sitio completo</a>
+</div></header>
+
+<main><div class="wrap">
+  <span class="eyebrow">{esc(dept)}</span>
+  <h1>Alimento para Perros en {esc(name)}</h1>
+  <p class="lede">{esc(c['blurb'])}{dist}</p>
+  <p style="color:var(--t2);max-width:64ch;margin-bottom:18px">{esc(name)} está a {alt_es} metros sobre el
+     nivel del mar en {esc(dept)}.</p>
+  <div class="badge">🐾 {tier['badge']}</div>
+
+  <div class="card">
+    <h2>Cómo entregamos en {esc(name)}</h2>
+    <p>{tier['line']}</p>
+    <p>{esc(c['logistics'])}</p>
+    <a class="cta" href="{wa}" target="_blank" rel="noopener">{WA_SVG} Pedir por WhatsApp</a>
+  </div>
+
+  <h2 class="sec">Qué zonas de {esc(name)} cubrimos</h2>
+  <p style="color:var(--t2);max-width:64ch">{esc(c['local'])}</p>
+
+  <h2 class="sec">El clima de {esc(name)} y la porción de tu perro</h2>
+  <p style="color:var(--t2);max-width:64ch">{esc(c['climate'])}</p>
+  <p style="color:var(--t2);max-width:64ch">Como referencia general, un perro de 5 kg come unos 70 a 110 g
+     al día, uno de 18 kg cerca de 280 g y uno de 40 kg entre 490 y 600 g.
+     <a href="../#calculadora">Abre la calculadora</a> y ajusta según el peso exacto de tu perro.</p>
+
+  <h2 class="sec">Precios</h2>
+  <table>
+    <thead><tr><th>Cantidad</th><th style="text-align:right">Precio</th><th style="text-align:right">Por libra</th></tr></thead>
+    <tbody>{rows}</tbody>
+  </table>
+
+  <h2 class="sec">Preguntas frecuentes en {esc(name)}</h2>
+  {faq_html}
+
+  <h2 class="sec">También entregamos cerca de {esc(name)}</h2>
+  <div class="near">{near}</div>
+
+  <div class="card" style="margin-top:32px">
+    <h2>Pide hoy en {esc(name)}</h2>
+    <p>Escríbenos con tu dirección y la cantidad que necesitas. Felipe te responde personalmente.</p>
+    <a class="cta" href="{wa}" target="_blank" rel="noopener">{WA_SVG} Escribir por WhatsApp</a>
+  </div>
+</div></main>
+
+<footer><div class="wrap">
+  <span>&copy; 2026 House Barf — Alimento para perros en {esc(name)}, {esc(dept)}.</span>
+  <span><a href="../">Inicio</a> · <a href="../privacidad.html">Política de datos</a> · <a href="https://wa.me/{WA}" target="_blank" rel="noopener">312 673 7317</a></span>
+</div></footer>
+</body>
+</html>
+"""
+
+
+def main():
+    made = []
+    for c in CITIES:
+        d = os.path.join(REPO, c['slug'])
+        os.makedirs(d, exist_ok=True)
+        html = build(c)
+        open(os.path.join(d, 'index.html'), 'w', encoding='utf-8', newline='').write(html)
+        made.append((c['slug'], len(html.encode('utf-8'))))
+        # every page must parse as JSON-LD
+        blk = re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)[0]
+        json.loads(blk)
+    print(f'built {len(made)} city pages')
+    for slug, size in made:
+        print(f'  /{slug}/{" " * (22 - len(slug))}{size / 1024:.1f} KB')
+    return [c['slug'] for c in CITIES]
+
+
+if __name__ == '__main__':
+    main()

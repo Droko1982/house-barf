@@ -644,3 +644,44 @@ _A6 = {
 A.update(_A6)
 
 T["Depende del peso de tu perro. Una libra son unos 454 gramos, así que a un perro pequeño de 5 kg (90 a 120 g al día) le rinde cerca de 4 días, y a uno mediano de 18 kg (320 a 400 g al día) algo menos de día y medio. Para razas grandes usa la calculadora de porciones: mueve el deslizador al peso de tu perro y te decimos exactamente cuántas libras pedir al mes."] = "It depends on your dog's weight. A pound is about 454 grams, so for a small 5 kg dog (90 to 120 g a day) it lasts around 4 days, and for a medium 18 kg dog (320 to 400 g a day) a little under a day and a half. For large breeds use the portion calculator: move the slider to your dog's weight and we'll tell you exactly how many pounds to order per month."
+
+
+# ---- portion figures recomputed from the maintenance-energy formula ----
+_T7 = {
+"Porción: 460-690g/día":
+  "Portion: 460-690g/day",
+"Porción: 410-510g/día":
+  "Portion: 410-510g/day",
+"Porción: 360-450g/día":
+  "Portion: 360-450g/day",
+"Porción: 360-470g/día":
+  "Portion: 360-470g/day",
+"Porción: 70-330g/día":
+  "Portion: 70-330g/day",
+"Los perros de razas grandes como Rottweilers y Pastores Alemanes necesitan entre 410 y 600 g diarios de alimento según su peso y actividad. En el clima templado del Quindío, la actividad física suele ser alta, así que asegúrate de mantener porciones generosas. Usa nuestra calculadora para saber la cantidad exacta.":
+  "Large breeds such as Rottweilers and German Shepherds need between 410 and 600 g of food a day depending on their weight and activity. In the mild climate of the Coffee Region dogs tend to be very active, so keep portions generous. Use our calculator to find the exact amount.",
+"Un perro mediano de 18 kg come unos 280 gramos diarios, que son unas 19 libras al mes: cerca de $85,500. Uno pequeño de 5 kg necesita apenas 6 libras, alrededor de $27,000. Pedir en cantidad baja el precio por libra a $4,400 desde 20 libras y a $4,250 desde 30. Calcula el tuyo con el deslizador.":
+  "A medium 18 kg dog eats about 280 grams a day, which is roughly 19 pounds a month, or around $85,500. A small 5 kg dog needs just 6 pounds, about $27,000. Ordering in quantity brings the price down to $4,400 a pound from 20 pounds, and $4,250 from 30. Work out your own with the slider.",
+"Depende del peso de tu perro. Una libra son unos 454 gramos, así que a un perro pequeño de 5 kg (70 a 110 g al día) le rinde entre 4 y 6 días, y a uno mediano de 18 kg (unos 280 g al día) algo más de día y medio. Para razas grandes usa la calculadora de porciones: mueve el deslizador al peso de tu perro y te decimos exactamente cuántas libras pedir al mes.":
+  "It depends on your dog's weight. A pound is about 454 grams, so for a small 5 kg dog (70 to 110 g a day) it lasts four to six days, and for a medium 18 kg dog (around 280 g a day) a little over a day and a half. For large breeds use the portion calculator: move the slider to your dog's weight and we'll tell you exactly how many pounds to order per month.",
+}
+T.update(_T7)
+
+
+# ---- coverage cards now link to the per-city pages ----
+_A8 = {
+"Alimento para perros en Armenia": "Dog food in Armenia",
+"Alimento para perros en Calarcá": "Dog food in Calarcá",
+"Alimento para perros en Circasia": "Dog food in Circasia",
+"Alimento para perros en Montenegro": "Dog food in Montenegro",
+"Alimento para perros en La Tebaida": "Dog food in La Tebaida",
+"Alimento para perros en Quimbaya": "Dog food in Quimbaya",
+"Alimento para perros en Filandia": "Dog food in Filandia",
+"Alimento para perros en Salento": "Dog food in Salento",
+"Alimento para perros en Pereira": "Dog food in Pereira",
+"Alimento para perros en Dosquebradas": "Dog food in Dosquebradas",
+"Alimento para perros en Santa Rosa de Cabal": "Dog food in Santa Rosa de Cabal",
+"Alimento para perros en Chinchiná": "Dog food in Chinchiná",
+"Alimento para perros en Manizales": "Dog food in Manizales",
+}
+A.update(_A8)

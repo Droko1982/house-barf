@@ -108,3 +108,27 @@ python tools/build_en.py             # then rebuild /en/
 
 `build_en.py` already regenerates both from the *translated* markup, so the English
 page cannot drift. Only the Spanish page needs this step.
+
+## City landing pages
+
+`tools/cities.py` holds the per-town data (delivery tier, altitude, climate note,
+coverage zones, logistics, neighbours). `tools/build_cities.py` renders one page per
+town into `/<slug>/index.html`.
+
+```sh
+python tools/build_cities.py
+```
+
+Never hand-edit a city page — the next build overwrites it. Change `cities.py` instead.
+
+**Why the content per town is long:** these only work if each page is genuinely
+different. A first version reused the same copy with the town name swapped and came
+out at 95% pairwise similarity, which is the doorway-page pattern Google penalises.
+The current pages average 39% similarity and about 550 words each, with the
+altitude, climate, feeding implication, coverage zones and logistics all differing.
+If you add a town, give it real content or don't add it.
+
+Adding a town also needs:
+- a `<loc>` in `sitemap.xml`
+- the coverage card on the main page linking to `/<slug>/`
+- an aria-label translation in `i18n.py` so `build_en.py` stays clean
