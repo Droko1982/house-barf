@@ -93,3 +93,18 @@ page and reports any old references it could not resolve (should be 0).
 
 Afterwards: commit, push, then set the custom domain in **Settings → Pages** and
 tick **Enforce HTTPS** once the certificate is issued.
+
+## After editing any FAQ or the ordering steps
+
+Google requires FAQ and HowTo text in the structured data to appear on the page.
+Editing an answer without regenerating the JSON-LD breaks that silently — nothing
+in the browser complains.
+
+```sh
+python tools/sync_schema.py          # regenerate from the visible markup
+python tools/sync_schema.py --check  # exit 1 if out of sync, changes nothing
+python tools/build_en.py             # then rebuild /en/
+```
+
+`build_en.py` already regenerates both from the *translated* markup, so the English
+page cannot drift. Only the Spanish page needs this step.
