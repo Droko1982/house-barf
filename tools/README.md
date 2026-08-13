@@ -132,3 +132,25 @@ Adding a town also needs:
 - a `<loc>` in `sitemap.xml`
 - the coverage card on the main page linking to `/<slug>/`
 - an aria-label translation in `i18n.py` so `build_en.py` stays clean
+
+## WhatsApp message markers
+
+Every WhatsApp link carries a source marker on its **first line**, because that is
+the only part WhatsApp previews in the chat list:
+
+```
+🌐 WEB · Manizales (Caldas) · envío bajo pedido, mín. 5kg
+Hola House Barf! Quiero pedir alimento para mi perro en Manizales 🐶
+```
+
+So before opening the chat, Felipe knows it came from the site, which page or town,
+and — on the town pages — the delivery terms that apply. English pages carry `· EN ·`
+so he knows to reply in English.
+
+Markers live in three places and must stay aligned:
+- `index.html` — static hrefs plus the two messages JS builds (product, calculator)
+- `tools/build_en.py` — the `WA` map and the two JS replacements
+- `tools/build_cities.py` — `wa_msg`, using the `wa` short label from `cities.py`
+
+The section names match the `zone` values sent to analytics by `hbTrack`, so the
+WhatsApp markers and the analytics reports reconcile.
