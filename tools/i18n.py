@@ -581,3 +581,66 @@ T["Alimento para perros en Armenia Quindío, comida para perros en Armenia Quind
 
 # privacy notice link (bilingual page at /privacidad.html)
 T["Política de datos"] = "Privacy notice"
+
+
+# ---- sixth pass: long-tail FAQs and three more nutrition guides ----
+_T6 = {
+"¿Cómo cambio el alimento de mi perro sin causar diarrea?":
+  "How do I switch my dog's food without causing diarrhoea?",
+"Hazlo gradual durante 7 a 10 días. Empieza con 25% de House Barf y 75% del alimento anterior durante 2 o 3 días, luego mitad y mitad, después 75% y 25%, y al final 100%. Un cambio de golpe es la causa más común de diarrea al estrenar alimento, y no significa que el producto le caiga mal. Si tu perro tiene el estómago sensible, alarga cada etapa un par de días más.":
+  "Do it gradually over 7 to 10 days. Start with 25% House Barf and 75% of the old food for two or three days, then half and half, then 75/25, and finally 100%. Switching all at once is the most common cause of diarrhoea with a new food, and it does not mean the product disagrees with your dog. If your dog has a sensitive stomach, give each stage a couple of extra days.",
+"¿Cuánto me dura una libra de alimento?":
+  "How long does a pound of food last?",
+"Depende del peso de tu perro. Una libra son unos 454 gramos, así que a un perro pequeño de 5 kg (90 a 120 g al día) le rinde cerca de 4 días, a uno mediano de 18 kg (320 a 400 g al día) algo menos de día y medio, y a uno grande de 40 kg le dura menos de medio día. Usa la calculadora de porciones y te decimos exactamente cuántas libras pedir al mes.":
+  "It depends on your dog's weight. A pound is about 454 grams, so for a small 5 kg dog (90 to 120 g a day) it lasts around 4 days, for a medium 18 kg dog (320 to 400 g a day) a little under a day and a half, and for a large 40 kg dog less than half a day. Use the portion calculator and we'll tell you exactly how many pounds to order per month.",
+"¿Cómo debo guardar el alimento para que no se dañe?":
+  "How should I store the food so it doesn't spoil?",
+"Guárdalo en un recipiente hermético, en un lugar fresco, seco y fuera del sol. En el clima húmedo del Quindío y el Eje Cafetero el alimento expuesto al aire pierde aroma y puede enmohecerse. No lo dejes en el piso ni en el garaje, y no mezcles alimento nuevo encima del viejo: termina primero el que ya tenías abierto.":
+  "Keep it in an airtight container somewhere cool, dry and out of the sun. In the humid climate of Quindío and the Coffee Region, food left open to the air loses its aroma and can grow mould. Don't leave it on the floor or in the garage, and don't tip new food on top of old: finish the bag you already opened first.",
+"¿Sirve para cachorros o solo para perros adultos?":
+  "Is it for puppies, or only adult dogs?",
+"House Barf es un alimento completo para perros adultos de todas las razas. Los cachorros necesitan más proteína y más comidas al día (3 o 4 veces hasta los 6 meses), así que si tu peludo todavía está creciendo escríbenos por WhatsApp y te asesoramos sobre la cantidad adecuada para su edad y peso.":
+  "House Barf is a complete food for adult dogs of every breed. Puppies need more protein and more meals a day (three or four until six months), so if your dog is still growing, message us on WhatsApp and we'll advise you on the right amount for their age and weight.",
+"¿Hacen precio especial por cantidad?":
+  "Do you offer a better price for larger orders?",
+"Sí. La libra cuesta $4,500, pero al pedir 20 libras el precio baja a $4,400 por libra y al pedir 30 libras baja a $4,250 por libra. Entre más pides, menos pagas por libra, y en Armenia el domicilio es gratis desde 5kg.":
+  "Yes. A pound costs $4,500, but at 20 pounds the price drops to $4,400 a pound, and at 30 pounds to $4,250 a pound. The more you order, the less you pay per pound — and in Armenia delivery is free on 5kg or more.",
+"¿Puedo comprar al por mayor o revender House Barf?":
+  "Can I buy wholesale or resell House Barf?",
+"Claro. Trabajamos con distribuidores en Armenia, el Quindío y el resto del Eje Cafetero, con márgenes para revendedores y acompañamiento con material e información. Escríbenos por WhatsApp al 312 673 7317 y hablamos de las condiciones.":
+  "Of course. We work with distributors across Armenia, Quindío and the rest of the Coffee Region, with reseller margins plus support materials and information. Message us on WhatsApp at 312 673 7317 and we'll talk terms.",
+"Digestión":
+  "Digestion",
+"Cómo Cambiar de Alimento Sin Problemas Digestivos":
+  "How to Switch Foods Without Upsetting Their Stomach",
+"El error más común al estrenar alimento es cambiarlo de un día para otro. Hazlo en 7 a 10 días: primero una cuarta parte del alimento nuevo, luego la mitad, después tres cuartas partes, y al final todo. Así la flora intestinal se adapta y evitas la diarrea que muchos dueños confunden con una mala reacción al producto.":
+  "The most common mistake with a new food is switching overnight. Take 7 to 10 days: a quarter of the new food first, then half, then three quarters, then all of it. That lets the gut flora adapt and avoids the diarrhoea many owners mistake for a bad reaction to the product.",
+"Ver más preguntas →":
+  "See more questions →",
+"Cuidado":
+  "Care",
+"Guarda el Alimento Así y Dura Fresco Mucho Más":
+  "Store It Like This and It Stays Fresh Far Longer",
+"En el clima húmedo del Eje Cafetero el alimento expuesto al aire pierde aroma y puede enmohecerse. Guárdalo en un recipiente hermético, en un sitio fresco, seco y lejos del sol, y termina el que ya tenías abierto antes de abrir el siguiente. Un alimento bien guardado conserva el olor que hace que tu perro se lo coma con ganas.":
+  "In the humid climate of the Coffee Region, food left open to the air loses its aroma and can grow mould. Keep it in an airtight container somewhere cool, dry and away from sunlight, and finish the bag you have open before starting the next one. Well-stored food keeps the smell that makes your dog eat it eagerly.",
+"Ver el alimento →":
+  "See the food →",
+"Presupuesto":
+  "Budget",
+"Cuánto Cuesta Alimentar a tu Perro al Mes":
+  "What It Costs to Feed Your Dog Each Month",
+"Un perro mediano de 18 kg come entre 320 y 400 gramos diarios, que son unas 24 libras al mes: cerca de $108,000. Uno pequeño de 5 kg necesita apenas 7 libras, alrededor de $31,500. Pedir en cantidad baja el precio por libra a $4,400 desde 20 libras y a $4,250 desde 30. Calcula el tuyo con el deslizador.":
+  "A medium 18 kg dog eats between 320 and 400 grams a day, which is about 24 pounds a month, or roughly $108,000. A small 5 kg dog needs just 7 pounds, around $31,500. Ordering in quantity brings the price down to $4,400 a pound from 20 pounds, and $4,250 from 30. Work out your own with the slider.",
+"Calcular mi caso →":
+  "Work out my case →",
+}
+T.update(_T6)
+
+_A6 = {
+"Perro sano después de cambiar de alimento correctamente": "A healthy dog after a proper food transition",
+"Golden Retriever con pelaje brillante por buena nutrición": "A Golden Retriever with a glossy coat from good nutrition",
+"Labrador bien alimentado con House Barf": "A well-fed Labrador on House Barf",
+}
+A.update(_A6)
+
+T["Depende del peso de tu perro. Una libra son unos 454 gramos, así que a un perro pequeño de 5 kg (90 a 120 g al día) le rinde cerca de 4 días, y a uno mediano de 18 kg (320 a 400 g al día) algo menos de día y medio. Para razas grandes usa la calculadora de porciones: mueve el deslizador al peso de tu perro y te decimos exactamente cuántas libras pedir al mes."] = "It depends on your dog's weight. A pound is about 454 grams, so for a small 5 kg dog (90 to 120 g a day) it lasts around 4 days, and for a medium 18 kg dog (320 to 400 g a day) a little under a day and a half. For large breeds use the portion calculator: move the slider to your dog's weight and we'll tell you exactly how many pounds to order per month."

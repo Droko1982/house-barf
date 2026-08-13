@@ -221,6 +221,24 @@ qa = [{"@type":"Question","name":H.unescape(re.sub(r'<[^>]+>','',q)).strip(),
 for e in data:
     if e.get('@type') == 'FAQPage':
         e['@id'] = EN + '#faq'; e['inLanguage'] = 'en'; e['mainEntity'] = qa
+
+# same treatment for HowTo - regenerate the steps from the translated markup, or the
+# English page ships Spanish step names that do not match anything it displays
+steps = re.findall(r'<div class="step-n">(\d)</div>\s*<h3>([^<]+)</h3>\s*<p>([^<]+)</p>', full, re.S)
+for e in data:
+    if e.get('@type') == 'HowTo':
+        assert len(steps) == len(e['step']), f'HowTo step count changed: {len(steps)} on page'
+        e['@id'] = EN + '#howto'
+        e['inLanguage'] = 'en'
+        e['name'] = 'How to order dog food in Armenia and the Coffee Region'
+        e['description'] = ("Ordering House Barf takes under a minute: pick the amount, message us on "
+                            "WhatsApp with your address, and pay by Nequi or cash on delivery.")
+        e['supply'] = [{"@type": "HowToSupply", "name": "Your dog's weight, to work out the portion"}]
+        e['tool'] = [{"@type": "HowToTool", "name": "WhatsApp"},
+                     {"@type": "HowToTool", "name": "Nequi or cash"}]
+        e['step'] = [{"@type": "HowToStep", "position": int(n), "name": name.strip(),
+                      "text": text.strip(), "url": EN + '#como-pedir'} for n, name, text in steps]
+
 full = full.replace('__LDJSON__', json.dumps(data, ensure_ascii=False, separators=(',', ':')))
 
 # ------------------------------------------------- 8. language switcher in nav
