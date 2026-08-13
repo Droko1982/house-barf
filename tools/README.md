@@ -74,3 +74,22 @@ EOF
 
 Bump `CACHE_NAME` in `sw.js` whenever you ship a change, or returning visitors
 keep the old page until the service worker happens to revalidate.
+
+## Moving to a custom domain
+
+`en/index.html`, the manifests, the service worker, the sitemap and robots.txt all
+carry absolute URLs and `/house-barf/` paths. Attaching a custom domain moves the
+site to the root of that domain, so both have to change together. One command does
+all of it:
+
+```sh
+python tools/set_domain.py www.yourdomain.com --dry   # preview
+python tools/set_domain.py www.yourdomain.com         # apply + rebuild /en/
+```
+
+It rewrites every absolute URL, converts `/house-barf/…` paths to `/…`, writes the
+`CNAME` file GitHub needs, updates `BASE` in `build_en.py`, rebuilds the English
+page and reports any old references it could not resolve (should be 0).
+
+Afterwards: commit, push, then set the custom domain in **Settings → Pages** and
+tick **Enforce HTTPS** once the certificate is issued.
