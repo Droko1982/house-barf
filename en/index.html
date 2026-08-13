@@ -232,11 +232,11 @@
         .nav.has-promo{top:40px}
         .nav.scrolled{background:var(--nav-bg);backdrop-filter:blur(16px);box-shadow:0 4px 30px rgba(0,0,0,.08);top:0;padding:8px 0}
         .nav-in{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
-        .logo{font-family:'Fredoka One',cursive;font-size:1.7rem;color:var(--p-txt);text-decoration:none;display:flex;align-items:center;gap:8px;transition:transform .3s}
+        .logo{font-family:'Fredoka One',cursive;font-size:1.45rem;color:var(--p-txt);text-decoration:none;display:flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0;transition:transform .3s}
         .logo:hover{transform:scale(1.03)}
-        .logo svg{width:34px;height:34px}
-        .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
-        .nav-links a{text-decoration:none;color:var(--t2);font-weight:600;font-size:.9rem;transition:color .2s;position:relative}
+        .logo svg{width:28px;height:28px;flex-shrink:0}
+        .nav-links{display:flex;gap:18px;list-style:none;align-items:center}
+        .nav-links a{text-decoration:none;color:var(--t2);font-weight:600;font-size:.86rem;white-space:nowrap;transition:color .2s;position:relative}
         .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2.5px;background:var(--p);border-radius:2px;transition:width .3s}
         .nav-links a:hover{color:var(--p-txt)}
         .nav-links a:hover::after{width:100%}
@@ -246,7 +246,7 @@
         .nav:not(.scrolled) .theme-toggle{border-color:rgba(255,255,255,.45);color:rgba(255,255,255,.9)}
         .nav:not(.scrolled) .theme-toggle:hover{border-color:#fff;color:#fff}
         .nav:not(.scrolled) .burger span{background:#fff}
-        .nav-cta{background:var(--wa)!important;color:var(--on-wa)!important;padding:10px 22px;border-radius:50px;font-weight:700!important;transition:all .3s!important;box-shadow:0 4px 15px rgba(37,211,102,.3)}
+        .nav-cta{background:var(--wa)!important;color:var(--on-wa)!important;padding:9px 18px;white-space:nowrap;border-radius:50px;font-weight:700!important;transition:all .3s!important;box-shadow:0 4px 15px rgba(37,211,102,.3)}
         .nav-cta:hover{transform:translateY(-2px)!important;box-shadow:0 8px 25px rgba(37,211,102,.4)!important}
         .nav-cta::after{display:none!important}
         .burger{display:none;background:none;border:none;cursor:pointer;width:32px;height:24px;position:relative}
@@ -601,6 +601,16 @@
             .contact-grid{grid-template-columns:1fr}
             .transform-imgs img{height:140px}
         }
+        /* the full menu needs ~1060px; below that it collapses to the burger */
+        @media(max-width:1100px){
+            .nav-links{display:none;position:fixed;inset:0;background:var(--nav-mob);backdrop-filter:blur(20px);flex-direction:column;justify-content:center;align-items:center;gap:28px;z-index:999}
+            .nav-links.open{display:flex}
+            .nav-links a{font-size:1.2rem}
+            .burger{display:block;position:relative;z-index:1000}
+            /* with the links list out of flow, space-between would strand the
+               language and theme controls mid-bar - keep them beside the burger */
+            .lang-switch{margin-left:auto}
+        }
         @media(max-width:700px){
             .coverage-grid{grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}
             .coverage-card{padding:18px 10px}
@@ -609,10 +619,6 @@
             .sec-head{margin-bottom:28px}
 
             .promo-bar{font-size:.78rem;padding:8px 14px}
-            .nav-links{display:none;position:fixed;inset:0;background:var(--nav-mob);backdrop-filter:blur(20px);flex-direction:column;justify-content:center;align-items:center;gap:28px;z-index:999}
-            .nav-links.open{display:flex}
-            .nav-links a{font-size:1.2rem}
-            .burger{display:block}
             section{padding:44px 16px}
             .steps{grid-template-columns:1fr}
             .steps::before{display:none}
@@ -1779,7 +1785,16 @@
     });
     document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', closeMobileMenu));
     document.addEventListener('click', e => {
-        if(document.getElementById('navLinks').classList.contains('open') && !e.target.closest('.nav-in')) closeMobileMenu();
+        const nl = document.getElementById('navLinks');
+        if(!nl.classList.contains('open')) return;
+        // the overlay lives inside .nav-in, so tapping it has to be handled explicitly
+        if(e.target === nl || !e.target.closest('.nav-in')) closeMobileMenu();
+    });
+    document.addEventListener('keydown', e => {
+        if(e.key === 'Escape' && document.getElementById('navLinks').classList.contains('open')){
+            closeMobileMenu();
+            burger.focus();
+        }
     });
 
     // === SCROLL REVEAL ===
