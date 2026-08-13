@@ -1,10 +1,10 @@
 {
-  "id": "/house-barf/en/",
+  "id": "/en/",
   "name": "House Barf - Dog Food Armenia, Quindío & the Coffee Region",
   "short_name": "House Barf",
   "description": "Premium chicken & vegetable dog food at $4,500/lb. Free delivery in Armenia on 5kg+ and shipping across Quindío and Colombia's Coffee Region.",
-  "start_url": "/house-barf/en/",
-  "scope": "/house-barf/en/",
+  "start_url": "/en/",
+  "scope": "/en/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#FFF8F0",
@@ -21,13 +21,13 @@
     {
       "name": "How to order",
       "short_name": "Order",
-      "url": "/house-barf/en/#como-pedir",
+      "url": "/en/#como-pedir",
       "icons": [{ "src": "../icon-192.png", "sizes": "192x192", "type": "image/png" }]
     },
     {
       "name": "Portion calculator",
       "short_name": "Calculator",
-      "url": "/house-barf/en/#calculadora",
+      "url": "/en/#calculadora",
       "icons": [{ "src": "../icon-192.png", "sizes": "192x192", "type": "image/png" }]
     }
   ]

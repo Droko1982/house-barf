@@ -9,7 +9,7 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(REPO, 'index.html')
 OUTDIR = os.path.join(REPO, 'en')
 OUT = os.path.join(OUTDIR, 'index.html')
-BASE = 'https://droko1982.github.io/house-barf/'
+BASE = 'https://www.housebarf.com/'
 
 src = open(SRC, encoding='utf-8', newline='').read()
 
