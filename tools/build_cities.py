@@ -242,7 +242,7 @@ def build(c):
 
 <footer><div class="wrap">
   <span>&copy; 2026 House Barf — Alimento para perros en {esc(name)}, {esc(dept)}.</span>
-  <span><a href="../">Inicio</a> · <a href="../privacidad.html">Política de datos</a> · <a href="https://wa.me/{WA}" target="_blank" rel="noopener">312 673 7317</a></span>
+  <span><a href="../">Inicio</a> · <a href="../privacidad.html">Política de datos</a> · <a href="https://wa.me/{WA}" target="_blank" rel="noopener">312 673 7317</a> · Sitio hecho por <a href="https://fastlabstudio.com/es" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">FastLab</a></span>
 </div></footer>
 </body>
 </html>
